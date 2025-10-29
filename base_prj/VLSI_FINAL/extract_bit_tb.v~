@@ -1,0 +1,56 @@
+`timescale 1ns / 1ps
+
+module extract_bit_tb();
+
+    reg clk, rst, en_ext;
+    reg [15:0] i_data;
+    wire [1:0] o_rx;
+
+    integer index;
+    integer input_file;
+    reg [15:0] in_data [0:1023]; 
+    reg done_input;
+
+    
+    extract_bit uut (
+        .rst(rst),
+        .clk(clk),
+        .en_ext(en_ext),
+        .i_data(i_data),
+        .o_rx(o_rx)
+    );
+    always #5 clk = ~clk;
+    initial begin
+        
+        clk = 0;
+        rst = 0;
+        en_ext = 0;
+        done_input = 0;
+        index = 0;
+        $readmemb("/mnt/hgfs/VMshare/input.txt", in_data);
+        #10 rst = 0;
+        #10 rst = 1;
+        en_ext = 1;
+        i_data = in_data[index];
+    end
+    always @(posedge clk) begin
+        if (rst && en_ext) begin
+            $display("Time %t | index: %0d | count: %0d | o_rx: %b", 
+                      $time, index, uut.count, o_rx);
+        end
+        if (rst && en_ext && uut.count < 2 && !done_input) begin
+            index = index + 1;
+
+            if (index < 1026 && in_data[index] !== 16'bx) begin
+                i_data = in_data[index];
+            end else begin
+                done_input = 1;
+                en_ext = 0;
+                $display("=== Done reading all inputs ===");
+                $finish;
+            end
+        end
+    end
+
+endmodule
+
