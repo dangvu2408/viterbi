@@ -1,0 +1,9 @@
+{signal: [
+  {name: 'clk',     wave: 'n.....|...|....'},
+  {name: 'en',      wave: 'h.....|...|....'},
+  {name: 'rst',     wave: 'lpl...|...|...p'},
+  {name: 'en_brch', wave: 'l.nh..|.pl|....'},
+  {name: 'en_add',  wave: 'l..nh.|.pl|....'},
+  {name: 'en_mem',  wave: 'l...nh|...|.pl.'},
+  {name: 'en_tbck', wave: 'l.....|.nh|.pl.'},
+]}

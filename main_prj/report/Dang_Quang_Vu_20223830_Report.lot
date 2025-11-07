@@ -1,0 +1,8 @@
+\contentsline {table}{\numberline {1.1}{\ignorespaces Bảng trạng thái của mã tích chập (2, 1, 2)}}{2}{table.caption.8}%
+\contentsline {table}{\numberline {1.2}{\ignorespaces Bảng trạng thái của mã tích chập dựa theo đầu vào $m$}}{4}{table.caption.12}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Bảng mô tả các chân I/O của module \texttt {viterbi\_decoder}}}{9}{table.caption.23}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Bảng mô tả các chân I/O của module \texttt {ctrl}}}{11}{table.caption.26}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Bảng mô tả các chân I/O của module \texttt {ham\_d}}}{13}{table.caption.29}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces Bảng mô tả các chân I/O của module \texttt {add\_comp}}}{15}{table.caption.32}%
+\contentsline {table}{\numberline {2.5}{\ignorespaces Bảng mô tả các chân I/O của module \texttt {mem}}}{17}{table.caption.35}%
+\contentsline {table}{\numberline {2.6}{\ignorespaces Bảng mô tả các chân I/O của module \texttt {tbck\_dec}}}{19}{table.caption.38}%

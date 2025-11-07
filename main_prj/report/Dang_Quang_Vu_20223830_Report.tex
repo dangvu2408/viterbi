@@ -1,0 +1,777 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[fontsize=13pt]{scrextend}
+\usepackage[paperheight=29.7cm,paperwidth=21cm,right=2cm,left=3cm,top=2cm,bottom=2.5cm,twoside]{geometry}% Chuẩn A4, căn lề phải, trái, trên, dưới.
+\usepackage{mathptmx}
+\usepackage{amsmath}
+\usepackage{graphicx} % Thư viện chèn ảnh
+\usepackage{float} % Set vị trí chèn ảnh
+\usepackage{tikz} % Thư viện tạo khung bìa
+\usepackage{fontspec}
+\setmonofont{Courier New}
+\usetikzlibrary{calc} % Thư viện tikz
+\usepackage{indentfirst} % Thư viện thụt đầu dòng
+\usepackage{booktabs} % To thicken table lines
+
+\renewcommand{\baselinestretch}{1.2} % Giãn dòng 1.2
+\setlength{\parskip}{6pt} % Spacing after
+\setlength{\parindent}{1cm} % Set khoảng cách thụt đầu dòng mỗi đoạn
+\usepackage{titlesec} % Thư viện để set up các kiểu chữ
+\usepackage{listings}
+\usepackage{matlab-prettifier}
+\setcounter{secnumdepth}{4} % 4 Heading
+\titlespacing*{\section}{0pt}{0pt}{30pt} % Heading 1
+\titleformat*{\section}{\fontsize{16pt}{0pt}\selectfont \bfseries \centering}
+
+\titlespacing*{\subsection}{0pt}{10pt}{0pt} % Heading 2
+\titleformat*{\subsection}{\fontsize{14pt}{0pt}\selectfont \bfseries}
+
+\titlespacing*{\subsubsection}{0pt}{10pt}{0pt} % Heading 3
+\titleformat*{\subsubsection}{\fontsize{13pt}{0pt}\selectfont \bfseries \itshape}
+
+\titlespacing*{\paragraph}{0pt}{10pt}{0pt} % Heading 4
+\titleformat*{\paragraph}{\fontsize{13pt}{0pt}\selectfont \itshape}
+
+\renewcommand{\figurename}{\fontsize{12pt}{0pt}\selectfont \bfseries Hình}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\usepackage[font=bf]{caption}
+\captionsetup[figure]{labelsep=space}
+
+\renewcommand{\tablename}{\fontsize{12pt}{0pt}\selectfont \bfseries Bảng}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\captionsetup[table]{labelsep=space}
+
+\usepackage{tabularx}
+\newcolumntype{s}{>{\hsize=.3\hsize}X}
+\newcolumntype{y}{>{\hsize=.4\hsize}X}
+\newcolumntype{d}{>{\hsize=.1\hsize}X}
+\newcolumntype{a}{>{\hsize=1.1\hsize}X}
+\newcolumntype{g}{>{\hsize=5\hsize}X}
+\renewcommand{\tabularxcolumn}[1]{>{\small}m{#1}}
+
+\renewcommand{\theequation}{\thesection.\arabic{equation}} % Thay đổi đánh số phương trình mặc định
+\newtheorem{theorem}{Định lý}[section]
+\newtheorem{defn}[theorem]{Định nghĩa}
+\newtheorem{corollary}[theorem]{Hệ quả}
+\newtheorem{lemma}[theorem]{Bổ đề}
+\usepackage{lipsum} % Thư viện tạo chữ linh tinh.
+
+\usepackage[unicode]{hyperref}
+\usepackage{colortbl}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\usepackage{forloop}
+\newcounter{loopcntr}
+\newcommand{\rpt}[2][1]{\forloop{loopcntr}{0}{\value{loopcntr}<#1}{#2}}
+
+\begin{document}
+	\setmainfont{Times New Roman}
+	\thispagestyle{empty}
+	\begin{center}
+		\vspace{-12pt}  \fontsize{14pt}{0pt}\selectfont ĐẠI HỌC BÁCH KHOA HÀ NỘI \\[6pt]
+		\textbf{\fontsize{18pt}{0pt}\selectfont TRƯỜNG ĐIỆN - ĐIỆN TỬ}
+		\vspace{0.75cm}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[height=4.25cm]{logoHUST.png}
+		\end{figure}
+		\vspace{1cm}
+		\textbf{\fontsize{28pt}{0pt}\selectfont THIẾT KẾ VLSI}
+		\vspace{0.5cm}
+	\end{center}
+	\begin{center}
+		\textbf{\fontsize{24pt}{0pt}\selectfont Thiết kế bộ giải mã Viterbi}\\
+		\vspace{3cm}
+		
+		\begin{tabular}{l l}
+			\centering
+			\begin{minipage}{0.45\textwidth}
+				\centering
+				\textbf{\fontsize{18pt}{0pt}\selectfont NGUYỄN TIẾN THÀNH} \\[6pt]
+				\fontsize{16pt}{0pt}\selectfont thanh.nt224154@sis.hust.edu.vn 
+			\end{minipage}
+			&
+			\begin{minipage}{0.45\textwidth}
+				\centering
+				\textbf{\fontsize{18pt}{0pt}\selectfont VŨ HUY HOÀNG} \\[6pt]
+				\fontsize{16pt}{0pt}\selectfont hoang.vh213936@sis.hust.edu.vn
+			\end{minipage}
+			\\[35pt]
+			\begin{minipage}{0.45\textwidth}
+				\centering
+				\textbf{\fontsize{18pt}{0pt}\selectfont ĐẶNG QUANG VŨ} \\[6pt]
+				\fontsize{16pt}{0pt}\selectfont vu.dq223830@sis.hust.edu.vn 
+			\end{minipage}
+			&
+			\begin{minipage}{0.45\textwidth}
+				\centering
+				\textbf{\fontsize{18pt}{0pt}\selectfont VŨ TIẾN LONG} \\[6pt]
+				\fontsize{16pt}{0pt}\selectfont long.vt224046@sis.hust.edu.vn
+			\end{minipage}
+			\\
+		\end{tabular}
+
+		\vspace{0.75cm}
+		\vspace{0.75cm}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{l l l}
+				\fontsize{16pt}{0pt}\selectfont \textbf{Giảng viên hướng dẫn:}    & \fontsize{16pt}{0pt}\selectfont TS. Nguyễn Vũ Thắng \vspace{6pt} & \_\_\_\_\_\_\_\_\_\_\_ \\ 
+			\end{tabular}
+		\end{table}
+		\vspace{2cm}
+		\fontsize{14pt}{0pt}\selectfont \textbf{Hà Nội, 11/2025}
+	\end{center}
+	\cleardoublepage
+	
+	\newpage 
+	\addtocontents{toc}{\protect\thispagestyle{empty}}
+	\renewcommand{\contentsname}{MỤC LỤC}
+	\tableofcontents 
+	\thispagestyle{empty}
+	\cleardoublepage
+	\newpage
+	
+	\pagenumbering{roman} % Đánh số thứ tự la mã
+	\section*{DANH MỤC KÝ HIỆU VÀ CHỮ VIẾT TẮT}
+	\phantomsection \addcontentsline{toc}{section}{\numberline {} DANH MỤC KÝ HIỆU VÀ CHỮ VIẾT TẮT}
+	
+	\begin{table}[h!]
+		\centering
+		\renewcommand{\arraystretch}{1.3}
+		\begin{tabular}{|>{\centering\arraybackslash}p{2.5cm}
+				|>{\centering\arraybackslash}p{6cm}
+				|>{\centering\arraybackslash}p{5cm}|}
+			\hline
+			\textbf{Từ viết tắt} & \textbf{Tên tiếng Anh} & \textbf{Nghĩa tiếng Việt} \\ \hline
+			FSM & Finite State Machine & Máy trạng thái hữu hạn \\ \hline
+			ML & Maximum Likelihood & Cực đại khả năng \\ \hline
+			
+		\end{tabular}
+	\end{table}
+	
+	
+	\newpage
+	
+	
+	\renewcommand{\listfigurename}{DANH MỤC HÌNH VẼ}
+	{\let\oldnumberline\numberline
+		\renewcommand{\numberline}{Hình~\oldnumberline}
+		\listoffigures} 
+		\phantomsection\addcontentsline{toc}{section}{\numberline {}DANH MỤC HÌNH VẼ}
+	\newpage
+	
+	
+	\renewcommand{\listtablename}{DANH MỤC BẢNG BIỂU}
+	{\let\oldnumberline\numberline
+		\renewcommand{\numberline}{Bảng~\oldnumberline}
+		\listoftables}
+		\phantomsection\addcontentsline{toc}{section}{\numberline {} DANH MỤC BẢNG BIỂU}
+	\newpage
+	
+	
+	\pagenumbering{arabic}
+	\section*{CHƯƠNG 1. CƠ SỞ LÝ THUYẾT}
+	\addcontentsline{toc}{section}{\numberline{}CHƯƠNG 1. CƠ SỞ LÝ THUYẾT}
+	\setcounter{section}{1}
+	\setcounter{subsection}{0}
+	\setcounter{figure}{0}
+	\setcounter{table}{0}
+	\setcounter{equation}{0}
+	\subsection{Tổng quan về mã tích chập}
+	
+	Mã tích chập là một dạng mã tuyến tính, trong đó quá trình mã hóa được thực hiện tương tự như một bộ lọc số thực hiện phép tích chập giữa chuỗi dữ liệu đầu vào và các hệ số mã. Có thể coi bộ mã hóa tích chập như một tập hợp các hệ thống tuyến tính, bất biến theo thời gian, trong đó mỗi đầu ra là kết quả của quá trình lọc và tổ hợp tuyến tính các bit đầu vào hiện tại và quá khứ. 
+	
+	Đầu vào của bộ mã hóa tích chập là một dòng dữ liệu được biểu diễn dưới dạng vector. Mã tích chập có hai tham số quan trọng là tốc độ mã và chiều dài ràng buộc. Tốc độ mã của mã tích chập được ký hiệu $R = \dfrac{k}{n}$, trong đó $k$ là số bit đầu vào và $n$ là số bit đầu ra ở mỗi chu kì mã hóa. Một tham số quan trọng khác là chiều dài ràng buộc $K$ biểu thị số lượng phần tử nhớ (hay số D-FF) trong thanh ghi dịch của bộ mã hóa, phản ánh mức độ phụ thuộc của đầu ra vào các bit đầu vào trước đó. Chẳng hạn với mã tích chập có tốc độ mã 1/2 được biểu diễn trên Hình \ref{hinh11} 
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 5pt 10pt 5pt 10pt, clip, width=13cm]{fig11a.pdf}
+		\caption[Mã tích chập với tốc độ mã 1/2]{\bfseries \fontsize{12pt}{0pt}\selectfont Mã tích chập với tốc độ mã 1/2}
+		\label{hinh11}
+	\end{figure}
+	
+	Ta xét một đầu vào cụ thể, chẳng hạn $m = \{1, 1, 0, 0, 1, 0, 1, 0\}$, khi đó ta sẽ biểu diễn được dưới dạng đa thức $m(x) = 1 + x + x^4 + x^6$. Với mã tích chập như trong Hình \ref{hinh11} thì ta có hai đa thức sinh $g^{(1)}(x) = 1 + x^2$ và $g^{(2)}(x) = 1 + x + x^2$. Khi đó đầu ra dạng đa thức là:
+	\begin{center}
+		$c^{(1)}(x) = m(x).g^{(1)}(x) = (1 + x + x^4 + x^6)(1 + x^2) = 1 + x + x^2 + x^3 + x^4 + x^8$
+	
+		$c^{(2)}(x) = m(x).g^{(2)}(x) = (1 + x + x^4 + x^6)(1 + x + x^2) = 1 + x^3 + x^4 + x^5 + x^7 + x^8$
+	\end{center}
+	
+	Hay đầu ra còn được viết dưới dạng bit:
+	\begin{center}
+		$c^{(1)} = \{1, 1, 1, 1, 1, 0, 0, 0, 1\}$
+		
+		$c^{(2)} = \{1, 0, 0, 1, 1, 1, 0, 1, 1\}$
+	\end{center}
+	
+	và dạng vector:
+	\begin{center}
+		$c = \{11, 10, 10, 11, 11, 01, 00, 01, 11\}$
+	\end{center}
+	
+	Mã tích chập thực chất là một máy trạng thái hữu hạn (FSM) do trạng thái của bộ mã hóa được xác định bởi giá trị trong các D Flip-Flops với số lượng trạng thái là $2^{K-1}$. Hơn nữa, ở mỗi chu kỳ thời gian, một bit đầu vào vào thanh ghi, làm thay đổi trạng thái và sinh ra $m$ bit đầu ra theo các đa thức sinh. Trong thiết kế bộ giải mã Viterbi cho mã tích chập (2, 1, 2), ta có Bảng \ref{bang11} là bảng sự thật với $S_1$, $S_2$ là các trạng thái lần lượt cho $u(n-1), u(n-2)$ ban đầu và đầu vào Input, $V_1$, $V_2$ là đầu ra, $S_1'$, $S_2'$ là trạng thái kế tiếp.
+	
+	\begin{table}[h!]
+		\caption[Bảng trạng thái của mã tích chập (2, 1, 2)]{\bfseries \fontsize{12pt}{0pt}\selectfont Bảng trạng thái của mã tích chập (2, 1, 2)}
+		\label{bang11}
+		\centering
+		\begin{tabular}{|c|c|c|c|c|c|c|}
+			\hline
+			\textbf{Input} & \textbf{$S_1$} & \textbf{$S_2$} & \textbf{$V_1$} & \textbf{$V_2$} & \textbf{$S_1'$} & \textbf{$S_2'$} \\ 
+			\hline
+			0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 
+			0 & 0 & 1 & 1 & 1 & 0 & 0 \\ 
+			0 & 1 & 0 & 1 & 0 & 0 & 1 \\ 
+			0 & 1 & 1 & 0 & 1 & 0 & 1 \\ 
+			1 & 0 & 0 & 1 & 1 & 1 & 0 \\ 
+			1 & 0 & 1 & 1 & 0 & 1 & 0 \\ 
+			1 & 1 & 0 & 0 & 1 & 1 & 1 \\ 
+			1 & 1 & 1 & 1 & 0 & 1 & 1 \\ 
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	Khi đó ta có Hình \ref{hinh12} là FSM của mã tích chập (2, 1, 2).
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 5pt 10pt 5pt 10pt, clip, width=7cm]{fig12a.pdf}
+		\caption[FSM của mã tích chập (2, 1, 2)]{\bfseries \fontsize{12pt}{0pt}\selectfont FSM của mã tích chập (2, 1, 2)}
+		\label{hinh12}
+	\end{figure}
+	
+	Từ FSM ta có thể xây dựng sơ đồ lưới tương ứng như trên Hình \ref{hinh13}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 5pt 10pt 5pt 10pt, clip, width=7cm]{fig13.pdf}
+		\caption[Sơ đồ lưới của mã tích chập (2, 1, 2)]{\bfseries \fontsize{12pt}{0pt}\selectfont Sơ đồ lưới của mã tích chập (2, 1, 2)}
+		\label{hinh13}
+	\end{figure}
+	
+	Sơ đồ lưới này là tiền đề để xây dựng một giản đồ lưới lớn hơn phục vụ cho thuật toán Viterbi.
+	
+	\subsection{Thuật toán giải mã Viterbi}
+	
+	Thuật toán Viterbi là một thuật toán giải mã cực đại khả năng (Maximum Likelihood - ML) được sử dụng phổ biến trong các bộ giải mã mã tích chập (convolutional decoder). Thuật toán này biểu diễn quá trình truyền mã bằng một đồ thị trạng thái (trellis), trong đó mỗi đỉnh biểu diễn một trạng thái bộ nhớ của bộ mã hóa, còn các cạnh thể hiện các chuyển trạng thái ứng với bit đầu vào. 
+	
+	Ở mỗi bước thời gian, thuật toán tính độ đo đường đi (path metric) cho từng trạng thái - là tổng của các độ đo nhánh (branch metric) đã đi qua. Branch metric thường được tính bằng khoảng cách Hamming giữa chuỗi đầu ra lý thuyết và chuỗi đầu ra nhận được (với kênh nhị phân), hoặc bằng khoảng cách Euclid trong các kênh khác. Với mỗi trạng thái, chỉ đường đi có metric nhỏ nhất được giữ lại (gọi là survivor path). Sau khi duyệt toàn bộ chuỗi, thuật toán truy ngược (traceback) để tìm đường đi tối ưu, tương ứng với chuỗi bit đầu vào có xác suất lớn nhất.
+	
+	Ta xét ví dụ với đầu vào $m = \{1, 1, 0, 0, 1, 0, 1, 0\}$ với ma trận đa thức sinh là: \linebreak $\mathbf{G}(x) = \begin{bmatrix}
+		1 + x^2 & 1 + x + x^2
+	\end{bmatrix}$. Khi đó từ mã thu được là $r = \{11, 10, 10, 11, 11, 01, 00, 01\}$.
+	
+	Dựa theo sơ đồ FSM ở Hình \ref{hinh12}, ta có bảng trạng thái tương ứng đầu vào như Bảng \ref{bang12}. Kết hợp với sơ đồ lưới như trên Hình \ref{hinh13}, ta được một giản đồ lưới như trên Hình \ref{hinh14}. Đây chính là giản đồ lưới mã hóa từ dãy bit đầu vào $m$. Thuật toán Viterbi sẽ giải mã ngược để tìm lại dãy bit ban đầu.
+	
+	Xuất phát từ trạng thái 00, tại $t = 1$, khoảng cách Hamming giữa đầu ra (11) với nhánh 00-00 và 00-10 lần lượt là 2 và 0. Ta "đánh dấu" khoảng cách Hamming này trên từng nhánh như trên Hình \ref{hinh15}.
+	
+	Tiếp tục với trạng thái tại $t = 2$, tương tự như trạng thái trước, khoảng cách Hamming giữa đầu ra (10) với các nhánh 00-00, 00-10, 10-01 và 10-11 lần lượt là 3, 3, 2 và 0 (sở dĩ khoảng cách Hamming lớn hơn 2 là do ta cộng dồn metric của nhánh vào metric của nhánh trước đó). Ta "đánh dấu" khoảng cách Hamming này trên từng nhánh như trên Hình \ref{hinh16}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=16.25cm]{fig14a.pdf}
+		\caption[Sơ đồ lưới của mã tích chập dựa theo đầu vào $m$]{\bfseries \fontsize{12pt}{0pt}\selectfont Sơ đồ lưới của mã tích chập dựa theo đầu vào $m$}
+		\label{hinh14}
+	\end{figure}
+	
+	\begin{table}[H]
+		\caption[Bảng trạng thái của mã tích chập dựa theo đầu vào $m$]{\bfseries \fontsize{12pt}{0pt}\selectfont Bảng trạng thái của mã tích chập dựa theo đầu vào $m$}
+		\label{bang12}
+		\centering
+		\begin{tabular}{| c | c | c | c |}
+			\hline
+			$t$ & \textbf{Input} & \textbf{Output} & \textbf{State} \\ 
+			\hline
+			0 & 1 & 11 & 10 \\
+			1 & 1 & 10 & 11 \\
+			2 & 0 & 10 & 01 \\
+			3 & 0 & 11 & 00 \\
+			4 & 1 & 11 & 10 \\
+			5 & 0 & 01 & 01 \\
+			6 & 1 & 00 & 10 \\
+			7 & 0 & 01 & 01 \\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, height=4.25cm]{fig15.pdf}
+		\caption[Minh họa giản đồ Trellis tại thời điểm $t = 1$]{\bfseries \fontsize{12pt}{0pt}\selectfont Minh họa giản đồ Trellis tại thời điểm $t = 1$}
+		\label{hinh15}
+	\end{figure}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, height=4.25cm]{fig16.pdf}
+		\caption[Minh họa giản đồ Trellis tại thời điểm $t = 2$]{\bfseries \fontsize{12pt}{0pt}\selectfont Minh họa giản đồ Trellis tại thời điểm $t = 2$}
+		\label{hinh16}
+	\end{figure}
+	
+	Tương tự trạng thái tại $t = 3$, khoảng cách Hamming giữa đầu ra (10) với các nhánh 00-00, 00-10, 10-01, 10-11, 01-00, 01-10, 11-01 và 11-11 lần lượt là 4, 4, 5, 3, 3, 4, 0 và 2. Ta "đánh dấu" khoảng cách Hamming này trên từng nhánh như trên Hình \ref{hinh17}(a), tuy nhiên tại trạng thái này xuất hiện 2 tuyến đường cùng tới 1 trạng thái. Khi đó ta loại bỏ tuyến đường có khoảng cách Hamming lớn. Tuyến đường giữ lại được biểu diễn như Hình \ref{hinh17}(b).
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, height=4.75cm]{fig17.pdf}
+		\caption[Minh họa giản đồ Trellis tại thời điểm $t = 3$]{\bfseries \fontsize{12pt}{0pt}\selectfont Minh họa giản đồ Trellis tại thời điểm $t = 3$}
+		\label{hinh17}
+	\end{figure}
+	
+	Tương tự trạng thái tại $t = 4$, khoảng cách Hamming giữa đầu ra (11) với các nhánh 00-00, 00-10, 10-01, 10-11, 01-00, 01-10, 11-01 và 11-11 lần lượt là 5, 3, 4, 4, 0, 2, 3 và 3. Ta "đánh dấu" khoảng cách Hamming này trên từng nhánh như trên Hình \ref{hinh18}(a). Tuy nhiên tại trạng thái này, một nút xuất hiện 2 tuyến đường cùng đi tới. Khi đó ta loại bỏ tuyến đường có khoảng cách Hamming lớn. Tuyến đường giữ lại được biểu diễn như Hình \ref{hinh18}(b).
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, height=10.5cm]{fig18.pdf}
+		\caption[Minh họa giản đồ Trellis tại thời điểm $t = 4$]{\bfseries \fontsize{12pt}{0pt}\selectfont Minh họa giản đồ Trellis tại thời điểm $t = 4$}
+		\label{hinh18}
+	\end{figure}
+	
+	Lần lượt thực hiện tương tự đối với các trạng thái sau, đối với nút có 2 tuyến đi đến, ta chỉ lựa chọn tuyến có khoảng cách Hamming nhỏ hơn. Khi đó ta có giản đồ Trellis ở các thời điểm $t = 5$ (Hình \ref{hinh19}), $t = 6$ (Hình \ref{hinh110}), $t = 7$ (Hình \ref{hinh111}) và $t = 8$ (Hình \ref{hinh112}).
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, height=4.5cm]{fig19.pdf}
+		\caption[Minh họa giản đồ Trellis tại thời điểm $t = 5$]{\bfseries \fontsize{12pt}{0pt}\selectfont Minh họa giản đồ Trellis tại thời điểm $t = 5$}
+		\label{hinh19}
+	\end{figure}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, height=4.5cm]{fig110.pdf}
+		\caption[Minh họa giản đồ Trellis tại thời điểm $t = 6$]{\bfseries \fontsize{12pt}{0pt}\selectfont Minh họa giản đồ Trellis tại thời điểm $t = 6$}
+		\label{hinh110}
+	\end{figure}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, height=4.5cm]{fig111.pdf}
+		\caption[Minh họa giản đồ Trellis tại thời điểm $t = 7$]{\bfseries \fontsize{12pt}{0pt}\selectfont Minh họa giản đồ Trellis tại thời điểm $t = 7$}
+		\label{hinh111}
+	\end{figure}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=16.5cm]{fig112.pdf}
+		\caption[Minh họa giản đồ Trellis tại thời điểm $t = 8$]{\bfseries \fontsize{12pt}{0pt}\selectfont Minh họa giản đồ Trellis tại thời điểm $t = 8$}
+		\label{hinh112}
+	\end{figure}
+	
+	Sau thời điểm $t = 8$, giản đồ Trellis đã biểu diễn được hết khoảng cách Hamming của 8 cặp bit từ mã. Loại bỏ những nút có khoảng cách Hamming lớn, khi đó ta xác định được đường đi có khoảng cách Hamming nhỏ nhất được biểu diễn trên Hình \ref{hinh113}. Với bit ban đầu là 1, đường đi sẽ biểu diễn bằng nét liền; với bit ban đầu là 0, đường đi sẽ biểu diễn bằng nét đứt, từ đó ta sẽ xác định được dãy 8 bit sau giải mã là $m_0 = \{1, 1, 0, 0, 1, 0, 1, 0\}$, trùng khớp với đầu vào bộ mã hóa ($m = \{1, 1, 0, 0, 1, 0, 1, 0\}$).
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=16.5cm]{fig113.pdf}
+		\caption[Xác định đường có khoảng cách Hamming nhỏ nhất trên giản đồ Trellis]{\bfseries \fontsize{12pt}{0pt}\selectfont Xác định đường có khoảng cách Hamming nhỏ nhất trên giản đồ Trellis}
+		\label{hinh113}
+	\end{figure}
+	
+	Thuật toán Viterbi đảm bảo chọn được đường có xác suất cao nhất trong trellis, do vậy tỷ lệ lỗi bit của bộ giải mã rất thấp. Vì vậy, Viterbi lý tưởng cho các hệ thống cần độ trễ thấp và tốc độ xử lý cao. Thuật toán Viterbi là thuật toán quy hoạch động, hoạt động bằng cách duy trì độ đo đường đi cho mỗi trạng thái trong đồ thị Trellis với độ phức tạp $O\left(N.2^{K-1}\right)$, do vậy độ phức tạp sẽ tăng nhanh nếu $K$ tăng. Hơn nữa bộ giải mã Viterbi cần có một khối memory để lưu lại đường đi sống sót với dung lượng $N.2^{K-1}$ bit, đồng nghĩa với việc bộ nhớ tăng khi $K$ tăng. Do vậy trong thiết kế mã tích chập và bộ giải mã Viterbi, $K$ bị giới hạn từ 3 đến 7.
+	
+	\newpage
+	
+	\section*{CHƯƠNG 2. YÊU CẦU KỸ THUẬT}
+	\addcontentsline{toc}{section}{\numberline{}CHƯƠNG 2. YÊU CẦU KỸ THUẬT}
+	\setcounter{section}{2}
+	\setcounter{subsection}{0}
+	\setcounter{figure}{0}
+	\setcounter{table}{0}
+	\setcounter{equation}{0}
+	
+	\subsection{Yêu cầu thông số kỹ thuật}
+	
+	Bộ giải mã Viterbi được thiết kế với các thông số cơ bản sau:
+	
+	- Độ dài ràng buộc (Constrain Length): $K = 3$.
+	
+	- Tốc độ mã hóa (Coding Rate): $R = \dfrac{1}{2}$.
+	
+	- Đa thức sinh (Generator Polynomials): $g_1(x) = x^2 + x + 1$ và $g_2(x) = x^2 + 1$.
+	
+	- Dữ liệu đầu vào: chuỗi 16 bit đã được mã hóa.
+	
+	- Dữ liệu đầu ra: chuỗi 8 bit (thông tin ban đầu trước khi mã hóa).
+	
+	\subsection{Sơ đồ khối các module}
+	
+	\subsubsection{Module \texttt{viterbi\_decoder}}
+	
+	\paragraph{Sơ đồ khối} \mbox{}
+	
+	Sơ đồ khối của module \texttt{viterbi\_decoder} được thể hiện trong Hình \ref{hinh21}.
+	 
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=9cm]{fig21.pdf}
+		\caption[Sơ đồ khối của module \texttt{viterbi\_decoder}]{\bfseries \fontsize{12pt}{0pt}\selectfont Sơ đồ khối của module \texttt{viterbi\_decoder}}
+		\label{hinh21}
+	\end{figure}
+	
+	\paragraph{Chức năng} \mbox{}
+	
+	Module \texttt{viterbi\_decoder} đóng vai trò là top module trong khối thiết kế, có chức năng khởi tạo 5 module nhỏ hơn (bao gồm các module \texttt{ctrl}, \texttt{ham\_d}, \texttt{add\_comp}, \texttt{mem} và \texttt{tbck\_dec}) và thực hiện kết nối tín hiệu giữa các khối này với nhau. Cụ thể:
+	
+	- Khối \texttt{ctrl}: khối điều khiển trung tâm.
+	
+	- Khối \texttt{ham\_d}: khối chia 16 bit đầu vào thành 8 bộ 2 bit một và tính toán khoảng cách Hamming của chúng.
+	
+	- Khối \texttt{add\_comp}: khối cộng và so sánh metric.
+	
+	- Khối \texttt{mem}: bộ nhớ lưu trữ trạng thái.
+	
+	- Khối \texttt{tbck\_dec}: khối trace-back dùng để suy ra chuỗi đầu ra.
+	
+	Module \texttt{viterbi\_decoder} có nhiệm vụ giải mã chuỗi dữ liệu mã hóa 16 bit ở đầu vào (\texttt{data}) thành chuỗi dữ liệu gốc 8 bit ở đầu ra (\texttt{output}) thông qua quá trình xử lý của các khối con bên trong.
+	
+	- Nếu \texttt{rst = 1}, module sẽ thực hiện khởi tạo lại toàn bộ hệ thống.
+	
+	- Nếu \texttt{en = 1} và tại sườn dương của tín hiệu \texttt{clk}, mạch bắt đầu thực hiện quá trình giải mã theo thuật toán Viterbi.
+	
+	- Ngược lại, nếu \texttt{en = 0}, toàn bộ mạch sẽ giữ nguyên trạng thái hiện tại và không thực hiện bất kỳ phép tính nào.
+	
+	\paragraph{Đầu vào, đầu ra} \mbox{}
+	
+	Bảng mô tả chân I/O của module \texttt{viterbi\_decoder} được thể hiện ở Bảng \ref{bang21}.
+	
+	\begin{table}[h!]
+		\caption[Bảng mô tả các chân I/O của module \texttt{viterbi\_decoder}]{\bfseries \fontsize{12pt}{0pt}\selectfont Bảng mô tả các chân I/O của module \texttt{viterbi\_decoder}}
+		\label{bang21}
+		\centering
+		\begin{tabular}{|c|c|c|p{10.25cm}|}
+			\hline
+			\textbf{Tên chân} & \textbf{I/O} & \textbf{Số bit} & \textbf{Chức năng} \\ \hline
+			\texttt{clk} & I & 1 & Tạo xung clock, sườn dương của xung là tín hiệu điều khiển lệnh trong mạch. \\ \hline
+			\texttt{rst} & I & 1 & Thiết lập module về trạng thái ban đầu. \\ \hline
+			\texttt{en} & I & 1 & Cho phép module hoạt động. \\ \hline
+			\texttt{data} & I & 16 & Dữ liệu đầu vào cần giải mã. \\ \hline
+			\texttt{out\_data} & O & 8 & Dữ liệu đầu ra sau khi được giải mã. \\ \hline
+		\end{tabular}
+	\end{table}
+	\paragraph{Sơ đồ nối dây bên trong} \mbox{}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=15cm]{fig22a.pdf}
+		\caption[Sơ đồ nối dây bên trong của module \texttt{viterbi\_decoder}]{\bfseries \fontsize{12pt}{0pt}\selectfont Sơ đồ nối dây bên trong của module \texttt{viterbi\_decoder}}
+		\label{hinh22}
+	\end{figure}
+	
+	\subsubsection{Module \texttt{ctrl}}
+	
+	\paragraph{Sơ đồ khối} \mbox{}
+	
+	Sơ đồ khối của module \texttt{ctrl} được thể hiện trong Hình \ref{hinh23}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=9.5cm]{fig23.pdf}
+		\caption[Sơ đồ khối của module \texttt{ctrl}]{\bfseries \fontsize{12pt}{0pt}\selectfont Sơ đồ khối của module \texttt{ctrl}}
+		\label{hinh23}
+	\end{figure}
+	
+	\paragraph{Chức năng} \mbox{} \label{function_ctrl}
+	
+	Module \texttt{ctrl} có nhiệm vụ tạo ra các tín hiệu điều khiển enable để đồng bộ hoạt động giữa các khối trong mạch. Module hoạt động như một máy trạng thái hữu hạn (FSM). Khi tín hiệu en được kích hoạt, ctrl sẽ lần lượt cho phép các khối \texttt{ham\_d}, \texttt{add\_comp}, \texttt{mem} và \texttt{tbck\_dec} hoạt động theo đúng thứ tự, cụ thể:
+	
+	- Trạng thái $S_0$: Khi \texttt{rst = 1}, FSM quay về trạng thái này, đặt biến \linebreak \texttt{count = 0}. Các tín hiệu \texttt{en\_brch}, \texttt{en\_add}, \texttt{en\_mem}, \texttt{en\_tbck} đều bằng 0. Chờ tín hiệu \texttt{en = 1} đển chuyển sang trạng thái tiếp theo.
+	
+	- Trạng thái $S_1$: Khi \texttt{en = 1}, FSM chuyển sang trạng thái này, \texttt{en\_brch = 1}, khối \texttt{ham\_d} hoạt động, tách 8 cặp bit và tính khoảng cách Hamming cho từng cặp.
+	
+	- Trạng thái $S_2$: Sau khi khối \texttt{ham\_d} tính toán xong khoảng cách Hamming của các cặp bit, trạng thái $S_1$ sẽ chuyển sang trạng thái này, khi đó \texttt{en\_add = 1}, cho phép khối \texttt{add\_comp} hoạt động.
+	
+	- Trạng thái $S_3$: Sau khi khối \texttt{add\_comp} hoạt động xong, trạng thái $S_2$ sẽ chuyển sang trạng thái này, khi đó \texttt{en\_mem = 1}, cho phép khối \texttt{add\_mem} hoạt động. Ở trạng thái này, sau mỗi chu kì \texttt{clk}, biến \texttt{count} tăng thêm 1, khi \texttt{count > 10}, FSM sẽ chuyển sang trạng thái $S_4$.
+	
+	- Trạng thái $S_4$: Khi \texttt{count > 10}, FSM chuyển sang trạng thái $S_4$, khi đó \linebreak \texttt{en\_tbck = 1}, cho phép khối \texttt{tbck\_dec} hoạt động. Khối này sẽ truy ngược lại trellis để lấy chuỗi bit đầu ra. 
+	
+	\paragraph{Đầu vào, đầu ra} \mbox{}
+	
+	Bảng mô tả các chân I/O của module \texttt{ctrl} được thể hiện ở Bảng \ref{bang22}.
+	
+	\begin{table}[h!]
+		\caption[Bảng mô tả các chân I/O của module \texttt{ctrl}]{\bfseries \fontsize{12pt}{0pt}\selectfont Bảng mô tả các chân I/O của module \texttt{ctrl}}
+		\label{bang22}
+		\centering
+		\begin{tabular}{|c|c|c|c|p{9.5cm}|}
+			\hline
+			\textbf{Tên chân} & \textbf{I/O} & \textbf{Số bit} & \textbf{Reg} & \textbf{Chức năng} \\ \hline
+			\texttt{clk} & I & 1 & & Tạo xung clock, sườn dương của xung là tín hiệu điều khiển lệnh trong mạch. \\ \hline
+			\texttt{rst} & I & 1 & & Thiết lập module về trạng thái ban đầu. \\ \hline
+			\texttt{en} & I & 1 & & Thiết lập module hoạt động. \\ \hline
+			\texttt{en\_brch} & O & 1 & Reg & Tín hiệu điều khiển khối \texttt{ham\_d} hoạt động. \\ \hline
+			\texttt{en\_add}  & O & 1 & Reg & Tín hiệu điều khiển khối \texttt{add\_comp} hoạt động. \\ \hline
+			\texttt{en\_mem}  & O & 1 & Reg & Tín hiệu điều khiển khối \texttt{mem} hoạt động. \\ \hline
+			\texttt{en\_tbck} & O & 1 & Reg & Tín hiệu điều khiển khối \texttt{tbck\_dec} hoạt động. \\ \hline
+		\end{tabular}
+	\end{table}
+	
+	\paragraph{Sơ đồ trạng thái FSM} \mbox{}
+	
+	Như đã nhắc đến trong Mục \ref{function_ctrl}, module \texttt{ctrl} hoạt động như một FSM với 5 trạng thái. Mô hình FSM được biểu diễn trên Hình \ref{hinh24}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=9cm]{fig24a.pdf}
+		\caption[Sơ đồ trạng thái FSM của module \texttt{ctrl}]{\bfseries \fontsize{12pt}{0pt}\selectfont Sơ đồ trạng thái FSM của module \texttt{ctrl}}
+		\label{hinh24}
+	\end{figure}
+	
+	\subsubsection{Module \texttt{ham\_d}}
+	
+	\paragraph{Sơ đồ khối} \mbox{}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=11.5cm]{fig25.pdf}
+		\caption[Sơ đồ khối của module \texttt{ham\_d}]{\bfseries \fontsize{12pt}{0pt}\selectfont Sơ đồ khối của module \texttt{ham\_d}}
+		\label{hinh25}
+	\end{figure}
+	
+	Sơ đồ khối của module \texttt{ham\_d} được thể hiện trong Hình \ref{hinh25}.
+	
+	\paragraph{Chức năng} \mbox{}
+	
+	Khối \texttt{ham\_d} có nhiệm vụ trích xuất và xử lý từng cặp 2 bit liên tiếp từ một dữ liệu đầu vào 16 bit, đồng thời tính toán khoảng cách Hamming giữa các cặp bit này với các mẫu tham chiếu. Nó đảm bảo rằng tại mỗi chu kỳ xử lý, bộ giải mã Viterbi nhận được đúng cặp bit cần thiết cùng các giá trị khoảng cách Hamming tương ứng, phục vụ cho quá trình lựa chọn đường đi tối ưu trong trellis. Chức năng của khối được đặc tả như sau:
+	
+	- Khi \texttt{rst = 1}, module được đưa về trạng thái khởi tạo, một bộ đếm nội \texttt{count} được đặt tại giá trị 15, tương ứng với bit cao nhất (MSB) trong chuỗi 16 bit đầu vào. Các cặp bit sau tách được gán bằng \texttt{00} và khoảng cách Hamming cũng được gán bằng \texttt{00}.
+	
+	- Khi \texttt{en\_brch = 1}, module bắt đầu hoạt động:
+	
+	+ Hai bit liên tiếp được lấy ra từ vị trí \texttt{count} và \texttt{count - 1} của dữ liệu đầu vào \texttt{data[15:0]}, bắt đầu từ MSB. Sau mỗi lần trích xuất, giá trị \texttt{count} giảm đi 2, tiến dần về LSB.
+	
+	+ Cặp bit vừa được trích xuất được đưa vào mạch tính toán nội bộ để so sánh với bốn mẫu mã hóa tham chiếu (\texttt{00}, \texttt{01}, \texttt{10}, \texttt{11}). Mỗi phép so sánh xác định số bit khác biệt (Hamming distance) giữa cặp bit và mẫu tham chiếu. Kết quả của tám phép tính (ứng với tám trạng thái trong trellis Viterbi) được xuất song song ra các đầu ra \texttt{hamd\_1} đến \texttt{hamd\_8} (mỗi đầu ra là giá trị 2 bit biểu diễn khoảng cách Hamming).
+	
+	+ Khi \texttt{count} giảm tới 2, quá trình trích xuất sẽ dừng lại để tránh truy cập ngoài phạm vi dữ liệu.
+	
+	\paragraph{Đầu vào, đầu ra} \mbox{}
+	
+	Bảng mô tả các chân I/O của module \texttt{ham\_d} được mô tả trên Bảng \ref{bang23}.
+	
+	\begin{table}[h!]
+		\caption[Bảng mô tả các chân I/O của module \texttt{ham\_d}]{\bfseries \fontsize{12pt}{0pt}\selectfont Bảng mô tả các chân I/O của module \texttt{ham\_d}}
+		\label{bang23}
+		\centering
+		\begin{tabular}{|p{2cm}|c|c|c|p{9.25cm}|}
+			\hline
+			\textbf{Tên chân} & \textbf{I/O} & \textbf{Số bit} & \textbf{Reg} & \textbf{Chức năng} \\ \hline
+			\texttt{clk} & I & 1 & & Tạo xung clock, sườn dương của xung là tín hiệu điều khiển lệnh trong mạch. \\ \hline
+			\texttt{rst} & I & 1 & & Thiết lập module về trạng thái ban đầu. \\ \hline
+			\texttt{en\_brch} & I & 1 & & Thiết lập module hoạt động. \\ \hline
+			\texttt{hamd\_1}, \texttt{hamd\_5} & O & 2 & Reg & Khoảng cách hamming giữa đầu vào và đầu ra tại nút 00. \\ \hline
+			\texttt{hamd\_2}, \texttt{hamd\_6} & O & 2 & Reg & Khoảng cách hamming giữa đầu vào và đầu ra tại nút 01. \\ \hline
+			\texttt{hamd\_3}, \texttt{hamd\_7} & O & 2 & Reg & Khoảng cách hamming giữa đầu vào và đầu ra tại nút 10. \\ \hline
+			\texttt{hamd\_4}, \texttt{hamd\_8} & O & 2 & Reg & Khoảng cách hamming giữa đầu vào và đầu ra tại nút 11. \\ \hline
+		\end{tabular}
+	\end{table}
+	
+	\paragraph{Lưu đồ thuật toán} \mbox{}
+	
+	Lưu đồ thuật toán của module \texttt{ham\_d} được biểu diễn trên Hình \ref{hinh26}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=16.25cm]{fig26.pdf}
+		\caption[Lưu đồ thuật toán của module \texttt{ham\_d}]{\bfseries \fontsize{12pt}{0pt}\selectfont Lưu đồ thuật toán của module \texttt{ham\_d}}
+		\label{hinh26}
+	\end{figure}
+	
+	\subsubsection{Module \texttt{add\_comp}}
+	
+	\paragraph{Sơ đồ khối} \mbox{}
+	
+	Sơ đồ khối của module \texttt{add\_comp} được thể hiện trong Hình \ref{hinh27}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=11.5cm]{fig27.pdf}
+		\caption[Sơ đồ khối của module \texttt{add\_comp}]{\bfseries \fontsize{12pt}{0pt}\selectfont Sơ đồ khối của module \texttt{add\_comp}}
+		\label{hinh27}
+	\end{figure}
+	
+	\paragraph{Chức năng} \mbox{}
+
+	Khối \texttt{add\_comp} thực hiện các phép cộng, so sánh và chọn đường đi sống sót trong thuật toán giải mã Viterbi. Mục tiêu của khối là cập nhật tổng tích lũy cho bốn trạng thái hiện tại của trellis: 00, 01, 10, 11, lựa chọn trạng thái trước đó tương ứng với mỗi trạng thái hiện tại dựa trên tổng tích lũy nhỏ hơn, đồng thời xác định nút có giá trị tích lũy nhỏ nhất toàn cục, để phục vụ cho việc truy vết ngược (traceback). Chức năng của khối được đặc tả như sau:
+	
+	- Khi \texttt{rst = 1}, tất cả các thanh ghi tổng tích lũy và đầu ra (\texttt{sum\_xx}, \texttt{prv\_st\_xx}) được đặt về 0. Khi \texttt{en\_add = 1}, tại mỗi cạnh lên của clk, khối thực hiện phép cộng và so sánh cho từng trạng thái:
+	
+	+ \fontsize{11pt}{0pt}\texttt{sum\_00\_new = min(hamd\_1 + sum\_00\_prev, hamd\_5 + sum\_01\_prev)}.
+	
+	+ \fontsize{11pt}{0pt}\texttt{sum\_01\_new = min(hamd\_3 + sum\_10\_prev, hamd\_7 + sum\_11\_prev)}.
+	
+	+ \fontsize{11pt}{0pt}\texttt{sum\_10\_new = min(hamd\_2 + sum\_00\_prev, hamd\_6 + sum\_01\_prev)}.
+	
+	+ \fontsize{11pt}{0pt}\texttt{sum\_11\_new = min(hamd\_4 + sum\_10\_prev, hamd\_8 + sum\_11\_prev)}.
+	
+	- Với mỗi phép so sánh, trạng thái trước tương ứng (\fontsize{12pt}{0pt}\texttt{prv\_st\_xx}) được cập nhật theo nhánh có giá trị nhỏ hơn. 
+	
+	- Sau khi cập nhật bốn tổng tích lũy, khối thực hiện phép so sánh giữa \fontsize{12pt}{0pt}\texttt{sum\_00\_new}, \texttt{sum\_01\_new}, \texttt{sum\_10\_new}, \texttt{sum\_11\_new} để tìm giá trị nhỏ nhất. \fontsize{12pt}{0pt}\texttt{sel\_node} được gán bằng mã trạng thái (2 bit) của node có tổng tích lũy nhỏ nhất. Nếu các tổng bằng nhau, thứ tự ưu tiên là: 00 > 10 > 01 > 11.
+	
+	\paragraph{Đầu vào, đầu ra} \mbox{}
+	
+	Bảng mô tả các chân I/O của module \texttt{add\_comp} được mô tả trên Bảng \ref{bang24}.
+	
+	\begin{table}[h!]
+		\caption[Bảng mô tả các chân I/O của module \texttt{add\_comp}]{\bfseries \fontsize{12pt}{0pt}\selectfont Bảng mô tả các chân I/O của module \texttt{add\_comp}}
+		\label{bang24}
+		\centering
+		\begin{tabular}{|p{2.5cm}|c|c|c|p{8.75cm}|}
+			\hline
+			\textbf{Tên chân} & \textbf{I/O} & \textbf{Số bit} & \textbf{Reg} & \textbf{Chức năng} \\ \hline
+			\texttt{clk} & I & 1 & & Tạo xung clock, sườn dương của xung là tín hiệu điều khiển lệnh trong mạch. \\ \hline
+			\texttt{rst} & I & 1 & & Thiết lập module về trạng thái ban đầu. \\ \hline
+			\texttt{en\_add} & I & 1 & & Thiết lập module hoạt động. \\ \hline
+			\texttt{hamd\_1}, \texttt{hamd\_5} & I & 2 &  & Khoảng cách hamming giữa đầu vào và đầu ra tại nút 00. \\ \hline
+			\texttt{hamd\_2}, \texttt{hamd\_6} & I & 2 &  & Khoảng cách hamming giữa đầu vào và đầu ra tại nút 01. \\ \hline
+			\texttt{hamd\_3}, \texttt{hamd\_7} & I & 2 &  & Khoảng cách hamming giữa đầu vào và đầu ra tại nút 10. \\ \hline
+			\texttt{hamd\_4}, \texttt{hamd\_8} & I & 2 &  & Khoảng cách hamming giữa đầu vào và đầu ra tại nút 11. \\ \hline
+			\texttt{prv\_st\_00} & O & 2 & Reg & Nút trước khi chuyển sang nút 00. \\ \hline
+			\texttt{prv\_st\_01} & O & 2 & Reg & Nút trước khi chuyển sang nút 01. \\ \hline
+			\texttt{prv\_st\_10} & O & 2 & Reg & Nút trước khi chuyển sang nút 10. \\ \hline
+			\texttt{prv\_st\_11} & O & 2 & Reg & Nút trước khi chuyển sang nút 11. \\ \hline
+			\texttt{sel\_node} & O & 2 & Reg & Nút có tổng khoảng cách hamming nhỏ nhất. \\ \hline
+		\end{tabular}
+	\end{table}
+	
+	\paragraph{Lưu đồ thuật toán} \mbox{}
+	
+	Lưu đồ thuật toán của module \texttt{add\_comp} được biểu diễn trên Hình \ref{hinh28}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=16cm]{fig28.pdf}
+		\caption[Lưu đồ thuật toán của module \texttt{add\_comp}]{\bfseries \fontsize{12pt}{0pt}\selectfont Lưu đồ thuật toán của module \texttt{add\_comp}}
+		\label{hinh28}
+	\end{figure}
+	
+	\subsubsection{Module \texttt{mem}}
+	
+	\paragraph{Sơ đồ khối} \mbox{}
+	
+	Sơ đồ khối của module \texttt{mem} được thể hiện trong Hình \ref{hinh29}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=11cm]{fig29.pdf}
+		\caption[Sơ đồ khối của module \texttt{mem}]{\bfseries \fontsize{12pt}{0pt}\selectfont Sơ đồ khối của module \texttt{mem}}
+		\label{hinh29}
+	\end{figure}
+	
+	\paragraph{Chức năng} \mbox{}
+	
+	Khối \texttt{mem} là bộ nhớ lưu trữ và truy xuất các trạng thái trước đó trong thuật toán Viterbi. Nó hỗ trợ quá trình traceback để tái tạo lại chuỗi bit đầu vào đã được giải mã. Khối nhận các tín hiệu trạng thái trước (\texttt{prv\_st\_00}, \texttt{prv\_st\_01}, \texttt{prv\_st\_10}, \texttt{prv\_st\_11}) từ khối \texttt{add\_comp} và lưu vào một mảng hai chiều \linebreak \texttt{trellis\_diagr[0:3][0:7]} nhằm biểu diễn sơ đồ Trellis gồm 4 nút và 8 chu kỳ thời gian. Khi đến giai đoạn truy vết ngược (traceback), khối xuất ra các trạng thái trước tương ứng (\texttt{bck\_prv\_st\_00}, \texttt{bck\_prv\_st\_01}, \texttt{bck\_prv\_st\_10}, \texttt{bck\_prv\_st\_11}) để xác định chuỗi bit tối ưu. Chức năng của khối được đặc tả như sau:
+	
+	- Khi \texttt{rst = 1}, khởi tạo \texttt{count = 0}, \texttt{trace = 7}, gán tất cả các phần tử của \texttt{trellis\_diagr} bằng \texttt{2'b00}.
+	
+	-  Khi \texttt{en\_mem = 1}, nếu \texttt{count < 8} thì ghi các giá trị \texttt{prv\_st\_xx} vào \linebreak \texttt{trellis\_diagr[*][count]}, sau đó tăng \texttt{count} lên 1. Khi \texttt{count = 8}, đọc các giá trị tại \texttt{trellis\_diagr[*][count]} và xuất ra các cổng \texttt{bck\_prv\_st\_xx}, giảm \texttt{trace} từ 7 xuống 0.
+	
+	\paragraph{Đầu vào, đầu ra} \mbox{}
+	
+	Bảng mô tả các chân I/O của module \texttt{mem} được mô tả trên Bảng \ref{bang25}.
+	
+	\begin{table}[h!]
+		\caption[Bảng mô tả các chân I/O của module \texttt{mem}]{\bfseries \fontsize{12pt}{0pt}\selectfont Bảng mô tả các chân I/O của module \texttt{mem}}
+		\label{bang25}
+		\centering
+		\begin{tabular}{|p{3.5cm}|c|c|c|p{7.75cm}|}
+			\hline
+			\textbf{Tên chân} & \textbf{I/O} & \textbf{Số bit} & \textbf{Reg} & \textbf{Chức năng} \\ \hline
+			\texttt{clk} & I & 1 & & Tạo xung clock, sườn dương của xung là tín hiệu điều khiển lệnh trong mạch. \\ \hline
+			\texttt{rst} & I & 1 & & Thiết lập module về trạng thái ban đầu. \\ \hline
+			\texttt{en\_mem} & I & 1 & & Thiết lập module hoạt động. \\ \hline
+			\texttt{prv\_st\_00} & I & 2 &  & Nút trước khi chuyển sang nút 00. \\ \hline
+			\texttt{prv\_st\_01} & I & 2 &  & Nút trước khi chuyển sang nút 01. \\ \hline
+			\texttt{prv\_st\_10} & I & 2 &  & Nút trước khi chuyển sang nút 10. \\ \hline
+			\texttt{prv\_st\_11} & I & 2 &  & Nút trước khi chuyển sang nút 11. \\ \hline
+			\texttt{bck\_prv\_st\_00} & O & 2 & Reg & Nút đi đến nút 00. \\ \hline
+			\texttt{bck\_prv\_st\_01} & O & 2 & Reg & Nút đi đến nút 01. \\ \hline
+			\texttt{bck\_prv\_st\_10} & O & 2 & Reg & Nút đi đến nút 10. \\ \hline
+			\texttt{bck\_prv\_st\_11} & O & 2 & Reg & Nút đi đến nút 11. \\ \hline
+		\end{tabular}
+	\end{table}
+	
+	\paragraph{Lưu đồ thuật toán} \mbox{}
+	
+	Lưu đồ thuật toán của module \texttt{mem} được biểu diễn trên Hình \ref{hinh210}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=15cm]{fig210.pdf}
+		\caption[Lưu đồ thuật toán của module \texttt{mem}]{\bfseries \fontsize{12pt}{0pt}\selectfont Lưu đồ thuật toán của module \texttt{mem}}
+		\label{hinh210}
+	\end{figure}
+	
+	\subsubsection{Module \texttt{tbck\_dec}}
+	
+	\paragraph{Sơ đồ khối} \mbox{}
+	
+	Sơ đồ khối của module \texttt{tbcb\_dec} được thể hiện trong Hình \ref{hinh211}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=10cm]{fig211.pdf}
+		\caption[Sơ đồ khối của module \texttt{tbck\_dec}]{\bfseries \fontsize{12pt}{0pt}\selectfont Sơ đồ khối của module \texttt{tbck\_dec}}
+		\label{hinh211}
+	\end{figure}
+	
+	\paragraph{Chức năng} \mbox{} \label{function_traceback}
+	
+	Khối \texttt{tbck\_dec} thực hiện truy vết ngược (traceback) trên sơ đồ Trellis nhằm tái tạo lại chuỗi dữ liệu gốc sau khi thuật toán Viterbi hoàn tất quá trình tính toán. Kết quả là chuỗi dữ liệu 8 bit được xuất ra qua cổng \texttt{out\_data}. Khối sử dụng FSM gồm 4 trạng thái tương ứng với các nút trong Trellis: 00 ($S_0$), 01 ($S_1$), 10 ($S_2$), 11 ($S_3$). Chức năng của khối được đặc tả như sau:
+	
+	- Khi \texttt{rst = 1}, khởi tạo toàn bộ các thanh ghi và tín hiệu về 0: \texttt{out\_data}, \texttt{count}, \texttt{sel\_node}, \texttt{sel\_bit\_out}.
+	
+	-  Khi \texttt{en\_tbck = 1}, FSM bắt đầu truy vết ngược trên trellis. Tại mỗi chu kỳ clk:
+	
+	+ Xác định trạng thái trước dựa trên \texttt{sel\_node} hiện tại.
+	
+	+ Ghi lại bit đầu vào tương ứng vào \texttt{sel\_bit\_out[count]}.
+	
+	+ Cập nhật \texttt{sel\_node} bằng giá trị trạng thái trước (\texttt{bck\_prev\_st\_xx}).
+	
+	+ Tăng biến \texttt{count} để theo dõi số bit đã truy vết.
+	
+	- Khi \texttt{count = 8} (đã truy ngược đủ 8 bước):
+	
+	+ Gán \texttt{out\_data = sel\_bit\_out} (chuỗi dữ liệu đã giải mã).
+	
+	+ Reset \texttt{count} để sẵn sàng cho chu kỳ kế tiếp.
+	
+	\paragraph{Đầu vào, đầu ra} \mbox{}
+	
+	Bảng mô tả các chân I/O của module \texttt{tbck\_dec} được mô tả trên Bảng \ref{bang26}.
+	
+	\begin{table}[h!]
+		\caption[Bảng mô tả các chân I/O của module \texttt{tbck\_dec}]{\bfseries \fontsize{12pt}{0pt}\selectfont Bảng mô tả các chân I/O của module \texttt{tbck\_dec}}
+		\label{bang26}
+		\centering
+		\begin{tabular}{|p{3.5cm}|c|c|c|p{7.75cm}|}
+			\hline
+			\textbf{Tên chân} & \textbf{I/O} & \textbf{Số bit} & \textbf{Reg} & \textbf{Chức năng} \\ \hline
+			\texttt{clk} & I & 1 & & Tạo xung clock, sườn dương của xung là tín hiệu điều khiển lệnh trong mạch. \\ \hline
+			\texttt{rst} & I & 1 & & Thiết lập module về trạng thái ban đầu. \\ \hline
+			\texttt{en\_tbck} & I & 1 & & Thiết lập module hoạt động. \\ \hline
+			\texttt{bck\_prv\_st\_00} & I & 2 &  & Nút đi đến nút 00. \\ \hline
+			\texttt{bck\_prv\_st\_01} & I & 2 &  & Nút đi đến nút 01. \\ \hline
+			\texttt{bck\_prv\_st\_10} & I & 2 &  & Nút đi đến nút 10. \\ \hline
+			\texttt{bck\_prv\_st\_11} & I & 2 &  & Nút đi đến nút 11. \\ \hline
+			\texttt{out\_data} & O & 8 & Reg & 8 bit data sau giải mã. \\ \hline
+		\end{tabular}
+		
+	\end{table}
+	
+	\paragraph{Sơ đồ trạng thái FSM} \mbox{}
+	
+	Như đã nhắc đến trong Mục \ref{function_traceback}, module \texttt{tbck\_dec} hoạt động như một FSM với 4 trạng thái. Mô hình FSM được biểu diễn trên Hình \ref{hinh212}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=11cm]{fig212.pdf}
+		\caption[Sơ đồ trạng thái FSM của module \texttt{tbck\_dec}]{\bfseries \fontsize{12pt}{0pt}\selectfont Sơ đồ trạng thái FSM của module \texttt{tbck\_dec}}
+		\label{hinh212}
+	\end{figure}
+	
+	\newpage
+	
+	\phantomsection\addcontentsline{toc}{section}{\numberline {}TÀI LIỆU THAM KHẢO}
+	\renewcommand{\refname}{TÀI LIỆU THAM KHẢO}
+	\nocite{*}
+	\bibliographystyle{IEEEtran}
+	\bibliography{Ref}
+\end{document}

@@ -1,0 +1,8 @@
+\thispagestyle {empty}
+\contentsline {section}{\hbox to\@tempdima {\hfil } DANH MỤC KÝ HIỆU VÀ CHỮ VIẾT TẮT}{i}{section*.3}%
+\contentsline {section}{\hbox to\@tempdima {\hfil }DANH MỤC HÌNH VẼ}{ii}{section*.4}%
+\contentsline {section}{\hbox to\@tempdima {\hfil } DANH MỤC BẢNG BIỂU}{iii}{section*.5}%
+\contentsline {section}{\hbox to\@tempdima {\hfil }CHƯƠNG 1. CƠ SỞ LÝ THUYẾT}{1}{section*.5}%
+\contentsline {subsection}{\numberline {1.1}Tổng quan về mã tích chập}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Thuật toán giải mã Viterbi}{2}{subsection.1.2}%
+\contentsline {section}{\hbox to\@tempdima {\hfil }TÀI LIỆU THAM KHẢO}{3}{section*.6}%
