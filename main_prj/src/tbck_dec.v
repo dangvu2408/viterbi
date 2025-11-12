@@ -69,8 +69,9 @@ module mem (clk, rst, en_tbck, bck_prv_st_00, bck_prv_st_01,
                 in_bit <= 1;
             end
 
-            sel_bit_out[count] = in_bit;
         endcase
+
+        sel_bit_out[count] <= in_bit;
     end
 
     always @ (posedge clk) begin 

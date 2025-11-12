@@ -1,0 +1,126 @@
+m255
+K4
+z2
+!s11f vlog 2024.1 2024.02, Feb  1 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL
+vadd_comp
+2D:/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v
+Z0 !s110 1762941158
+!i10b 1
+!s100 F8_G8agz01Q^ECFXa?2H72
+IY7odzBl4KZVNH2TJnJmUn2
+Z1 dD:/backup_later/ET4340/prj/main_prj/main_prj/src
+w1762940671
+8D:/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v
+FD:/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v
+!i122 20
+L0 1 109
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 OL;L;2024.1;79
+r1
+!s85 0
+31
+Z4 !s108 1762941158.000000
+!s107 D:/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v|
+!i113 0
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z6 tCvgOpt 0
+vctrl
+2D:/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v
+R0
+!i10b 1
+!s100 1DZMfHd;S;P@63FcHGg;i1
+I9ihim:Fl=mRjL1dR09DBU3
+R1
+w1762940696
+8D:/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v
+FD:/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v
+!i122 21
+L0 1 62
+R2
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v|
+!i113 0
+R5
+R6
+vham_d
+2D:/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v
+R0
+!i10b 1
+!s100 P?;DORC03D:CiPkQ>z1f`0
+IKbFQT^6JELn^RJbj?2;K02
+R1
+w1762940838
+8D:/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v
+FD:/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v
+!i122 22
+L0 1 67
+R2
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v|
+!i113 0
+R5
+R6
+vmem
+2D:/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v
+R0
+!i10b 1
+!s100 Eb;O2Dc73VRjK;eS5;]I40
+I^<e7:fE`i^8IO5Yz7hSFB3
+R1
+w1762941154
+8D:/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v
+FD:/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v
+!i122 24
+L0 1 83
+R2
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v|
+!i113 0
+R5
+R6
+vviterbi_decoder
+2D:/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder.v
+R0
+!i10b 1
+!s100 dz6]K7`9m:3OlAYmXiXkQ1
+IBJbPL[DU^^b9ZZcDgVD`>1
+R1
+w1762941076
+8D:/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder.v
+FD:/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder.v
+!i122 25
+L0 1 70
+R2
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder.v|
+!i113 0
+R5
+R6

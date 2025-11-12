@@ -2,9 +2,9 @@ module ham_d (clk, rst, en_brch, data, hamd_1, hamd_2,
                                        hamd_3, hamd_4, 
                                        hamd_5, hamd_6, 
                                        hamd_7, hamd_8);
-    input        clk, rst, en_brch;
-    input  [15:0] data;
-    output [1:0]  hamd_1, hamd_2, hamd_3, hamd_4, hamd_5, hamd_6, hamd_7, hamd_8;
+    input            clk, rst, en_brch;
+    input     [15:0] data;
+    output reg [1:0] hamd_1, hamd_2, hamd_3, hamd_4, hamd_5, hamd_6, hamd_7, hamd_8;
 
     reg [3:0]    count;        // counter for extract bit from MSB to LSB
     reg [1:0]    data_rx;      // data after extract (2 bit)

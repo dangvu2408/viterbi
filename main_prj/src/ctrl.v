@@ -17,7 +17,7 @@ module ctrl (clk, rst, en, en_brch, en_add, en_mem, en_tbck);
         end else begin
             if (en == 1) begin
                 count <= count + 1; 
-                state <= nxt_state;
+                state <= next_state;
             end else begin
                 count <= count;
                 state <= state; 

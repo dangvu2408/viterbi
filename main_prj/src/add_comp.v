@@ -3,7 +3,7 @@ module add_comp (clk, rst, en_add, hamd_1, hamd_2,
                                    hamd_5, hamd_6, 
                                    hamd_7, hamd_8, 
                                    prv_st_00, prv_st_01, 
-                                   prv_st_10, prv_st_10, 
+                                   prv_st_10, prv_st_11, 
                                    sel_node);
     input            clk, rst, en_add;
     input      [1:0] hamd_1, hamd_2, hamd_3, hamd_4, hamd_5, hamd_6, hamd_7, hamd_8;

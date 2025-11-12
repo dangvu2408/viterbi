@@ -1,5 +1,5 @@
 module mem (clk, rst, en_mem, prv_st_00, prv_st_01, 
-                              prv_st_10, prv_st_10, 
+                              prv_st_10, prv_st_11, 
                               bck_prv_st_00, bck_prv_st_01,
                               bck_prv_st_10, bck_prv_st_11);
     input            clk, rst, en_mem;
