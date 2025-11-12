@@ -37,8 +37,8 @@ end
 initial
 begin
      index <= 1;
-     $readmemb("/mnt/hgfs/VMshare/input.txt", in_ram); 
-     file_outputs = $fopen("/mnt/hgfs/VMshare/output_result.txt", "w");
+     $readmemb("input.txt", in_ram); 
+     file_outputs = $fopen("output_result.txt", "w");
      i_data = in_ram[0];
 end
 
