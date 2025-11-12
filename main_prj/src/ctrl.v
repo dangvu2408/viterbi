@@ -11,7 +11,7 @@ module ctrl (clk, rst, en, en_brch, en_add, en_mem, en_tbck);
     localparam [2:0] s4 = 3'b100; // traceback
 
     always @ (posedge clk or posedge rst) begin
-        if (rst == 0) begin
+        if (rst) begin
             count <= 0;
             state <= s0;
         end else begin
