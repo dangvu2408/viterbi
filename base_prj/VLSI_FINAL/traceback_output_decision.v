@@ -111,7 +111,7 @@ end
 
 always @ (posedge clk)
 begin
-    if (count == 8) // da du 8 bit 
+    if (count == 8) 
         begin
             count <= 0;
             o_data <= select_bit_out;

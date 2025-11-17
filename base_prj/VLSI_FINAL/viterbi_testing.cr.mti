@@ -1,0 +1,43 @@
+D:/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module mem
+
+Top level modules:
+	mem
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module tbck_dec
+
+Top level modules:
+	tbck_dec
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module ham_d
+
+Top level modules:
+	ham_d
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module ctrl
+
+Top level modules:
+	ctrl
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder_tb.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder_tb.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module viterbi_decoder_tb
+
+Top level modules:
+	viterbi_decoder_tb
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module add_comp
+
+Top level modules:
+	add_comp
+
+} {} {}}

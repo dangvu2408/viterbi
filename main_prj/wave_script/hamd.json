@@ -1,0 +1,16 @@
+{signal: [
+        {name: 'clk',        wave: 'p..........'},
+        {name: 'rst',        wave: 'lpl........'},
+        {name: 'en_brch',    wave: 'l.pl.......'},
+        {name: 'data',       wave: 'x=.........'},
+        {name: 'data_rx',    wave: '=.=========', data: ["0", "rx1", "rx2", "rx3", "rx4", "rx5", "rx6", "rx7", "rx8", "..."]},
+        {name: 'hamd_1',     wave: '=.=........', data: ["0"]},
+        {name: 'hamd_2',     wave: '=.=........', data: ["0"]},
+        {name: 'hamd_3',     wave: '=.=........', data: ["0"]},
+        {name: 'hamd_4',     wave: '=.=........', data: ["0"]},
+        {name: 'hamd_5',     wave: '=.=........', data: ["0"]},
+        {name: 'hamd_6',     wave: '=.=........', data: ["0"]},
+        {name: 'hamd_7',     wave: '=.=........', data: ["0"]},
+        {name: 'hamd_8',     wave: '=.=........', data: ["0"]},
+    ],
+}

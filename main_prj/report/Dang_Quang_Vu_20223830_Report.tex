@@ -109,7 +109,7 @@
 			\end{minipage}
 			\\
 		\end{tabular}
-
+		
 		\vspace{0.75cm}
 		\vspace{0.75cm}
 		\begin{table}[H]
@@ -157,7 +157,7 @@
 	{\let\oldnumberline\numberline
 		\renewcommand{\numberline}{Hình~\oldnumberline}
 		\listoffigures} 
-		\phantomsection\addcontentsline{toc}{section}{\numberline {}DANH MỤC HÌNH VẼ}
+	\phantomsection\addcontentsline{toc}{section}{\numberline {}DANH MỤC HÌNH VẼ}
 	\newpage
 	
 	
@@ -165,7 +165,7 @@
 	{\let\oldnumberline\numberline
 		\renewcommand{\numberline}{Bảng~\oldnumberline}
 		\listoftables}
-		\phantomsection\addcontentsline{toc}{section}{\numberline {} DANH MỤC BẢNG BIỂU}
+	\phantomsection\addcontentsline{toc}{section}{\numberline {} DANH MỤC BẢNG BIỂU}
 	\newpage
 	
 	
@@ -193,7 +193,7 @@
 	Ta xét một đầu vào cụ thể, chẳng hạn $m = \{1, 1, 0, 0, 1, 0, 1, 0\}$, khi đó ta sẽ biểu diễn được dưới dạng đa thức $m(x) = 1 + x + x^4 + x^6$. Với mã tích chập như trong Hình \ref{hinh11} thì ta có hai đa thức sinh $g^{(1)}(x) = 1 + x^2$ và $g^{(2)}(x) = 1 + x + x^2$. Khi đó đầu ra dạng đa thức là:
 	\begin{center}
 		$c^{(1)}(x) = m(x).g^{(1)}(x) = (1 + x + x^4 + x^6)(1 + x^2) = 1 + x + x^2 + x^3 + x^4 + x^8$
-	
+		
 		$c^{(2)}(x) = m(x).g^{(2)}(x) = (1 + x + x^4 + x^6)(1 + x + x^2) = 1 + x^3 + x^4 + x^5 + x^7 + x^8$
 	\end{center}
 	
@@ -398,7 +398,7 @@
 	\paragraph{Sơ đồ khối} \mbox{}
 	
 	Sơ đồ khối của module \texttt{viterbi\_decoder} được thể hiện trong Hình \ref{hinh21}.
-	 
+	
 	\begin{figure}[!ht]
 		\centering
 		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=9cm]{fig21.pdf}
@@ -509,9 +509,20 @@
 	
 	\begin{figure}[!ht]
 		\centering
-		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=9cm]{fig24a.pdf}
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=8.5cm]{fig24a.pdf}
 		\caption[Sơ đồ trạng thái FSM của module \texttt{ctrl}]{\bfseries \fontsize{12pt}{0pt}\selectfont Sơ đồ trạng thái FSM của module \texttt{ctrl}}
 		\label{hinh24}
+	\end{figure}
+	
+	\paragraph{Dạng sóng tín hiệu} \mbox{}
+	
+	Dạng sóng của các tín hiệu trong module \texttt{ctrl} được biểu diễn trên Hình \ref{ctrlwave}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=15.5cm]{ctrl_wave.pdf}
+		\caption[Dạng sóng của các tín hiệu trong module \texttt{ctrl}]{\bfseries \fontsize{12pt}{0pt}\selectfont Dạng sóng của các tín hiệu trong module \texttt{ctrl}}
+		\label{ctrlwave}
 	\end{figure}
 	
 	\subsubsection{Module \texttt{ham\_d}}
@@ -573,6 +584,17 @@
 		\label{hinh26}
 	\end{figure}
 	
+	\paragraph{Dạng sóng tín hiệu} \mbox{}
+	
+	Dạng sóng của các tín hiệu trong module \texttt{ctrl} được biểu diễn trên Hình \ref{hamdwave}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=12cm]{hamd_wave.pdf}
+		\caption[Dạng sóng của các tín hiệu trong module \texttt{ham\_d}]{\bfseries \fontsize{12pt}{0pt}\selectfont Dạng sóng của các tín hiệu trong module \texttt{ham\_d}}
+		\label{hamdwave}
+	\end{figure}
+	
 	\subsubsection{Module \texttt{add\_comp}}
 	
 	\paragraph{Sơ đồ khối} \mbox{}
@@ -587,7 +609,7 @@
 	\end{figure}
 	
 	\paragraph{Chức năng} \mbox{}
-
+	
 	Khối \texttt{add\_comp} thực hiện các phép cộng, so sánh và chọn đường đi sống sót trong thuật toán giải mã Viterbi. Mục tiêu của khối là cập nhật tổng tích lũy cho bốn trạng thái hiện tại của trellis: 00, 01, 10, 11, lựa chọn trạng thái trước đó tương ứng với mỗi trạng thái hiện tại dựa trên tổng tích lũy nhỏ hơn, đồng thời xác định nút có giá trị tích lũy nhỏ nhất toàn cục, để phục vụ cho việc truy vết ngược (traceback). Chức năng của khối được đặc tả như sau:
 	
 	- Khi \texttt{rst = 1}, tất cả các thanh ghi tổng tích lũy và đầu ra (\texttt{sum\_xx}, \texttt{prv\_st\_xx}) được đặt về 0. Khi \texttt{en\_add = 1}, tại mỗi cạnh lên của clk, khối thực hiện phép cộng và so sánh cho từng trạng thái:
@@ -766,6 +788,31 @@
 		\caption[Sơ đồ trạng thái FSM của module \texttt{tbck\_dec}]{\bfseries \fontsize{12pt}{0pt}\selectfont Sơ đồ trạng thái FSM của module \texttt{tbck\_dec}}
 		\label{hinh212}
 	\end{figure}
+	
+	\paragraph{Dạng sóng tín hiệu} \mbox{}
+	
+	Dạng sóng của các tín hiệu trong module \texttt{ctrl} được biểu diễn trên Hình \ref{tbckwave}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=12cm]{tbck_wave.pdf}
+		\caption[Dạng sóng của các tín hiệu trong module \texttt{tbck\_dec}]{\bfseries \fontsize{12pt}{0pt}\selectfont Dạng sóng của các tín hiệu trong module \texttt{tbck\_dec}}
+		\label{tbckwave}
+	\end{figure}
+	
+	\newpage
+	
+	\section*{CHƯƠNG 3. KẾT QUẢ MÔ PHỎNG}
+	\addcontentsline{toc}{section}{\numberline{}CHƯƠNG 3. KẾT QUẢ MÔ PHỎNG}
+	\setcounter{section}{3}
+	\setcounter{subsection}{0}
+	\setcounter{figure}{0}
+	\setcounter{table}{0}
+	\setcounter{equation}{0}
+	
+	\subsection{Yêu cầu thông số kỹ thuật}
+	
+	Bộ giải mã Viterbi được thiết kế với các thông số cơ bản sau:
 	
 	\newpage
 	

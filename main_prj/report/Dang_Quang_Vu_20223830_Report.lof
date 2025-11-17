@@ -15,11 +15,14 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Sơ đồ nối dây bên trong của module \texttt {viterbi\_decoder}}}{9}{figure.caption.24}%
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Sơ đồ khối của module \texttt {ctrl}}}{10}{figure.caption.25}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Sơ đồ trạng thái FSM của module \texttt {ctrl}}}{11}{figure.caption.27}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Sơ đồ khối của module \texttt {ham\_d}}}{12}{figure.caption.28}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Lưu đồ thuật toán của module \texttt {ham\_d}}}{13}{figure.caption.30}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Sơ đồ khối của module \texttt {add\_comp}}}{14}{figure.caption.31}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Lưu đồ thuật toán của module \texttt {add\_comp}}}{16}{figure.caption.33}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Sơ đồ khối của module \texttt {mem}}}{16}{figure.caption.34}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Lưu đồ thuật toán của module \texttt {mem}}}{18}{figure.caption.36}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Sơ đồ khối của module \texttt {tbck\_dec}}}{18}{figure.caption.37}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Sơ đồ trạng thái FSM của module \texttt {tbck\_dec}}}{19}{figure.caption.39}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Dạng sóng của các tín hiệu trong module \texttt {ctrl}}}{11}{figure.caption.28}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Sơ đồ khối của module \texttt {ham\_d}}}{12}{figure.caption.29}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Lưu đồ thuật toán của module \texttt {ham\_d}}}{14}{figure.caption.31}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Dạng sóng của các tín hiệu trong module \texttt {ham\_d}}}{14}{figure.caption.32}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Sơ đồ khối của module \texttt {add\_comp}}}{15}{figure.caption.33}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Lưu đồ thuật toán của module \texttt {add\_comp}}}{17}{figure.caption.35}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Sơ đồ khối của module \texttt {mem}}}{17}{figure.caption.36}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Lưu đồ thuật toán của module \texttt {mem}}}{19}{figure.caption.38}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Sơ đồ khối của module \texttt {tbck\_dec}}}{19}{figure.caption.39}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Sơ đồ trạng thái FSM của module \texttt {tbck\_dec}}}{20}{figure.caption.41}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Dạng sóng của các tín hiệu trong module \texttt {tbck\_dec}}}{21}{figure.caption.42}%

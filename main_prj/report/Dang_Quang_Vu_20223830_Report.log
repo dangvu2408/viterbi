@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.4.20)  5 NOV 2025 01:06
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.4.20)  17 NOV 2025 19:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1019,16 +1019,15 @@ Overfull \hbox (11.64935pt too wide) in paragraph at lines 96--97
 
 
 ] [1]
-(Dang_Quang_Vu_20223830_Report.lof)
+(Dang_Quang_Vu_20223830_Report.lof [2])
 \tf@lof=\write6
 \openout6 = `Dang_Quang_Vu_20223830_Report.lof'.
 
- [2] (Dang_Quang_Vu_20223830_Report.lot)
+ [3] (Dang_Quang_Vu_20223830_Report.lot)
 \tf@lot=\write7
 \openout7 = `Dang_Quang_Vu_20223830_Report.lot'.
 
-
-[3]
+[4]
 File: fig11a.pdf Graphic file (type pdf)
 <use fig11a.pdf>
  [1]
@@ -1116,154 +1115,170 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [10]
 File: fig24a.pdf Graphic file (type pdf)
 <use fig24a.pdf>
+File: ctrl_wave.pdf Graphic file (type pdf)
+<use ctrl_wave.pdf>
 File: fig25.pdf Graphic file (type pdf)
 <use fig25.pdf>
- [11]
-Underfull \hbox (badness 10000) in paragraph at lines 558--558
+ [11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 569--569
 []|\TU/CourierNew(0)/m/n/13 hamd_1\TU/TimesNewRoman(0)/m/n/13 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 559--559
+Underfull \hbox (badness 10000) in paragraph at lines 570--570
 []|\TU/CourierNew(0)/m/n/13 hamd_2\TU/TimesNewRoman(0)/m/n/13 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 560--560
+Underfull \hbox (badness 10000) in paragraph at lines 571--571
 []|\TU/CourierNew(0)/m/n/13 hamd_3\TU/TimesNewRoman(0)/m/n/13 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 561--561
+Underfull \hbox (badness 10000) in paragraph at lines 572--572
 []|\TU/CourierNew(0)/m/n/13 hamd_4\TU/TimesNewRoman(0)/m/n/13 ,
  []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: fig26.pdf Graphic file (type pdf)
 <use fig26.pdf>
 
-Overfull \hbox (7.11316pt too wide) in paragraph at lines 571--572
+Overfull \hbox (7.11316pt too wide) in paragraph at lines 582--583
  [][] 
  []
 
+File: hamd_wave.pdf Graphic file (type pdf)
+<use hamd_wave.pdf>
 File: fig27.pdf Graphic file (type pdf)
 <use fig27.pdf>
-[12] [13]
-Overfull \hbox (4.45114pt too wide) in paragraph at lines 593--594
+
+Overfull \hbox (4.45114pt too wide) in paragraph at lines 615--616
 []\TU/TimesNewRoman(0)/m/n/13 - Khi \TU/CourierNew(0)/m/n/13 rst = 1\TU/TimesNe
 wRoman(0)/m/n/13 , tất cả các thanh ghi tổng tích lũy và đầu ra (\TU/CourierNew
 (0)/m/n/13 sum_xx\TU/TimesNewRoman(0)/m/n/13 , \TU/CourierNew(0)/m/n/13 prv_st_
 xx\TU/TimesNewRoman(0)/m/n/13 )
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 621--621
+[13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 643--643
 []|\TU/CourierNew(0)/m/n/13 hamd_1\TU/TimesNewRoman(0)/m/n/13 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 622--622
+Underfull \hbox (badness 10000) in paragraph at lines 644--644
 []|\TU/CourierNew(0)/m/n/13 hamd_2\TU/TimesNewRoman(0)/m/n/13 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 623--623
+Underfull \hbox (badness 10000) in paragraph at lines 645--645
 []|\TU/CourierNew(0)/m/n/13 hamd_3\TU/TimesNewRoman(0)/m/n/13 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 624--624
+Underfull \hbox (badness 10000) in paragraph at lines 646--646
 []|\TU/CourierNew(0)/m/n/13 hamd_4\TU/TimesNewRoman(0)/m/n/13 ,
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14]
 File: fig28.pdf Graphic file (type pdf)
 <use fig28.pdf>
 File: fig29.pdf Graphic file (type pdf)
 <use fig29.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 659--660
+Underfull \hbox (badness 10000) in paragraph at lines 681--682
 \TU/CourierNew(0)/m/n/12 prv_st_11\TU/TimesNewRoman(0)/m/n/13 ) từ khối \TU/Cou
 rierNew(0)/m/n/12 add_comp \TU/TimesNewRoman(0)/m/n/13 và lưu vào một mảng hai 
 chiều
  []
 
 [15]
-Underfull \hbox (badness 2005) in paragraph at lines 663--664
+Underfull \hbox (badness 2005) in paragraph at lines 685--686
 []\TU/TimesNewRoman(0)/m/n/13 - Khi \TU/CourierNew(0)/m/n/12 en_mem = 1\TU/Time
 sNewRoman(0)/m/n/13 , nếu \TU/CourierNew(0)/m/n/12 count < 8 \TU/TimesNewRoman(
 0)/m/n/13 thì ghi các giá trị \TU/CourierNew(0)/m/n/12 prv_st_xx \TU/TimesNewRo
 man(0)/m/n/13 vào
  []
 
-[16]
-Overfull \hbox (1.83186pt too wide) in paragraph at lines 683--683
+
+Overfull \hbox (1.83186pt too wide) in paragraph at lines 705--705
 []|\TU/CourierNew(0)/m/n/13 bck_prv_st_00| 
  []
 
 
-Overfull \hbox (1.83186pt too wide) in paragraph at lines 684--684
+Overfull \hbox (1.83186pt too wide) in paragraph at lines 706--706
 []|\TU/CourierNew(0)/m/n/13 bck_prv_st_01| 
  []
 
 
-Overfull \hbox (1.83186pt too wide) in paragraph at lines 685--685
+Overfull \hbox (1.83186pt too wide) in paragraph at lines 707--707
 []|\TU/CourierNew(0)/m/n/13 bck_prv_st_10| 
  []
 
 
-Overfull \hbox (1.83186pt too wide) in paragraph at lines 686--686
+Overfull \hbox (1.83186pt too wide) in paragraph at lines 708--708
 []|\TU/CourierNew(0)/m/n/13 bck_prv_st_11| 
  []
+
+[16]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: fig210.pdf Graphic file (type pdf)
 <use fig210.pdf>
+[17]
 File: fig211.pdf Graphic file (type pdf)
 <use fig211.pdf>
-[17] [18]
-Overfull \hbox (1.83186pt too wide) in paragraph at lines 750--750
+ [18]
+Overfull \hbox (1.83186pt too wide) in paragraph at lines 772--772
 []|\TU/CourierNew(0)/m/n/13 bck_prv_st_00| 
  []
 
 
-Overfull \hbox (1.83186pt too wide) in paragraph at lines 751--751
+Overfull \hbox (1.83186pt too wide) in paragraph at lines 773--773
 []|\TU/CourierNew(0)/m/n/13 bck_prv_st_01| 
  []
 
 
-Overfull \hbox (1.83186pt too wide) in paragraph at lines 752--752
+Overfull \hbox (1.83186pt too wide) in paragraph at lines 774--774
 []|\TU/CourierNew(0)/m/n/13 bck_prv_st_10| 
  []
 
 
-Overfull \hbox (1.83186pt too wide) in paragraph at lines 753--753
+Overfull \hbox (1.83186pt too wide) in paragraph at lines 775--775
 []|\TU/CourierNew(0)/m/n/13 bck_prv_st_11| 
  []
 
+[19]
 File: fig212.pdf Graphic file (type pdf)
 <use fig212.pdf>
-[19] (Dang_Quang_Vu_20223830_Report.bbl) [20]
+File: tbck_wave.pdf Graphic file (type pdf)
+<use tbck_wave.pdf>
+ [20] [21] (Dang_Quang_Vu_20223830_Report.bbl) [22]
 (Dang_Quang_Vu_20223830_Report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-Package rerunfilecheck Info: File `Dang_Quang_Vu_20223830_Report.out' has not c
-hanged.
-(rerunfilecheck)             Checksum: 3ECE2EC0185A21FEF0B5D3D37BAE2EB0;2834.
+
+
+Package rerunfilecheck Warning: File `Dang_Quang_Vu_20223830_Report.out' has ch
+anged.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Dang_Quang_Vu_20223830_Report.out':
+
+(rerunfilecheck)             Before: 8B488432967C9F8D5D8D43E1AC986DE8;2834
+(rerunfilecheck)             After:  DFA8F4284FB4493756855372CA960A75;3273.
  ) 
 Here is how much of TeX's memory you used:
- 27490 strings out of 409617
- 544536 string characters out of 5778276
- 1938191 words of memory out of 5000000
- 49107 multiletter control sequences out of 15000+600000
- 575025 words of font info for 115 fonts, out of 8000000 for 9000
+ 27522 strings out of 409617
+ 545197 string characters out of 5778276
+ 1944191 words of memory out of 5000000
+ 49135 multiletter control sequences out of 15000+600000
+ 575033 words of font info for 116 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  108i,11n,107p,807b,515s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Dang_Quang_Vu_20223830_Report.pdf (27 pages).
+Output written on Dang_Quang_Vu_20223830_Report.pdf (30 pages).

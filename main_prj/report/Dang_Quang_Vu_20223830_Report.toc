@@ -1,7 +1,7 @@
 \thispagestyle {empty}
 \contentsline {section}{\hbox to\@tempdima {\hfil } DANH MỤC KÝ HIỆU VÀ CHỮ VIẾT TẮT}{i}{section*.3}%
-\contentsline {section}{\hbox to\@tempdima {\hfil }DANH MỤC HÌNH VẼ}{ii}{section*.5}%
-\contentsline {section}{\hbox to\@tempdima {\hfil } DANH MỤC BẢNG BIỂU}{iii}{section*.6}%
+\contentsline {section}{\hbox to\@tempdima {\hfil }DANH MỤC HÌNH VẼ}{iii}{section*.5}%
+\contentsline {section}{\hbox to\@tempdima {\hfil } DANH MỤC BẢNG BIỂU}{iv}{section*.6}%
 \contentsline {section}{\hbox to\@tempdima {\hfil }CHƯƠNG 1. CƠ SỞ LÝ THUYẾT}{1}{section*.6}%
 \contentsline {subsection}{\numberline {1.1}Tổng quan về mã tích chập}{1}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Thuật toán giải mã Viterbi}{3}{subsection.1.2}%
@@ -18,24 +18,29 @@
 \contentsline {paragraph}{\numberline {2.2.2.2}Chức năng}{10}{paragraph.2.2.2.2}%
 \contentsline {paragraph}{\numberline {2.2.2.3}Đầu vào, đầu ra}{10}{paragraph.2.2.2.3}%
 \contentsline {paragraph}{\numberline {2.2.2.4}Sơ đồ trạng thái FSM}{10}{paragraph.2.2.2.4}%
-\contentsline {subsubsection}{\numberline {2.2.3}Module \texttt {ham\_d}}{11}{subsubsection.2.2.3}%
-\contentsline {paragraph}{\numberline {2.2.3.1}Sơ đồ khối}{11}{paragraph.2.2.3.1}%
-\contentsline {paragraph}{\numberline {2.2.3.2}Chức năng}{11}{paragraph.2.2.3.2}%
-\contentsline {paragraph}{\numberline {2.2.3.3}Đầu vào, đầu ra}{12}{paragraph.2.2.3.3}%
-\contentsline {paragraph}{\numberline {2.2.3.4}Lưu đồ thuật toán}{12}{paragraph.2.2.3.4}%
-\contentsline {subsubsection}{\numberline {2.2.4}Module \texttt {add\_comp}}{12}{subsubsection.2.2.4}%
-\contentsline {paragraph}{\numberline {2.2.4.1}Sơ đồ khối}{12}{paragraph.2.2.4.1}%
+\contentsline {paragraph}{\numberline {2.2.2.5}Dạng sóng tín hiệu}{11}{paragraph.2.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.3}Module \texttt {ham\_d}}{12}{subsubsection.2.2.3}%
+\contentsline {paragraph}{\numberline {2.2.3.1}Sơ đồ khối}{12}{paragraph.2.2.3.1}%
+\contentsline {paragraph}{\numberline {2.2.3.2}Chức năng}{12}{paragraph.2.2.3.2}%
+\contentsline {paragraph}{\numberline {2.2.3.3}Đầu vào, đầu ra}{13}{paragraph.2.2.3.3}%
+\contentsline {paragraph}{\numberline {2.2.3.4}Lưu đồ thuật toán}{13}{paragraph.2.2.3.4}%
+\contentsline {paragraph}{\numberline {2.2.3.5}Dạng sóng tín hiệu}{13}{paragraph.2.2.3.5}%
+\contentsline {subsubsection}{\numberline {2.2.4}Module \texttt {add\_comp}}{13}{subsubsection.2.2.4}%
+\contentsline {paragraph}{\numberline {2.2.4.1}Sơ đồ khối}{13}{paragraph.2.2.4.1}%
 \contentsline {paragraph}{\numberline {2.2.4.2}Chức năng}{13}{paragraph.2.2.4.2}%
-\contentsline {paragraph}{\numberline {2.2.4.3}Đầu vào, đầu ra}{14}{paragraph.2.2.4.3}%
+\contentsline {paragraph}{\numberline {2.2.4.3}Đầu vào, đầu ra}{15}{paragraph.2.2.4.3}%
 \contentsline {paragraph}{\numberline {2.2.4.4}Lưu đồ thuật toán}{15}{paragraph.2.2.4.4}%
 \contentsline {subsubsection}{\numberline {2.2.5}Module \texttt {mem}}{15}{subsubsection.2.2.5}%
 \contentsline {paragraph}{\numberline {2.2.5.1}Sơ đồ khối}{15}{paragraph.2.2.5.1}%
 \contentsline {paragraph}{\numberline {2.2.5.2}Chức năng}{15}{paragraph.2.2.5.2}%
-\contentsline {paragraph}{\numberline {2.2.5.3}Đầu vào, đầu ra}{17}{paragraph.2.2.5.3}%
+\contentsline {paragraph}{\numberline {2.2.5.3}Đầu vào, đầu ra}{16}{paragraph.2.2.5.3}%
 \contentsline {paragraph}{\numberline {2.2.5.4}Lưu đồ thuật toán}{17}{paragraph.2.2.5.4}%
-\contentsline {subsubsection}{\numberline {2.2.6}Module \texttt {tbck\_dec}}{17}{subsubsection.2.2.6}%
-\contentsline {paragraph}{\numberline {2.2.6.1}Sơ đồ khối}{17}{paragraph.2.2.6.1}%
-\contentsline {paragraph}{\numberline {2.2.6.2}Chức năng}{17}{paragraph.2.2.6.2}%
+\contentsline {subsubsection}{\numberline {2.2.6}Module \texttt {tbck\_dec}}{18}{subsubsection.2.2.6}%
+\contentsline {paragraph}{\numberline {2.2.6.1}Sơ đồ khối}{18}{paragraph.2.2.6.1}%
+\contentsline {paragraph}{\numberline {2.2.6.2}Chức năng}{18}{paragraph.2.2.6.2}%
 \contentsline {paragraph}{\numberline {2.2.6.3}Đầu vào, đầu ra}{19}{paragraph.2.2.6.3}%
-\contentsline {paragraph}{\numberline {2.2.6.4}Sơ đồ trạng thái FSM}{19}{paragraph.2.2.6.4}%
-\contentsline {section}{\hbox to\@tempdima {\hfil }TÀI LIỆU THAM KHẢO}{20}{section*.40}%
+\contentsline {paragraph}{\numberline {2.2.6.4}Sơ đồ trạng thái FSM}{20}{paragraph.2.2.6.4}%
+\contentsline {paragraph}{\numberline {2.2.6.5}Dạng sóng tín hiệu}{20}{paragraph.2.2.6.5}%
+\contentsline {section}{\hbox to\@tempdima {\hfil }CHƯƠNG 3. KẾT QUẢ MÔ PHỎNG}{21}{figure.caption.42}%
+\contentsline {subsection}{\numberline {3.1}Yêu cầu thông số kỹ thuật}{21}{subsection.3.1}%
+\contentsline {section}{\hbox to\@tempdima {\hfil }TÀI LIỆU THAM KHẢO}{22}{section*.43}%

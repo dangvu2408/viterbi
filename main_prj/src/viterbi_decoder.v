@@ -1,8 +1,9 @@
-module viterbi_decoder(clk, rst, en, data, data_out);
+module viterbi_decoder(clk, rst, en, data, data_out, done_flag);
     input clk, rst, en;
     input [15:0] data;
 
     output [7:0] data_out;
+    output done_flag;
 
     wire en_brch ,en_add, en_mem, en_tbck;
     wire [1:0] hamd_1, hamd_2, hamd_3, hamd_4, hamd_5, hamd_6, hamd_7, hamd_8;
@@ -21,6 +22,7 @@ module viterbi_decoder(clk, rst, en, data, data_out);
     ham_d br1 (.clk(clk),
             .rst(rst),
             .en_brch(en_brch),
+            .data(data),
             .hamd_1(hamd_1),
             .hamd_2(hamd_2),
             .hamd_3(hamd_3),
@@ -49,6 +51,7 @@ module viterbi_decoder(clk, rst, en, data, data_out);
 
     mem mem1 (.clk(clk),
             .rst(rst),
+            .en_mem(en_mem),
             .prv_st_00(prv_st_00),
             .prv_st_01(prv_st_01),
             .prv_st_10(prv_st_10),
@@ -66,5 +69,6 @@ module viterbi_decoder(clk, rst, en, data, data_out);
             .bck_prv_st_10(bck_prv_st_10),
             .bck_prv_st_11(bck_prv_st_11),
             .sel_node(sel_node),
-            .data_out(data_out));
+            .data_out(data_out),
+            .done_flag(done_flag));
 endmodule

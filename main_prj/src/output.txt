@@ -1,0 +1,16 @@
+Time=40000 | Input=xxxxxxxxxxxxxxxx | Output=00000000
+Time=60000 | Input=xxxxxxxxxxxxxxxx | Output=00000000
+Time=80000 | Input=xxxxxxxxxxxxxxxx | Output=00000000
+Time=100000 | Input=xxxxxxxxxxxxxxxx | Output=00000000
+Time=120000 | Input=xxxxxxxxxxxxxxxx | Output=00000000
+Time=140000 | Input=xxxxxxxxxxxxxxxx | Output=00000000
+Time=160000 | Input=xxxxxxxxxxxxxxxx | Output=00000000
+Time=180000 | Input=xxxxxxxxxxxxxxxx | Output=00000000
+Time=200000 | Input=xxxxxxxxxxxxxxxx | Output=00000000
+Time=220000 | Input=xxxxxxxxxxxxxxxx | Output=00000000
+Time=240000 | Input=xxxxxxxxxxxxxxxx | Output=11111010
+Time=260000 | Input=xxxxxxxxxxxxxxxx | Output=11111010
+Time=280000 | Input=xxxxxxxxxxxxxxxx | Output=11111010
+Time=300000 | Input=xxxxxxxxxxxxxxxx | Output=11111010
+Time=320000 | Input=xxxxxxxxxxxxxxxx | Output=11111111
+Time=340000 | Input=xxxxxxxxxxxxxxxx | Output=11111111

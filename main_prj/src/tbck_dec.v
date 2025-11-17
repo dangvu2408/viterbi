@@ -1,10 +1,11 @@
-module mem (clk, rst, en_tbck, bck_prv_st_00, bck_prv_st_01,
+module tbck_dec (clk, rst, en_tbck, bck_prv_st_00, bck_prv_st_01,
                                bck_prv_st_10, bck_prv_st_11,
-                               sel_node, data_out);
+                               sel_node, data_out, done_flag);
     input            clk, rst, en_tbck;
     input      [1:0] bck_prv_st_00, bck_prv_st_01, bck_prv_st_10, bck_prv_st_11;
     input      [1:0] sel_node;
     output reg [7:0] data_out;
+    output reg       done_flag;
 
     reg [7:0] sel_bit_out;
     reg [3:0] count;
@@ -20,6 +21,7 @@ module mem (clk, rst, en_tbck, bck_prv_st_00, bck_prv_st_01,
     always @ (posedge clk or posedge rst) begin 
         if (rst) begin 
             data_out <= 0;
+            done_flag <= 0;
             sel_bit_out <= 8'b00000000;
             count <= 0;
             select_node <= s0;
@@ -31,6 +33,7 @@ module mem (clk, rst, en_tbck, bck_prv_st_00, bck_prv_st_01,
                 select_node <= sel_node;
                 count <= count;
                 sel_bit_out <= 8'b00000000;
+                done_flag <= 0;
             end
         end
     end
@@ -78,6 +81,7 @@ module mem (clk, rst, en_tbck, bck_prv_st_00, bck_prv_st_01,
         if (count == 8) begin 
             count <= 0;
             data_out <= sel_bit_out;
+            done_flag <= 1;
         end
     end
 endmodule

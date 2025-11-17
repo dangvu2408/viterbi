@@ -1,0 +1,127 @@
+D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/add_compare_select_tb.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/add_compare_select_tb.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module add_comp_slt_tb
+
+Top level modules:
+	add_comp_slt_tb
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/add_compare_select.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/add_compare_select.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module add_comp_slt
+
+Top level modules:
+	add_comp_slt
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/memory.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/memory.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module memory
+
+Top level modules:
+	memory
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/extract_bit.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/extract_bit.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module extract_bit
+
+Top level modules:
+	extract_bit
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/branch_metric.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/branch_metric.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module branch_metric
+
+Top level modules:
+	branch_metric
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/control.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/control.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module control
+
+Top level modules:
+	control
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module mem
+
+Top level modules:
+	mem
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module tbck_dec
+
+Top level modules:
+	tbck_dec
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module ham_d
+
+Top level modules:
+	ham_d
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/traceback_output_decision.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/traceback_output_decision.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module traceback
+
+Top level modules:
+	traceback
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module viterbi_decoder
+
+Top level modules:
+	viterbi_decoder
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/extract_bit_tb.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/extract_bit_tb.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module extract_bit_tb
+
+Top level modules:
+	extract_bit_tb
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/branch_metric_tb.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/branch_metric_tb.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module branch_metric_tb
+
+Top level modules:
+	branch_metric_tb
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/viterbi_decoder_tb.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/viterbi_decoder_tb.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module viterbi_decoder_tb
+
+Top level modules:
+	viterbi_decoder_tb
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module ctrl
+
+Top level modules:
+	ctrl
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/viterbi_decoder.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/viterbi_decoder.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module viterbi_decoder
+
+Top level modules:
+	viterbi_decoder
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module add_comp
+
+Top level modules:
+	add_comp
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder_tb.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder_tb.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module viterbi_decoder_tb
+
+Top level modules:
+	viterbi_decoder_tb
+
+} {} {}}

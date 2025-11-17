@@ -33,10 +33,10 @@ module mem (clk, rst, en_mem, prv_st_00, prv_st_01,
                 end
 
                 if (count == 8) begin 
-                    bck_prv_st_00 <= trellis_diagr[0][count]; 
-                    bck_prv_st_10 <= trellis_diagr[2][count]; 
-                    bck_prv_st_01 <= trellis_diagr[1][count];
-                    bck_prv_st_11 <= trellis_diagr[3][count];
+                    bck_prv_st_00 <= trellis_diagr[0][trace]; 
+                    bck_prv_st_10 <= trellis_diagr[2][trace]; 
+                    bck_prv_st_01 <= trellis_diagr[1][trace];
+                    bck_prv_st_11 <= trellis_diagr[3][trace];
                     if (trace != 0) 
                         trace <= trace - 1;
                 end
