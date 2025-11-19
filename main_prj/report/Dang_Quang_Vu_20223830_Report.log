@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.4.20)  17 NOV 2025 19:19
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.4.20)  19 NOV 2025 17:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1019,7 +1019,13 @@ Overfull \hbox (11.64935pt too wide) in paragraph at lines 96--97
 
 
 ] [1]
-(Dang_Quang_Vu_20223830_Report.lof [2])
+(Dang_Quang_Vu_20223830_Report.lof [2]
+Overfull \hbox (20.87764pt too wide) in paragraph at lines 36--36
+ [][] []\TU/TimesNewRoman(0)/m/n/13 Hình []Dạng sóng mô phỏng của các tín hiệu 
+trong module \TU/CourierNew(0)/m/n/13 viterbi_decoder[] [][]  
+ []
+
+)
 \tf@lof=\write6
 \openout6 = `Dang_Quang_Vu_20223830_Report.lof'.
 
@@ -1027,7 +1033,7 @@ Overfull \hbox (11.64935pt too wide) in paragraph at lines 96--97
 \tf@lot=\write7
 \openout7 = `Dang_Quang_Vu_20223830_Report.lot'.
 
-[4]
+ [4]
 File: fig11a.pdf Graphic file (type pdf)
 <use fig11a.pdf>
  [1]
@@ -1035,28 +1041,27 @@ File: fig12a.pdf Graphic file (type pdf)
 <use fig12a.pdf>
 File: fig13.pdf Graphic file (type pdf)
 <use fig13.pdf>
- [2]
+ [2] [3]
 File: fig14a.pdf Graphic file (type pdf)
 <use fig14a.pdf>
 
-Overfull \hbox (7.11316pt too wide) in paragraph at lines 272--273
+Overfull \hbox (7.11316pt too wide) in paragraph at lines 275--276
  [][] 
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 273.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 276.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 273.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 276.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 273.
-[3]
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 276.
 File: fig15.pdf Graphic file (type pdf)
 <use fig15.pdf>
 File: fig16.pdf Graphic file (type pdf)
 <use fig16.pdf>
 File: fig17.pdf Graphic file (type pdf)
 <use fig17.pdf>
- [4]
+[4]
 File: fig18.pdf Graphic file (type pdf)
 <use fig18.pdf>
 File: fig19.pdf Graphic file (type pdf)
@@ -1066,21 +1071,14 @@ File: fig110.pdf Graphic file (type pdf)
 File: fig111.pdf Graphic file (type pdf)
 <use fig111.pdf>
 
-Overfull \hbox (12.92796pt too wide) in paragraph at lines 347--348
+Overfull \hbox (12.92796pt too wide) in paragraph at lines 350--351
  [][] 
  []
 
 File: fig112.pdf Graphic file (type pdf)
 <use fig112.pdf>
 
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 354--355
- [][] 
- []
-
-File: fig113.pdf Graphic file (type pdf)
-<use fig113.pdf>
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 363--364
+Overfull \hbox (14.22635pt too wide) in paragraph at lines 357--358
  [][] 
  []
 
@@ -1088,29 +1086,33 @@ Overfull \hbox (14.22635pt too wide) in paragraph at lines 363--364
 
 LaTeX Warning: Text page 6 contains only floats.
 
-[6] [7]
+[6]
+File: fig113.pdf Graphic file (type pdf)
+<use fig113.pdf>
+
+Overfull \hbox (14.22635pt too wide) in paragraph at lines 366--367
+ [][] 
+ []
+
+[7]
 File: fig21.pdf Graphic file (type pdf)
 <use fig21.pdf>
  [8]
 File: fig22a.pdf Graphic file (type pdf)
 <use fig22a.pdf>
- [9]
 File: fig23.pdf Graphic file (type pdf)
 <use fig23.pdf>
 
-Underfull \hbox (badness 2302) in paragraph at lines 475--476
+Underfull \hbox (badness 2302) in paragraph at lines 481--482
 []\TU/TimesNewRoman(0)/m/n/13 - Trạng thái $\OML/ztmcm/m/it/13 S[]$\TU/TimesNew
 Roman(0)/m/n/13 : Khi \TU/CourierNew(0)/m/n/13 rst = 1\TU/TimesNewRoman(0)/m/n/
 13 , FSM quay về trạng thái này, đặt biến
  []
 
-
-Overfull \hbox (4.65771pt too wide) in paragraph at lines 493--504
+[9]
+Overfull \hbox (4.65771pt too wide) in paragraph at lines 499--510
  [][] 
  []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [10]
 File: fig24a.pdf Graphic file (type pdf)
@@ -1120,61 +1122,61 @@ File: ctrl_wave.pdf Graphic file (type pdf)
 File: fig25.pdf Graphic file (type pdf)
 <use fig25.pdf>
  [11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 569--569
+Underfull \hbox (badness 10000) in paragraph at lines 575--575
 []|\TU/CourierNew(0)/m/n/13 hamd_1\TU/TimesNewRoman(0)/m/n/13 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 570--570
+Underfull \hbox (badness 10000) in paragraph at lines 576--576
 []|\TU/CourierNew(0)/m/n/13 hamd_2\TU/TimesNewRoman(0)/m/n/13 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 571--571
+Underfull \hbox (badness 10000) in paragraph at lines 577--577
 []|\TU/CourierNew(0)/m/n/13 hamd_3\TU/TimesNewRoman(0)/m/n/13 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 572--572
+Underfull \hbox (badness 10000) in paragraph at lines 578--578
 []|\TU/CourierNew(0)/m/n/13 hamd_4\TU/TimesNewRoman(0)/m/n/13 ,
  []
 
 File: fig26.pdf Graphic file (type pdf)
 <use fig26.pdf>
 
-Overfull \hbox (7.11316pt too wide) in paragraph at lines 582--583
+Overfull \hbox (7.11316pt too wide) in paragraph at lines 588--589
  [][] 
  []
 
-File: hamd_wave.pdf Graphic file (type pdf)
-<use hamd_wave.pdf>
+File: hamd_wave_a.pdf Graphic file (type pdf)
+<use hamd_wave_a.pdf>
 File: fig27.pdf Graphic file (type pdf)
 <use fig27.pdf>
-
-Overfull \hbox (4.45114pt too wide) in paragraph at lines 615--616
+[13] [14]
+Overfull \hbox (4.45114pt too wide) in paragraph at lines 621--622
 []\TU/TimesNewRoman(0)/m/n/13 - Khi \TU/CourierNew(0)/m/n/13 rst = 1\TU/TimesNe
 wRoman(0)/m/n/13 , tất cả các thanh ghi tổng tích lũy và đầu ra (\TU/CourierNew
 (0)/m/n/13 sum_xx\TU/TimesNewRoman(0)/m/n/13 , \TU/CourierNew(0)/m/n/13 prv_st_
 xx\TU/TimesNewRoman(0)/m/n/13 )
  []
 
-[13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 643--643
+
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
 []|\TU/CourierNew(0)/m/n/13 hamd_1\TU/TimesNewRoman(0)/m/n/13 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 644--644
+Underfull \hbox (badness 10000) in paragraph at lines 650--650
 []|\TU/CourierNew(0)/m/n/13 hamd_2\TU/TimesNewRoman(0)/m/n/13 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 645--645
+Underfull \hbox (badness 10000) in paragraph at lines 651--651
 []|\TU/CourierNew(0)/m/n/13 hamd_3\TU/TimesNewRoman(0)/m/n/13 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 646--646
+Underfull \hbox (badness 10000) in paragraph at lines 652--652
 []|\TU/CourierNew(0)/m/n/13 hamd_4\TU/TimesNewRoman(0)/m/n/13 ,
  []
 
@@ -1183,17 +1185,20 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: fig28.pdf Graphic file (type pdf)
 <use fig28.pdf>
+File: addcomp_wave.pdf Graphic file (type pdf)
+<use addcomp_wave.pdf>
+[15]
 File: fig29.pdf Graphic file (type pdf)
 <use fig29.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 681--682
+Underfull \hbox (badness 10000) in paragraph at lines 698--699
 \TU/CourierNew(0)/m/n/12 prv_st_11\TU/TimesNewRoman(0)/m/n/13 ) từ khối \TU/Cou
 rierNew(0)/m/n/12 add_comp \TU/TimesNewRoman(0)/m/n/13 và lưu vào một mảng hai 
 chiều
  []
 
-[15]
-Underfull \hbox (badness 2005) in paragraph at lines 685--686
+[16]
+Underfull \hbox (badness 2005) in paragraph at lines 702--703
 []\TU/TimesNewRoman(0)/m/n/13 - Khi \TU/CourierNew(0)/m/n/12 en_mem = 1\TU/Time
 sNewRoman(0)/m/n/13 , nếu \TU/CourierNew(0)/m/n/12 count < 8 \TU/TimesNewRoman(
 0)/m/n/13 thì ghi các giá trị \TU/CourierNew(0)/m/n/12 prv_st_xx \TU/TimesNewRo
@@ -1201,84 +1206,99 @@ man(0)/m/n/13 vào
  []
 
 
-Overfull \hbox (1.83186pt too wide) in paragraph at lines 705--705
+Overfull \hbox (1.83186pt too wide) in paragraph at lines 722--722
 []|\TU/CourierNew(0)/m/n/13 bck_prv_st_00| 
  []
 
 
-Overfull \hbox (1.83186pt too wide) in paragraph at lines 706--706
+Overfull \hbox (1.83186pt too wide) in paragraph at lines 723--723
 []|\TU/CourierNew(0)/m/n/13 bck_prv_st_01| 
  []
 
 
-Overfull \hbox (1.83186pt too wide) in paragraph at lines 707--707
+Overfull \hbox (1.83186pt too wide) in paragraph at lines 724--724
 []|\TU/CourierNew(0)/m/n/13 bck_prv_st_10| 
  []
 
 
-Overfull \hbox (1.83186pt too wide) in paragraph at lines 708--708
+Overfull \hbox (1.83186pt too wide) in paragraph at lines 725--725
 []|\TU/CourierNew(0)/m/n/13 bck_prv_st_11| 
  []
 
-[16]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: fig210.pdf Graphic file (type pdf)
 <use fig210.pdf>
+File: mem_wave.pdf Graphic file (type pdf)
+<use mem_wave.pdf>
 [17]
 File: fig211.pdf Graphic file (type pdf)
 <use fig211.pdf>
  [18]
-Overfull \hbox (1.83186pt too wide) in paragraph at lines 772--772
+Overfull \hbox (1.83186pt too wide) in paragraph at lines 800--800
 []|\TU/CourierNew(0)/m/n/13 bck_prv_st_00| 
  []
 
 
-Overfull \hbox (1.83186pt too wide) in paragraph at lines 773--773
+Overfull \hbox (1.83186pt too wide) in paragraph at lines 801--801
 []|\TU/CourierNew(0)/m/n/13 bck_prv_st_01| 
  []
 
 
-Overfull \hbox (1.83186pt too wide) in paragraph at lines 774--774
+Overfull \hbox (1.83186pt too wide) in paragraph at lines 802--802
 []|\TU/CourierNew(0)/m/n/13 bck_prv_st_10| 
  []
 
 
-Overfull \hbox (1.83186pt too wide) in paragraph at lines 775--775
+Overfull \hbox (1.83186pt too wide) in paragraph at lines 803--803
 []|\TU/CourierNew(0)/m/n/13 bck_prv_st_11| 
  []
 
-[19]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 File: fig212.pdf Graphic file (type pdf)
 <use fig212.pdf>
+[19]
 File: tbck_wave.pdf Graphic file (type pdf)
 <use tbck_wave.pdf>
- [20] [21] (Dang_Quang_Vu_20223830_Report.bbl) [22]
+ [20]
+Overfull \vbox (2.54053pt too high) has occurred while \output is active []
+
+
+[21]
+File: fig31.png Graphic file (type bmp)
+<fig31.png>
+File: fig32.png Graphic file (type bmp)
+<fig32.png>
+ [22]
+File: fig331.png Graphic file (type bmp)
+<fig331.png>
+File: fig34.png Graphic file (type bmp)
+<fig34.png>
+ [23]
+File: fig35.png Graphic file (type bmp)
+<fig35.png>
+File: fig36.png Graphic file (type bmp)
+<fig36.png>
+ [24] (Dang_Quang_Vu_20223830_Report.bbl) [25]
 (Dang_Quang_Vu_20223830_Report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-
-
-Package rerunfilecheck Warning: File `Dang_Quang_Vu_20223830_Report.out' has ch
-anged.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Dang_Quang_Vu_20223830_Report.out':
-
-(rerunfilecheck)             Before: 8B488432967C9F8D5D8D43E1AC986DE8;2834
-(rerunfilecheck)             After:  DFA8F4284FB4493756855372CA960A75;3273.
+Package rerunfilecheck Info: File `Dang_Quang_Vu_20223830_Report.out' has not c
+hanged.
+(rerunfilecheck)             Checksum: 39163838E39C037789A6805397FA4F30;3900.
  ) 
 Here is how much of TeX's memory you used:
- 27522 strings out of 409617
- 545197 string characters out of 5778276
- 1944191 words of memory out of 5000000
- 49135 multiletter control sequences out of 15000+600000
+ 27603 strings out of 409617
+ 546438 string characters out of 5778276
+ 1942191 words of memory out of 5000000
+ 49208 multiletter control sequences out of 15000+600000
  575033 words of font info for 116 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  108i,11n,107p,807b,515s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Dang_Quang_Vu_20223830_Report.pdf (30 pages).
+Output written on Dang_Quang_Vu_20223830_Report.pdf (33 pages).

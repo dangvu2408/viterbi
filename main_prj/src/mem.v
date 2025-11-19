@@ -3,7 +3,7 @@ module mem (clk, rst, en_mem, prv_st_00, prv_st_01,
                               bck_prv_st_00, bck_prv_st_01,
                               bck_prv_st_10, bck_prv_st_11);
     input            clk, rst, en_mem;
-    input            prv_st_00, prv_st_01, prv_st_10, prv_st_11; 
+    input      [1:0] prv_st_00, prv_st_01, prv_st_10, prv_st_11; 
     output reg [1:0] bck_prv_st_00, bck_prv_st_01, bck_prv_st_10, bck_prv_st_11;
 
     reg [3:0] count; 

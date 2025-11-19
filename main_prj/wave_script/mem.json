@@ -1,0 +1,14 @@
+{signal: [
+        {name: 'clk',           wave: 'p............'},
+        {name: 'rst',           wave: 'lpl..........'},
+        {name: 'en_mem',        wave: 'l.pl.........'},
+  		{name: 'prv_st_00',     wave: '=.=..........', data: ["0", "prv_st_00"]},
+  		{name: 'prv_st_01',     wave: '=.=..........', data: ["0", "prv_st_01"]},
+  		{name: 'prv_st_10',     wave: '=.=..........', data: ["0", "prv_st_10"]},
+  		{name: 'prv_st_11',     wave: '=.=..........', data: ["0", "prv_st_11"]},
+  		{name: 'bck_prv_st_00', wave: 'x.........=..', data: ["0-3"]},
+        {name: 'bck_prv_st_01', wave: 'x.........=..', data: ["0-3"]},
+        {name: 'bck_prv_st_10', wave: 'x.........=..', data: ["0-3"]},
+        {name: 'bck_prv_st_11', wave: 'x.........=..', data: ["0-3"]},
+    ],
+}

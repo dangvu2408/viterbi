@@ -3,39 +3,99 @@ K4
 z2
 Z0 !s12c _opt1
 Z1 !s99 nomlopt
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
 Z2 !s12c _opt2
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R2
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R2
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R2
+R1
+R0
+R1
+R2
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R2
 R1
 R0
 R1
@@ -88,10 +148,10 @@ n@_opt
 Z11 OL;O;2024.1;79
 R4
 T_opt1
-!s110 1763381498
-V8URje6Xf8ejng]P[=jZfb0
+!s110 1763542596
+VP?hBP9[:lzI;fQDh>eTjW2
 R5
-=1-b48c9d17587f-691b10fa-f3-2bf0
+=1-b48c9d17587f-691d8644-be-23fc
 R1
 R6
 R7
@@ -101,10 +161,10 @@ R10
 n@_opt1
 R11
 T_opt2
-!s110 1763361891
-VeRQb?koS2CNK=k>FF]5lS2
-04 12 4 work tb_traceback fast 0
-=1-b48c9d17587f-691ac463-ab-56d8
+!s110 1763542475
+VFeYfEBd5bf@TE8UK>N4481
+04 11 4 work tb_tbck_dec fast 0
+=1-b48c9d17587f-691d85cb-15a-2d94
 R1
 R6
 R7
@@ -116,7 +176,7 @@ R11
 R4
 vadd_comp
 2D:/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v
-Z12 !s110 1763381490
+Z12 !s110 1763542458
 !i10b 1
 !s100 F8_G8agz01Q^ECFXa?2H72
 IY7odzBl4KZVNH2TJnJmUn2
@@ -124,14 +184,14 @@ Z13 dD:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL
 w1762940671
 8D:/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v
 FD:/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v
-!i122 245
+!i122 503
 L0 1 109
 Z14 VDg1SIo80bB@j0V0VzS_@n1
 Z15 OL;L;2024.1;79
 r1
 !s85 0
 31
-Z16 !s108 1763381490.000000
+Z16 !s108 1763542458.000000
 !s107 D:/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v|
 !i113 0
@@ -262,7 +322,7 @@ R13
 w1762940696
 8D:/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v
 FD:/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v
-!i122 246
+!i122 504
 L0 1 62
 R14
 R15
@@ -272,6 +332,29 @@ r1
 R16
 !s107 D:/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v|
+!i113 0
+R17
+R10
+vctrl_tb
+2D:/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl_tb.v
+Z20 !s110 1763542459
+!i10b 1
+!s100 ^15<1Q<IRHB4:kinLU>7[0
+I_3SSRCU1BD@FBG1adk^T?2
+R13
+w1763452766
+8D:/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl_tb.v
+FD:/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl_tb.v
+!i122 510
+L0 3 36
+R14
+R15
+r1
+!s85 0
+31
+Z21 !s108 1763542459.000000
+!s107 D:/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl_tb.v|
 !i113 0
 R17
 R10
@@ -300,7 +383,7 @@ R17
 R10
 vextract_bit_tb
 2D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/extract_bit_tb.v
-Z20 !s110 1763361872
+Z22 !s110 1763361872
 !i10b 1
 !s100 lWj95[m;dhQd=:AmNTN9a0
 IDGZWBDIa[hgdiQ]JGk[SG1
@@ -315,7 +398,7 @@ R15
 r1
 !s85 0
 31
-Z21 !s108 1763361872.000000
+Z23 !s108 1763361872.000000
 !s107 D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/extract_bit_tb.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/extract_bit_tb.v|
 !i113 0
@@ -331,7 +414,7 @@ R13
 w1762940838
 8D:/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v
 FD:/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v
-!i122 247
+!i122 505
 L0 1 67
 R14
 R15
@@ -346,22 +429,22 @@ R17
 R10
 vmem
 2D:/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v
-R12
+R20
 !i10b 1
-!s100 e?E0DRF3l^VZj__IdC>bZ3
-IDadoc6ECnSlIm@=Xo`_R10
+!s100 7;GG[c03W^0Yeg3>WjmF?1
+If<5MDm2kMl>kQV5N5R`eI0
 R13
-w1763379236
+w1763541931
 8D:/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v
 FD:/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v
-!i122 248
+!i122 506
 L0 1 46
 R14
 R15
 r1
 !s85 0
 31
-R16
+R21
 !s107 D:/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v|
 !i113 0
@@ -369,7 +452,7 @@ R17
 R10
 vmemory
 2D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/memory.v
-R20
+R22
 !i10b 1
 !s100 ;RPJI_7i;jS3omjC8OE600
 If40GS<?X4]0]IlC4K0i<b3
@@ -384,15 +467,107 @@ R15
 r1
 !s85 0
 31
-R21
+R23
 !s107 D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/memory.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/memory.v|
 !i113 0
 R17
 R10
+vtb_add_comp
+2D:/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp_tb.v
+R20
+!i10b 1
+!s100 jb03_MaS=NHOieLKjSF>T1
+IV6TAf=PBn33Z1Id6[WALb0
+R13
+w1763540758
+8D:/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp_tb.v
+FD:/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp_tb.v
+!i122 512
+L0 3 55
+R14
+R15
+r1
+!s85 0
+31
+R21
+!s107 D:/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp_tb.v|
+!i113 0
+R17
+R10
+vtb_ham_d
+2D:/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d_tb.v
+R20
+!i10b 1
+!s100 Ek7zYeOf`;]6GNFmI_JMz0
+Inoj25=JUFF]J>2X4c]3[W1
+R13
+w1763539785
+8D:/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d_tb.v
+FD:/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d_tb.v
+!i122 511
+L0 3 64
+R14
+R15
+r1
+!s85 0
+31
+R21
+!s107 D:/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d_tb.v|
+!i113 0
+R17
+R10
+vtb_mem
+2D:/backup_later/ET4340/prj/main_prj/main_prj/src/mem_tb.v
+R20
+!i10b 1
+!s100 6^a<323QT`W45=Qf>2<Sb1
+IOWZE_:GjkMPj=fLSgW4W@2
+R13
+w1763541933
+8D:/backup_later/ET4340/prj/main_prj/main_prj/src/mem_tb.v
+FD:/backup_later/ET4340/prj/main_prj/main_prj/src/mem_tb.v
+!i122 513
+L0 3 66
+R14
+R15
+r1
+!s85 0
+31
+R21
+!s107 D:/backup_later/ET4340/prj/main_prj/main_prj/src/mem_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/backup_later/ET4340/prj/main_prj/main_prj/src/mem_tb.v|
+!i113 0
+R17
+R10
+vtb_tbck_dec
+2D:/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec_tb.v
+R20
+!i10b 1
+!s100 X0G131>XUM6Fc<]1CJLUX0
+IGe85H8jEa5e]8n__ge2[J1
+R13
+w1763542430
+8D:/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec_tb.v
+FD:/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec_tb.v
+!i122 514
+L0 3 51
+R14
+R15
+r1
+!s85 0
+31
+R21
+!s107 D:/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec_tb.v|
+!i113 0
+R17
+R10
 vtb_traceback
 2D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/tbck_dec_out_tb.v
-R20
+R22
 !i10b 1
 !s100 hfe55LBo8Fho1MI2mPi`D2
 IYROM@bd>>hd;4O:HgYGPk1
@@ -407,7 +582,7 @@ R15
 r1
 !s85 0
 31
-R21
+R23
 !s107 D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/tbck_dec_out_tb.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/tbck_dec_out_tb.v|
 !i113 0
@@ -415,7 +590,7 @@ R17
 R10
 vtbck_dec
 2D:/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v
-R12
+R20
 !i10b 1
 !s100 oVjzeegmH]`LAJCWzgfH^0
 I]a>1g]3W^FGoTDQ2UFaPd1
@@ -423,14 +598,14 @@ R13
 w1763376296
 8D:/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v
 FD:/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v
-!i122 249
+!i122 507
 L0 1 87
 R14
 R15
 r1
 !s85 0
 31
-R16
+R21
 !s107 D:/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v|
 !i113 0
@@ -438,7 +613,7 @@ R17
 R10
 vtraceback
 2D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/traceback_output_decision.v
-R20
+R22
 !i10b 1
 !s100 ][`NK>Uc]Nj>[;JKE2F172
 I_<2WW9d[12?mTO6=4=ah81
@@ -453,7 +628,7 @@ R15
 r1
 !s85 0
 31
-R21
+R23
 !s107 D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/traceback_output_decision.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/backup_later/ET4340/prj/main_prj/base_prj/VLSI_FINAL/traceback_output_decision.v|
 !i113 0
@@ -461,7 +636,7 @@ R17
 R10
 vviterbi_decoder
 2D:/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder.v
-R12
+R20
 !i10b 1
 !s100 9a=k=La[jn>n4Rbhc;mjB1
 I9khKD1i]RZ^lDbhlImeLZ0
@@ -469,14 +644,14 @@ R13
 w1763381476
 8D:/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder.v
 FD:/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder.v
-!i122 250
+!i122 508
 L0 1 74
 R14
 R15
 r1
 !s85 0
 31
-R16
+R21
 !s107 D:/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder.v|
 !i113 0
@@ -484,7 +659,7 @@ R17
 R10
 vviterbi_decoder_tb
 2D:/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder_tb.v
-R12
+R20
 !i10b 1
 !s100 ZTXnhnM>m>_WabbZ8KPCZ3
 I4?_9Jl<kQj[m69ea28VOF2
@@ -492,14 +667,14 @@ R13
 w1763380713
 8D:/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder_tb.v
 FD:/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder_tb.v
-!i122 251
+!i122 509
 L0 3 57
 R14
 R15
 r1
 !s85 0
 31
-R16
+R21
 !s107 D:/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder_tb.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder_tb.v|
 !i113 0

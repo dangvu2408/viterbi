@@ -177,6 +177,9 @@
 	\setcounter{figure}{0}
 	\setcounter{table}{0}
 	\setcounter{equation}{0}
+	
+	Chương này trình bày cơ sở lý thuyết liên quan đến mã tích chập và thuật toán giải mã Viterbi - một phương pháp giải mã tối ưu dựa trên sơ đồ lưới trạng thái. Nội dung tập trung vào nguyên lý hình thành Trellis, cách đánh giá khoảng cách Hamming và cơ chế lựa chọn đường đi sống sót, làm nền tảng cho việc thiết kế và mô phỏng bộ giải mã ở các chương sau.
+	
 	\subsection{Tổng quan về mã tích chập}
 	
 	Mã tích chập là một dạng mã tuyến tính, trong đó quá trình mã hóa được thực hiện tương tự như một bộ lọc số thực hiện phép tích chập giữa chuỗi dữ liệu đầu vào và các hệ số mã. Có thể coi bộ mã hóa tích chập như một tập hợp các hệ thống tuyến tính, bất biến theo thời gian, trong đó mỗi đầu ra là kết quả của quá trình lọc và tổ hợp tuyến tính các bit đầu vào hiện tại và quá khứ. 
@@ -365,7 +368,7 @@
 		\label{hinh113}
 	\end{figure}
 	
-	Thuật toán Viterbi đảm bảo chọn được đường có xác suất cao nhất trong trellis, do vậy tỷ lệ lỗi bit của bộ giải mã rất thấp. Vì vậy, Viterbi lý tưởng cho các hệ thống cần độ trễ thấp và tốc độ xử lý cao. Thuật toán Viterbi là thuật toán quy hoạch động, hoạt động bằng cách duy trì độ đo đường đi cho mỗi trạng thái trong đồ thị Trellis với độ phức tạp $O\left(N.2^{K-1}\right)$, do vậy độ phức tạp sẽ tăng nhanh nếu $K$ tăng. Hơn nữa bộ giải mã Viterbi cần có một khối memory để lưu lại đường đi sống sót với dung lượng $N.2^{K-1}$ bit, đồng nghĩa với việc bộ nhớ tăng khi $K$ tăng. Do vậy trong thiết kế mã tích chập và bộ giải mã Viterbi, $K$ bị giới hạn từ 3 đến 7.
+	Thuật toán Viterbi đảm bảo chọn được đường có xác suất cao nhất trong trellis, do vậy tỷ lệ lỗi bit của bộ giải mã rất thấp. Vì vậy, Viterbi lý tưởng cho các hệ thống cần độ trễ thấp và tốc độ xử lý cao. Thuật toán Viterbi là thuật toán quy hoạch động với độ phức tạp $O\left(N.2^{K-1}\right)$, do vậy độ phức tạp sẽ tăng nhanh nếu $K$ tăng. Hơn nữa bộ giải mã Viterbi cần có một khối memory để lưu lại đường đi sống sót với dung lượng $N.2^{K-1}$ bit, đồng nghĩa với việc bộ nhớ tăng khi $K$ tăng. Do vậy trong thiết kế mã tích chập và bộ giải mã Viterbi, $K$ bị giới hạn từ 3 đến 7.
 	
 	\newpage
 	
@@ -376,6 +379,9 @@
 	\setcounter{figure}{0}
 	\setcounter{table}{0}
 	\setcounter{equation}{0}
+	
+	Chương này sẽ trình bày các yêu cầu kỹ thuật cơ bản và các thông số quan trọng, cần thiết trước khi tiến hành thiết kế và triển khai bộ giải mã Viterbi. Nội dung bao gồm sơ đồ khối, cấu hình đầu vào/ra, chức năng cụ thể và dạng sóng. 
+	
 	
 	\subsection{Yêu cầu thông số kỹ thuật}
 	
@@ -586,11 +592,11 @@
 	
 	\paragraph{Dạng sóng tín hiệu} \mbox{}
 	
-	Dạng sóng của các tín hiệu trong module \texttt{ctrl} được biểu diễn trên Hình \ref{hamdwave}.
+	Dạng sóng của các tín hiệu trong module \texttt{ham\_d} được biểu diễn trên Hình \ref{hamdwave}.
 	
 	\begin{figure}[!ht]
 		\centering
-		\includegraphics[clip, width=12cm]{hamd_wave.pdf}
+		\includegraphics[clip, width=12cm]{hamd_wave_a.pdf}
 		\caption[Dạng sóng của các tín hiệu trong module \texttt{ham\_d}]{\bfseries \fontsize{12pt}{0pt}\selectfont Dạng sóng của các tín hiệu trong module \texttt{ham\_d}}
 		\label{hamdwave}
 	\end{figure}
@@ -663,6 +669,17 @@
 		\label{hinh28}
 	\end{figure}
 	
+	\paragraph{Dạng sóng tín hiệu} \mbox{}
+	
+	Dạng sóng của các tín hiệu trong module \texttt{add\_comp} được biểu diễn trên Hình \ref{addwave}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=12cm]{addcomp_wave.pdf}
+		\caption[Dạng sóng của các tín hiệu trong module \texttt{add\_comp}]{\bfseries \fontsize{12pt}{0pt}\selectfont Dạng sóng của các tín hiệu trong module \texttt{add\_comp}}
+		\label{addwave}
+	\end{figure}
+	
 	\subsubsection{Module \texttt{mem}}
 	
 	\paragraph{Sơ đồ khối} \mbox{}
@@ -718,6 +735,17 @@
 		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=15cm]{fig210.pdf}
 		\caption[Lưu đồ thuật toán của module \texttt{mem}]{\bfseries \fontsize{12pt}{0pt}\selectfont Lưu đồ thuật toán của module \texttt{mem}}
 		\label{hinh210}
+	\end{figure}
+	
+	\paragraph{Dạng sóng tín hiệu} \mbox{}
+	
+	Dạng sóng của các tín hiệu trong module \texttt{mem} được biểu diễn trên Hình \ref{memwave}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=12cm]{mem_wave.pdf}
+		\caption[Dạng sóng của các tín hiệu trong module \texttt{mem}]{\bfseries \fontsize{12pt}{0pt}\selectfont Dạng sóng của các tín hiệu trong module \texttt{mem}}
+		\label{memwave}
 	\end{figure}
 	
 	\subsubsection{Module \texttt{tbck\_dec}}
@@ -791,7 +819,7 @@
 	
 	\paragraph{Dạng sóng tín hiệu} \mbox{}
 	
-	Dạng sóng của các tín hiệu trong module \texttt{ctrl} được biểu diễn trên Hình \ref{tbckwave}.
+	Dạng sóng của các tín hiệu trong module \texttt{tbck\_dec} được biểu diễn trên Hình \ref{tbckwave}.
 	
 	\begin{figure}[!ht]
 		\centering
@@ -810,9 +838,78 @@
 	\setcounter{table}{0}
 	\setcounter{equation}{0}
 	
-	\subsection{Yêu cầu thông số kỹ thuật}
+	Trong chương này, nhóm em thực hiện mô phỏng thiết kế. Môi trường và công cụ mô phỏng nhóm em sử dụng trình biên dịch QuestaSim. Nhóm em mô phỏng lần lượt từ các module con đến top module.
 	
-	Bộ giải mã Viterbi được thiết kế với các thông số cơ bản sau:
+	\subsection{Module \texttt{ctrl}}
+	
+	Dạng sóng mô phỏng của các tín hiệu trong module \texttt{ctrl} được biểu diễn trên Hình \ref{fig31}. 
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{fig31.png}
+		\caption[Dạng sóng mô phỏng của các tín hiệu trong module \texttt{ctrl}]{\bfseries \fontsize{12pt}{0pt}\selectfont Dạng sóng mô phỏng của các tín hiệu trong module \texttt{ctrl}}
+		\label{fig31}
+	\end{figure}
+	
+	Ta thấy dạng sóng mô phỏng hoạt động đúng như dạng sóng đã đề cập ở Hình \ref{ctrlwave}. Mỗi trạng thái tương ứng của \texttt{en\_brch} ($S_1$), \texttt{en\_add} ($S_2$), \texttt{en\_mem} ($S_3$) và \texttt{en\_tbck} ($S_4$) đều được biểu diễn theo đúng như trên Hình \ref{hinh24}.
+	
+	\subsection{Module \texttt{ham\_d}}
+	
+	Dạng sóng mô phỏng của các tín hiệu trong module \texttt{ham\_d} được biểu diễn trên Hình \ref{fig32}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{fig32.png}
+		\caption[Dạng sóng mô phỏng của các tín hiệu trong module \texttt{ham\_d}]{\bfseries \fontsize{12pt}{0pt}\selectfont Dạng sóng mô phỏng của các tín hiệu trong module \texttt{ham\_d}}
+		\label{fig32}
+	\end{figure}
+	
+	
+	Dạng sóng mô phỏng cho thấy sau khi luồng dữ liệu đầu tiên đi vào (\texttt{16'h8000}), các thanh ghi \texttt{hamd\_1} đến \texttt{hamd\_8} được nhận giá trị khoảng cách Hamming tương ứng, cho thấy dữ liệu đã được tách thành các cặp 2 bit và so sánh với khoảng cách Hamming. Thanh ghi \texttt{data\_reg} hoạt động đúng chức năng lưu bộ dữ liệu trước. Tóm lại, dạng sóng mô phỏng đã hoạt động đúng như dạng sóng thể hiện trên Hình \ref{hamdwave}.
+	
+	\subsection{Module \texttt{add\_comp}}
+	
+	xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz 
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{fig331.png}
+		\caption[Dạng sóng mô phỏng của các tín hiệu trong module \texttt{add\_comp}]{\bfseries \fontsize{12pt}{0pt}\selectfont Dạng sóng mô phỏng của các tín hiệu trong module \texttt{add\_comp}}
+		\label{fig33}
+	\end{figure}
+	
+	\subsection{Module \texttt{mem}}
+	
+	xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz 
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{fig34.png}
+		\caption[Dạng sóng mô phỏng của các tín hiệu trong module \texttt{mem}]{\bfseries \fontsize{12pt}{0pt}\selectfont Dạng sóng mô phỏng của các tín hiệu trong module \texttt{mem}}
+		\label{fig34}
+	\end{figure}
+	
+	\subsection{Module \texttt{tbck\_dec}}
+	
+	xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz 
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{fig35.png}
+		\caption[Dạng sóng mô phỏng của các tín hiệu trong module \texttt{tbck\_dec}]{\bfseries \fontsize{12pt}{0pt}\selectfont Dạng sóng mô phỏng của các tín hiệu trong module \texttt{tbck\_dec}}
+		\label{fig35}
+	\end{figure}
+	
+	\subsection{Module \texttt{viterbi\_decoder}}
+	
+	xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz 
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{fig36.png}
+		\caption[Dạng sóng mô phỏng của các tín hiệu trong module \texttt{viterbi\_decoder}]{\bfseries \fontsize{12pt}{0pt}\selectfont Dạng sóng mô phỏng của các tín hiệu trong module \texttt{viterbi\_decoder}}
+		\label{fig36}
+	\end{figure}
 	
 	\newpage
 	
