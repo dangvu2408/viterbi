@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.4.20)  19 NOV 2025 17:07
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.4.20)  19 NOV 2025 17:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1261,28 +1261,31 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: fig212.pdf Graphic file (type pdf)
 <use fig212.pdf>
 [19]
-File: tbck_wave.pdf Graphic file (type pdf)
-<use tbck_wave.pdf>
- [20]
-Overfull \vbox (2.54053pt too high) has occurred while \output is active []
 
+LaTeX Warning: Text page 20 contains only floats.
+
+[20]
+
+LaTeX Warning: Text page 21 contains only floats.
 
 [21]
+File: tbck_wave.pdf Graphic file (type pdf)
+<use tbck_wave.pdf>
+ [22]
 File: fig31.png Graphic file (type bmp)
 <fig31.png>
 File: fig32.png Graphic file (type bmp)
 <fig32.png>
- [22]
 File: fig331.png Graphic file (type bmp)
 <fig331.png>
+ [23]
 File: fig34.png Graphic file (type bmp)
 <fig34.png>
- [23]
 File: fig35.png Graphic file (type bmp)
 <fig35.png>
 File: fig36.png Graphic file (type bmp)
 <fig36.png>
- [24] (Dang_Quang_Vu_20223830_Report.bbl) [25]
+ [24] [25] (Dang_Quang_Vu_20223830_Report.bbl) [26]
 (Dang_Quang_Vu_20223830_Report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -1290,15 +1293,15 @@ L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `Dang_Quang_Vu_20223830_Report.out' has not c
 hanged.
-(rerunfilecheck)             Checksum: 39163838E39C037789A6805397FA4F30;3900.
+(rerunfilecheck)             Checksum: 61F0BAD1BE464845CCE8C0ED9F2D419D;4641.
  ) 
 Here is how much of TeX's memory you used:
  27603 strings out of 409617
  546438 string characters out of 5778276
- 1942191 words of memory out of 5000000
+ 1943191 words of memory out of 5000000
  49208 multiletter control sequences out of 15000+600000
  575033 words of font info for 116 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  108i,11n,107p,807b,515s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Dang_Quang_Vu_20223830_Report.pdf (33 pages).
+Output written on Dang_Quang_Vu_20223830_Report.pdf (34 pages).

@@ -82,12 +82,11 @@ module add_comp (clk, rst, en_add, hamd_1, hamd_2,
         end
     end
 
-    always @ (posedge rst or count or min_sum) begin 
+    always @(posedge clk or posedge rst) begin 
         if (rst) begin 
             min_sum  <= 5'b11111;
             min_node <= 2'b00;
-        end
-        if (count == 8 || count > 8) begin 
+        end else if (count >= 8) begin 
             if (sum_00 < min_sum) begin 
                 min_sum  <= sum_00;
                 min_node <= 2'b00;
@@ -106,4 +105,5 @@ module add_comp (clk, rst, en_add, hamd_1, hamd_2,
             end
         end
     end
+
 endmodule

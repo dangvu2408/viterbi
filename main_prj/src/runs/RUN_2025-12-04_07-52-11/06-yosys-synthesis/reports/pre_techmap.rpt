@@ -1,0 +1,46 @@
+136. Printing statistics.
+
+=== viterbi_decoder ===
+
+   Number of wires:                871
+   Number of wire bits:           1017
+   Number of public wires:          68
+   Number of public wire bits:     194
+   Number of ports:                  6
+   Number of port bits:             28
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                983
+     $_ANDNOT_                     231
+     $_AND_                         95
+     $_DFFE_PP0P_                  116
+     $_DFFE_PP1P_                    6
+     $_DFFE_PP_                      8
+     $_DFF_PP0_                     34
+     $_DFF_PP1_                      2
+     $_MUX_                        138
+     $_NAND_                        29
+     $_NOR_                         32
+     $_NOT_                         29
+     $_ORNOT_                       26
+     $_OR_                         161
+     $_XNOR_                        22
+     $_XOR_                         54
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_DFFE_PP_ is unknown!
+   Area for cell type $_DFF_PP0_ is unknown!
+   Area for cell type $_DFF_PP1_ is unknown!
+   Area for cell type $_DFFE_PP0P_ is unknown!
+   Area for cell type $_DFFE_PP1P_ is unknown!
+

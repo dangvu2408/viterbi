@@ -1,0 +1,14 @@
+{
+  "DESIGN_NAME": "viterbi_decoder",
+  "VERILOG_FILES": [
+    "dir::add_comp.v",
+    "dir::ctrl.v",
+    "dir::ham_d.v",
+    "dir::mem.v",
+    "dir::tbck_dec.v",
+    "dir::viterbi_decoder.v"
+  ],
+  "FP_CORE_UTIL": 40,
+  "CLOCK_PORT": "clk",
+  "CLOCK_PERIOD": 100
+}

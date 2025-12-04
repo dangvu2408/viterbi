@@ -1,9 +1,30 @@
-D:/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d_tb.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d_tb.v
+D:/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec_tb.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec_tb.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module tb_tbck_dec
+
+Top level modules:
+	tb_tbck_dec
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/main_prj/src/mem_tb.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/main_prj/src/mem_tb.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module tb_mem
+
+Top level modules:
+	tb_mem
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d_tb.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d_tb.v
 QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
 -- Compiling module tb_ham_d
 
 Top level modules:
 	tb_ham_d
+
+} {} {}} D:/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module mem
+
+Top level modules:
+	mem
 
 } {} {}} D:/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v {1 {vlog -work work -vopt -stats=none D:/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v
 QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024

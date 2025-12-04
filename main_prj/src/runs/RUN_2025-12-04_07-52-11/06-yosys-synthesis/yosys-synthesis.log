@@ -1,0 +1,2416 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)
+Loaded SDC plugin
+
+1. Executing Liberty frontend: /home/lroot/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+Imported 428 cell types from liberty file.
+[INFO] Using SDC file '/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/runs/RUN_2025-12-04_07-52-11/06-yosys-synthesis/synthesis.abc.sdc' for ABC…
+
+2. Executing Verilog-2005 frontend: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v
+Parsing SystemVerilog input from `/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v' to AST representation.
+Storing AST representation for module `$abstract\add_comp'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v
+Parsing SystemVerilog input from `/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v' to AST representation.
+Storing AST representation for module `$abstract\ctrl'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v
+Parsing SystemVerilog input from `/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v' to AST representation.
+Storing AST representation for module `$abstract\ham_d'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v
+Parsing SystemVerilog input from `/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v' to AST representation.
+Storing AST representation for module `$abstract\mem'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v
+Parsing SystemVerilog input from `/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v' to AST representation.
+Storing AST representation for module `$abstract\tbck_dec'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder.v
+Parsing SystemVerilog input from `/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder.v' to AST representation.
+Storing AST representation for module `$abstract\viterbi_decoder'.
+Successfully finished Verilog frontend.
+
+8. Executing HIERARCHY pass (managing design hierarchy).
+
+9. Executing AST frontend in derive mode using pre-parsed AST for module `\viterbi_decoder'.
+Generating RTLIL representation for module `\viterbi_decoder'.
+
+9.1. Analyzing design hierarchy..
+Top module:  \viterbi_decoder
+
+9.2. Executing AST frontend in derive mode using pre-parsed AST for module `\tbck_dec'.
+Generating RTLIL representation for module `\tbck_dec'.
+
+9.3. Executing AST frontend in derive mode using pre-parsed AST for module `\mem'.
+Generating RTLIL representation for module `\mem'.
+Warning: Replacing memory \trellis_diagr with list of registers. See /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:22
+
+9.4. Executing AST frontend in derive mode using pre-parsed AST for module `\add_comp'.
+Generating RTLIL representation for module `\add_comp'.
+
+9.5. Executing AST frontend in derive mode using pre-parsed AST for module `\ham_d'.
+Generating RTLIL representation for module `\ham_d'.
+
+9.6. Executing AST frontend in derive mode using pre-parsed AST for module `\ctrl'.
+Generating RTLIL representation for module `\ctrl'.
+Note: Assuming pure combinatorial block at /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29.5-69.8 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+
+9.7. Analyzing design hierarchy..
+Top module:  \viterbi_decoder
+Used module:     \tbck_dec
+Used module:     \mem
+Used module:     \add_comp
+Used module:     \ham_d
+Used module:     \ctrl
+
+9.8. Analyzing design hierarchy..
+Top module:  \viterbi_decoder
+Used module:     \tbck_dec
+Used module:     \mem
+Used module:     \add_comp
+Used module:     \ham_d
+Used module:     \ctrl
+Removing unused module `$abstract\viterbi_decoder'.
+Removing unused module `$abstract\tbck_dec'.
+Removing unused module `$abstract\mem'.
+Removing unused module `$abstract\ham_d'.
+Removing unused module `$abstract\ctrl'.
+Removing unused module `$abstract\add_comp'.
+Removed 6 unused modules.
+Renaming module viterbi_decoder to viterbi_decoder.
+
+10. Generating Graphviz representation of design.
+Writing dot description to `/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/runs/RUN_2025-12-04_07-52-11/06-yosys-synthesis/hierarchy.dot'.
+Dumping module viterbi_decoder to page 1.
+
+11. Executing TRIBUF pass.
+
+12. Executing HIERARCHY pass (managing design hierarchy).
+
+12.1. Analyzing design hierarchy..
+Top module:  \viterbi_decoder
+Used module:     \tbck_dec
+Used module:     \mem
+Used module:     \add_comp
+Used module:     \ham_d
+Used module:     \ctrl
+
+12.2. Analyzing design hierarchy..
+Top module:  \viterbi_decoder
+Used module:     \tbck_dec
+Used module:     \mem
+Used module:     \add_comp
+Used module:     \ham_d
+Used module:     \ctrl
+Removed 0 unused modules.
+
+13. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+14. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 1 dead cases from process $proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159 in module ham_d.
+Marked 3 switch rules as full_case in process $proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159 in module ham_d.
+Marked 1 switch rules as full_case in process $proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:85$153 in module add_comp.
+Marked 6 switch rules as full_case in process $proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115 in module add_comp.
+Removed 4 dead cases from process $proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33 in module mem.
+Marked 12 switch rules as full_case in process $proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33 in module mem.
+Marked 8 switch rules as full_case in process $proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5 in module tbck_dec.
+Marked 3 switch rules as full_case in process $proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29$167 in module ctrl.
+Marked 2 switch rules as full_case in process $proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:13$164 in module ctrl.
+Removed a total of 5 dead cases.
+
+15. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 23 redundant assignments.
+Promoted 26 assignments to connections.
+
+16. Executing PROC_INIT pass (extract init attributes).
+
+17. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst in `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+Found async reset \rst in `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:85$153'.
+Found async reset \rst in `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+Found async reset \rst in `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+Found async reset \rst in `\tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+Found async reset \rst in `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:13$164'.
+
+18. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~35 debug messages>
+
+19. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+     1/11: $0\hamd_8[1:0]
+     2/11: $0\hamd_7[1:0]
+     3/11: $0\hamd_6[1:0]
+     4/11: $0\hamd_5[1:0]
+     5/11: $0\hamd_4[1:0]
+     6/11: $0\hamd_3[1:0]
+     7/11: $0\hamd_2[1:0]
+     8/11: $0\hamd_1[1:0]
+     9/11: $0\count[3:0]
+    10/11: $0\data_rx[1:0]
+    11/11: $0\data_reg[15:0]
+Creating decoders for process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:85$153'.
+     1/2: $0\min_node[1:0]
+     2/2: $0\min_sum[4:0]
+Creating decoders for process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+     1/10: $0\prv_st_11[1:0]
+     2/10: $0\sum_11[4:0]
+     3/10: $0\prv_st_01[1:0]
+     4/10: $0\sum_01[4:0]
+     5/10: $0\prv_st_10[1:0]
+     6/10: $0\sum_10[4:0]
+     7/10: $0\prv_st_00[1:0]
+     8/10: $0\sum_00[4:0]
+     9/10: $0\count[3:0]
+    10/10: $0\sel_node[1:0]
+Creating decoders for process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+     1/92: $4$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:39$32_DATA[1:0]$112
+     2/92: $4$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:38$31_DATA[1:0]$110
+     3/92: $4$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:37$30_DATA[1:0]$108
+     4/92: $4$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:36$29_DATA[1:0]$106
+     5/92: $3$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:39$32_DATA[1:0]$104
+     6/92: $3$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:39$32_ADDR[4:0]$103
+     7/92: $3$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:38$31_DATA[1:0]$102
+     8/92: $3$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:38$31_ADDR[4:0]$101
+     9/92: $3$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:37$30_DATA[1:0]$100
+    10/92: $3$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:37$30_ADDR[4:0]$99
+    11/92: $3$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:36$29_DATA[1:0]$98
+    12/92: $3$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:36$29_ADDR[4:0]$97
+    13/92: $3$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:31$28_ADDR[4:0]$89
+    14/92: $3$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:31$28_DATA[1:0]$90
+    15/92: $3$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:30$27_ADDR[4:0]$87
+    16/92: $3$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:30$27_DATA[1:0]$88
+    17/92: $3$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:29$26_ADDR[4:0]$85
+    18/92: $3$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:29$26_DATA[1:0]$86
+    19/92: $3$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:28$25_ADDR[4:0]$83
+    20/92: $3$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:28$25_DATA[1:0]$84
+    21/92: $2$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:39$32_DATA[1:0]$81
+    22/92: $2$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:39$32_ADDR[4:0]$80
+    23/92: $2$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:38$31_DATA[1:0]$79
+    24/92: $2$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:38$31_ADDR[4:0]$78
+    25/92: $2$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:37$30_DATA[1:0]$77
+    26/92: $2$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:37$30_ADDR[4:0]$76
+    27/92: $2$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:36$29_DATA[1:0]$75
+    28/92: $2$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:36$29_ADDR[4:0]$74
+    29/92: $2$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:31$28_DATA[1:0]$73
+    30/92: $2$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:31$28_ADDR[4:0]$72
+    31/92: $2$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:30$27_DATA[1:0]$71
+    32/92: $2$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:30$27_ADDR[4:0]$70
+    33/92: $2$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:29$26_DATA[1:0]$69
+    34/92: $2$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:29$26_ADDR[4:0]$68
+    35/92: $2$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:28$25_DATA[1:0]$67
+    36/92: $2$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:28$25_ADDR[4:0]$66
+    37/92: $1$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:39$32_DATA[1:0]$65
+    38/92: $1$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:39$32_ADDR[4:0]$64
+    39/92: $1$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:38$31_DATA[1:0]$63
+    40/92: $1$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:38$31_ADDR[4:0]$62
+    41/92: $1$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:37$30_DATA[1:0]$61
+    42/92: $1$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:37$30_ADDR[4:0]$60
+    43/92: $1$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:36$29_DATA[1:0]$59
+    44/92: $1$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:36$29_ADDR[4:0]$58
+    45/92: $1$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:31$28_DATA[1:0]$57
+    46/92: $1$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:31$28_ADDR[4:0]$56
+    47/92: $1$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:30$27_DATA[1:0]$55
+    48/92: $1$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:30$27_ADDR[4:0]$54
+    49/92: $1$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:29$26_DATA[1:0]$53
+    50/92: $1$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:29$26_ADDR[4:0]$52
+    51/92: $1$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:28$25_DATA[1:0]$51
+    52/92: $1$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:28$25_ADDR[4:0]$50
+    53/92: $1\k[31:0]
+    54/92: $1\i[31:0]
+    55/92: $0\trellis_diagr[31][1:0]
+    56/92: $0\trellis_diagr[30][1:0]
+    57/92: $0\trellis_diagr[29][1:0]
+    58/92: $0\trellis_diagr[28][1:0]
+    59/92: $0\trellis_diagr[27][1:0]
+    60/92: $0\trellis_diagr[26][1:0]
+    61/92: $0\trellis_diagr[25][1:0]
+    62/92: $0\trellis_diagr[24][1:0]
+    63/92: $0\trellis_diagr[23][1:0]
+    64/92: $0\trellis_diagr[22][1:0]
+    65/92: $0\trellis_diagr[21][1:0]
+    66/92: $0\trellis_diagr[20][1:0]
+    67/92: $0\trellis_diagr[19][1:0]
+    68/92: $0\trellis_diagr[18][1:0]
+    69/92: $0\trellis_diagr[17][1:0]
+    70/92: $0\trellis_diagr[16][1:0]
+    71/92: $0\trellis_diagr[15][1:0]
+    72/92: $0\trellis_diagr[14][1:0]
+    73/92: $0\trellis_diagr[13][1:0]
+    74/92: $0\trellis_diagr[12][1:0]
+    75/92: $0\trellis_diagr[11][1:0]
+    76/92: $0\trellis_diagr[10][1:0]
+    77/92: $0\trellis_diagr[9][1:0]
+    78/92: $0\trellis_diagr[8][1:0]
+    79/92: $0\trellis_diagr[7][1:0]
+    80/92: $0\trellis_diagr[6][1:0]
+    81/92: $0\trellis_diagr[5][1:0]
+    82/92: $0\trellis_diagr[4][1:0]
+    83/92: $0\trellis_diagr[3][1:0]
+    84/92: $0\trellis_diagr[2][1:0]
+    85/92: $0\trellis_diagr[1][1:0]
+    86/92: $0\trellis_diagr[0][1:0]
+    87/92: $0\trace[2:0]
+    88/92: $0\count[3:0]
+    89/92: $0\bck_prv_st_11[1:0]
+    90/92: $0\bck_prv_st_10[1:0]
+    91/92: $0\bck_prv_st_01[1:0]
+    92/92: $0\bck_prv_st_00[1:0]
+Creating decoders for process `\tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+     1/9: $2$lookahead\sel_bit_out$4[7:0]$11
+     2/9: $2$bitselwrite$pos$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:63$3[3:0]$10
+     3/9: $1$lookahead\sel_bit_out$4[7:0]$9
+     4/9: $1$bitselwrite$pos$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:63$3[3:0]$8
+     5/9: $0\select_node[1:0]
+     6/9: $0\in_bit[0:0]
+     7/9: $0\count[3:0]
+     8/9: $0\done_flag[0:0]
+     9/9: $0\data_out[7:0]
+Creating decoders for process `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29$167'.
+     1/7: $3\next_state[2:0]
+     2/7: $2\next_state[2:0]
+     3/7: $1\next_state[2:0]
+     4/7: $1\en_tbck[0:0]
+     5/7: $1\en_mem[0:0]
+     6/7: $1\en_add[0:0]
+     7/7: $1\en_brch[0:0]
+Creating decoders for process `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:13$164'.
+     1/2: $0\state[2:0]
+     2/2: $0\count[3:0]
+
+20. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\ctrl.\en_brch' from process `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29$167'.
+No latch inferred for signal `\ctrl.\en_add' from process `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29$167'.
+No latch inferred for signal `\ctrl.\en_mem' from process `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29$167'.
+No latch inferred for signal `\ctrl.\en_tbck' from process `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29$167'.
+No latch inferred for signal `\ctrl.\next_state' from process `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29$167'.
+
+21. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ham_d.\hamd_1' using process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+  created $adff cell `$procdff$3185' with positive edge clock and positive level reset.
+Creating register for signal `\ham_d.\hamd_2' using process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+  created $adff cell `$procdff$3188' with positive edge clock and positive level reset.
+Creating register for signal `\ham_d.\hamd_3' using process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+  created $adff cell `$procdff$3191' with positive edge clock and positive level reset.
+Creating register for signal `\ham_d.\hamd_4' using process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+  created $adff cell `$procdff$3194' with positive edge clock and positive level reset.
+Creating register for signal `\ham_d.\hamd_5' using process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+  created $adff cell `$procdff$3197' with positive edge clock and positive level reset.
+Creating register for signal `\ham_d.\hamd_6' using process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+  created $adff cell `$procdff$3200' with positive edge clock and positive level reset.
+Creating register for signal `\ham_d.\hamd_7' using process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+  created $adff cell `$procdff$3203' with positive edge clock and positive level reset.
+Creating register for signal `\ham_d.\hamd_8' using process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+  created $adff cell `$procdff$3206' with positive edge clock and positive level reset.
+Creating register for signal `\ham_d.\count' using process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+  created $adff cell `$procdff$3209' with positive edge clock and positive level reset.
+Creating register for signal `\ham_d.\data_rx' using process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+  created $adff cell `$procdff$3212' with positive edge clock and positive level reset.
+Creating register for signal `\ham_d.\data_reg' using process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+  created $adff cell `$procdff$3215' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\min_sum' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:85$153'.
+  created $adff cell `$procdff$3218' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\min_node' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:85$153'.
+  created $adff cell `$procdff$3221' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\prv_st_00' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+  created $adff cell `$procdff$3224' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\prv_st_01' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+  created $adff cell `$procdff$3227' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\prv_st_10' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+  created $adff cell `$procdff$3230' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\prv_st_11' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+  created $adff cell `$procdff$3233' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\sel_node' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+  created $adff cell `$procdff$3236' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\count' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+  created $adff cell `$procdff$3239' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\sum_00' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+  created $adff cell `$procdff$3242' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\sum_10' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+  created $adff cell `$procdff$3245' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\sum_01' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+  created $adff cell `$procdff$3248' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\sum_11' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+  created $adff cell `$procdff$3251' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\bck_prv_st_00' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $dff cell `$procdff$3256' with positive edge clock.
+Creating register for signal `\mem.\bck_prv_st_01' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $dff cell `$procdff$3261' with positive edge clock.
+Creating register for signal `\mem.\bck_prv_st_10' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $dff cell `$procdff$3266' with positive edge clock.
+Creating register for signal `\mem.\bck_prv_st_11' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $dff cell `$procdff$3271' with positive edge clock.
+Creating register for signal `\mem.\count' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3274' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trace' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3277' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\i' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3280' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\k' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3283' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[0]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3286' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[1]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3289' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[2]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3292' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[3]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3295' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[4]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3298' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[5]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3301' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[6]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3304' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[7]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3307' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[8]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3310' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[9]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3313' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[10]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3316' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[11]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3319' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[12]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3322' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[13]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3325' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[14]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3328' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[15]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3331' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[16]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3334' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[17]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3337' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[18]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3340' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[19]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3343' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[20]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3346' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[21]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3349' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[22]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3352' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[23]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3355' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[24]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3358' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[25]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3361' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[26]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3364' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[27]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3367' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[28]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3370' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[29]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3373' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[30]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3376' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[31]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3379' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:28$25_ADDR' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3382' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:28$25_DATA' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3385' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:29$26_ADDR' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3388' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:29$26_DATA' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3391' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:30$27_ADDR' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3394' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:30$27_DATA' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3397' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:31$28_ADDR' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3400' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:31$28_DATA' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3403' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:36$29_ADDR' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3406' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:36$29_DATA' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3409' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:37$30_ADDR' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3412' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:37$30_DATA' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3415' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:38$31_ADDR' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3418' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:38$31_DATA' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3421' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:39$32_ADDR' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3424' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:39$32_DATA' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3427' with positive edge clock and positive level reset.
+Creating register for signal `\tbck_dec.\data_out' using process `\tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+  created $adff cell `$procdff$3430' with positive edge clock and positive level reset.
+Creating register for signal `\tbck_dec.\done_flag' using process `\tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+  created $adff cell `$procdff$3433' with positive edge clock and positive level reset.
+Creating register for signal `\tbck_dec.\sel_bit_out' using process `\tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+  created $adff cell `$procdff$3436' with positive edge clock and positive level reset.
+Creating register for signal `\tbck_dec.\count' using process `\tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+  created $adff cell `$procdff$3439' with positive edge clock and positive level reset.
+Creating register for signal `\tbck_dec.\in_bit' using process `\tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+  created $adff cell `$procdff$3442' with positive edge clock and positive level reset.
+Creating register for signal `\tbck_dec.\select_node' using process `\tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+  created $adff cell `$procdff$3445' with positive edge clock and positive level reset.
+Creating register for signal `\tbck_dec.$bitselwrite$pos$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:63$3' using process `\tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+  created $adff cell `$procdff$3448' with positive edge clock and positive level reset.
+Creating register for signal `\tbck_dec.$lookahead\sel_bit_out$4' using process `\tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+  created $adff cell `$procdff$3451' with positive edge clock and positive level reset.
+Creating register for signal `\ctrl.\count' using process `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:13$164'.
+  created $adff cell `$procdff$3454' with positive edge clock and positive level reset.
+Creating register for signal `\ctrl.\state' using process `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:13$164'.
+  created $adff cell `$procdff$3457' with positive edge clock and positive level reset.
+
+22. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+23. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 2 empty switches in `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+Removing empty process `ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+Found and cleaned up 5 empty switches in `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:85$153'.
+Removing empty process `add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:85$153'.
+Found and cleaned up 5 empty switches in `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+Removing empty process `add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+Found and cleaned up 12 empty switches in `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+Removing empty process `mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+Found and cleaned up 7 empty switches in `\tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+Removing empty process `tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+Found and cleaned up 3 empty switches in `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29$167'.
+Removing empty process `ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29$167'.
+Found and cleaned up 1 empty switch in `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:13$164'.
+Removing empty process `ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:13$164'.
+Cleaned up 35 empty switches.
+
+24. Executing CHECK pass (checking for obvious problems).
+Checking module viterbi_decoder...
+Checking module ham_d...
+Checking module add_comp...
+Checking module mem...
+Checking module tbck_dec...
+Checking module ctrl...
+Found and reported 0 problems.
+
+25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+Optimizing module ham_d.
+<suppressed ~19 debug messages>
+Optimizing module add_comp.
+<suppressed ~12 debug messages>
+Optimizing module mem.
+<suppressed ~67 debug messages>
+Optimizing module tbck_dec.
+<suppressed ~12 debug messages>
+Optimizing module ctrl.
+<suppressed ~5 debug messages>
+
+26. Executing FLATTEN pass (flatten design).
+Deleting now unused module ham_d.
+Deleting now unused module add_comp.
+Deleting now unused module mem.
+Deleting now unused module tbck_dec.
+Deleting now unused module ctrl.
+<suppressed ~5 debug messages>
+
+27. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+
+28. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+Removed 91 unused cells and 539 unused wires.
+<suppressed ~103 debug messages>
+
+29. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+<suppressed ~56 debug messages>
+
+30. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\viterbi_decoder'.
+<suppressed ~180 debug messages>
+Removed a total of 60 cells.
+
+31. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \viterbi_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $flatten\c1.$procmux$3140.
+    dead port 2/2 on $mux $flatten\c1.$procmux$3148.
+    dead port 2/2 on $mux $flatten\c1.$procmux$3150.
+    dead port 2/2 on $mux $flatten\mem1.$procmux$348.
+    dead port 2/2 on $mux $flatten\mem1.$procmux$350.
+    dead port 2/2 on $mux $flatten\mem1.$procmux$387.
+    dead port 2/2 on $mux $flatten\mem1.$procmux$389.
+    dead port 2/2 on $mux $flatten\mem1.$procmux$426.
+    dead port 2/2 on $mux $flatten\mem1.$procmux$428.
+    dead port 1/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 2/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 3/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 4/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 5/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 6/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 7/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 8/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 9/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 10/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 11/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 12/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 13/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 14/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 15/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 16/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 17/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 18/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 19/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 20/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 21/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 22/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 23/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 24/33 on $pmux $flatten\mem1.$procmux$432.
+    dead port 2/2 on $mux $flatten\mem1.$procmux$465.
+    dead port 2/2 on $mux $flatten\mem1.$procmux$467.
+Removed 35 multiplexer ports.
+<suppressed ~68 debug messages>
+
+32. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \viterbi_decoder.
+    New ctrl vector for $pmux cell $flatten\br1.$procmux$186: { $flatten\br1.$procmux$174_CMP $auto$opt_reduce.cc:134:opt_pmux$3464 $flatten\br1.$procmux$171_CMP }
+    New ctrl vector for $pmux cell $flatten\c1.$procmux$3163: $auto$opt_reduce.cc:134:opt_pmux$3466
+    New ctrl vector for $pmux cell $flatten\c1.$procmux$3168: $auto$opt_reduce.cc:134:opt_pmux$3468
+    New ctrl vector for $pmux cell $flatten\br1.$procmux$194: { $flatten\br1.$procmux$174_CMP $auto$opt_reduce.cc:134:opt_pmux$3470 $flatten\br1.$procmux$171_CMP }
+    New ctrl vector for $pmux cell $flatten\c1.$procmux$3173: $auto$opt_reduce.cc:134:opt_pmux$3472
+    New ctrl vector for $pmux cell $flatten\br1.$procmux$202: { $flatten\br1.$procmux$173_CMP $flatten\br1.$procmux$172_CMP $auto$opt_reduce.cc:134:opt_pmux$3474 }
+    New ctrl vector for $pmux cell $flatten\br1.$procmux$170: { $flatten\br1.$procmux$173_CMP $flatten\br1.$procmux$172_CMP $auto$opt_reduce.cc:134:opt_pmux$3476 }
+    New ctrl vector for $pmux cell $flatten\br1.$procmux$210: { $flatten\br1.$procmux$173_CMP $flatten\br1.$procmux$172_CMP $auto$opt_reduce.cc:134:opt_pmux$3478 }
+    New ctrl vector for $pmux cell $flatten\br1.$procmux$218: { $flatten\br1.$procmux$174_CMP $auto$opt_reduce.cc:134:opt_pmux$3480 $flatten\br1.$procmux$171_CMP }
+    New ctrl vector for $pmux cell $flatten\br1.$procmux$178: { $flatten\br1.$procmux$173_CMP $flatten\br1.$procmux$172_CMP $auto$opt_reduce.cc:134:opt_pmux$3482 }
+    New ctrl vector for $pmux cell $flatten\tbck1.$procmux$3110: { $auto$opt_reduce.cc:134:opt_pmux$3486 $auto$opt_reduce.cc:134:opt_pmux$3484 }
+    New ctrl vector for $pmux cell $flatten\br1.$procmux$226: { $flatten\br1.$procmux$174_CMP $auto$opt_reduce.cc:134:opt_pmux$3488 $flatten\br1.$procmux$171_CMP }
+  Optimizing cells in module \viterbi_decoder.
+Performed a total of 12 changes.
+
+33. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\viterbi_decoder'.
+<suppressed ~54 debug messages>
+Removed a total of 18 cells.
+
+34. Executing OPT_DFF pass (perform DFF optimizations).
+
+35. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+Removed 0 unused cells and 141 unused wires.
+<suppressed ~1 debug messages>
+
+36. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+
+37. Rerunning OPT passes. (Maybe there is more to do…)
+
+38. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \viterbi_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~64 debug messages>
+
+39. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \viterbi_decoder.
+Performed a total of 0 changes.
+
+40. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\viterbi_decoder'.
+Removed a total of 0 cells.
+
+41. Executing OPT_DFF pass (perform DFF optimizations).
+
+42. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+
+43. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+
+44. Executing FSM pass (extract and optimize FSM).
+
+44.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking viterbi_decoder.add1.prv_st_00 as FSM state register:
+    Users of register don't seem to benefit from recoding.
+Not marking viterbi_decoder.add1.prv_st_01 as FSM state register:
+    Users of register don't seem to benefit from recoding.
+Not marking viterbi_decoder.add1.prv_st_10 as FSM state register:
+    Users of register don't seem to benefit from recoding.
+Not marking viterbi_decoder.add1.prv_st_11 as FSM state register:
+    Users of register don't seem to benefit from recoding.
+Not marking viterbi_decoder.br1.hamd_1 as FSM state register:
+    Users of register don't seem to benefit from recoding.
+Not marking viterbi_decoder.br1.hamd_2 as FSM state register:
+    Users of register don't seem to benefit from recoding.
+Not marking viterbi_decoder.br1.hamd_3 as FSM state register:
+    Users of register don't seem to benefit from recoding.
+Not marking viterbi_decoder.br1.hamd_4 as FSM state register:
+    Users of register don't seem to benefit from recoding.
+Found FSM state register viterbi_decoder.c1.state.
+Found FSM state register viterbi_decoder.tbck1.select_node.
+
+44.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\c1.state' from module `\viterbi_decoder'.
+  found $adff cell for state register: $flatten\c1.$procdff$3457
+  root of input selection tree: $flatten\c1.$0\state[2:0]
+  found reset state: 3'000 (from async reset)
+  found ctrl input: \en
+  found ctrl input: $flatten\c1.$procmux$3154_CMP
+  found ctrl input: $flatten\c1.$procmux$3141_CMP
+  found ctrl input: $flatten\c1.$procmux$3156_CMP
+  found ctrl input: $flatten\c1.$procmux$3157_CMP
+  found ctrl input: $flatten\c1.$procmux$3151_CMP
+  found state code: 3'100
+  found ctrl input: $flatten\c1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:57$168_Y
+  found state code: 3'011
+  found state code: 3'010
+  found state code: 3'001
+  found ctrl output: $flatten\c1.$procmux$3141_CMP
+  found ctrl output: $flatten\c1.$procmux$3151_CMP
+  found ctrl output: $flatten\c1.$procmux$3154_CMP
+  found ctrl output: $flatten\c1.$procmux$3156_CMP
+  found ctrl output: $flatten\c1.$procmux$3157_CMP
+  ctrl inputs: { $flatten\c1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:57$168_Y \en }
+  ctrl outputs: { $flatten\c1.$procmux$3157_CMP $flatten\c1.$procmux$3156_CMP $flatten\c1.$procmux$3154_CMP $flatten\c1.$procmux$3151_CMP $flatten\c1.$procmux$3141_CMP $flatten\c1.$0\state[2:0] }
+  transition:      3'000 2'-0 ->      3'000 8'00010000
+  transition:      3'000 2'-1 ->      3'001 8'00010001
+  transition:      3'100 2'-0 ->      3'100 8'00100100
+  transition:      3'100 2'-1 ->      3'100 8'00100100
+  transition:      3'010 2'-0 ->      3'010 8'01000010
+  transition:      3'010 2'-1 ->      3'011 8'01000011
+  transition:      3'001 2'-0 ->      3'001 8'10000001
+  transition:      3'001 2'-1 ->      3'010 8'10000010
+  transition:      3'011 2'-0 ->      3'011 8'00001011
+  transition:      3'011 2'01 ->      3'100 8'00001100
+  transition:      3'011 2'11 ->      3'011 8'00001011
+Extracting FSM `\tbck1.select_node' from module `\viterbi_decoder'.
+  found $adff cell for state register: $flatten\tbck1.$procdff$3445
+  root of input selection tree: $flatten\tbck1.$0\select_node[1:0]
+  found reset state: 2'00 (from async reset)
+  found ctrl input: \c1.en_tbck
+  found ctrl input: $flatten\tbck1.$procmux$3094_CMP
+  found ctrl input: $flatten\tbck1.$procmux$3098_CMP
+  found ctrl input: $flatten\tbck1.$procmux$3102_CMP
+  found ctrl input: $flatten\tbck1.$procmux$3106_CMP
+  found ctrl input: $flatten\tbck1.$eq$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:55$15_Y
+  found state code: 2'11
+  found state code: 2'10
+  found ctrl input: $flatten\tbck1.$eq$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:48$14_Y
+  found state code: 2'01
+  found ctrl input: $flatten\tbck1.$eq$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:41$13_Y
+  found ctrl input: $flatten\tbck1.$eq$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:34$12_Y
+  found ctrl output: $flatten\tbck1.$procmux$3106_CMP
+  found ctrl output: $flatten\tbck1.$procmux$3102_CMP
+  found ctrl output: $flatten\tbck1.$procmux$3098_CMP
+  found ctrl output: $flatten\tbck1.$procmux$3094_CMP
+  ctrl inputs: { $flatten\tbck1.$eq$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:34$12_Y $flatten\tbck1.$eq$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:41$13_Y $flatten\tbck1.$eq$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:48$14_Y $flatten\tbck1.$eq$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:55$15_Y \c1.en_tbck }
+  ctrl outputs: { $flatten\tbck1.$0\select_node[1:0] $flatten\tbck1.$procmux$3094_CMP $flatten\tbck1.$procmux$3098_CMP $flatten\tbck1.$procmux$3102_CMP $flatten\tbck1.$procmux$3106_CMP }
+  transition:       2'00 5'----0 ->       2'00 6'000001
+  transition:       2'00 5'0---1 ->       2'01 6'010001
+  transition:       2'00 5'1---1 ->       2'00 6'000001
+  transition:       2'10 5'----0 ->       2'10 6'100100
+  transition:       2'10 5'--0-1 ->       2'01 6'010100
+  transition:       2'10 5'--1-1 ->       2'00 6'000100
+  transition:       2'01 5'----0 ->       2'01 6'010010
+  transition:       2'01 5'-0--1 ->       2'11 6'110010
+  transition:       2'01 5'-1--1 ->       2'10 6'100010
+  transition:       2'11 5'----0 ->       2'11 6'111000
+  transition:       2'11 5'---01 ->       2'11 6'111000
+  transition:       2'11 5'---11 ->       2'10 6'101000
+
+44.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\tbck1.select_node$3496' from module `\viterbi_decoder'.
+Optimizing FSM `$fsm$\c1.state$3489' from module `\viterbi_decoder'.
+  Merging pattern 2'-0 and 2'-1 from group (1 1 8'00100100).
+  Merging pattern 2'-1 and 2'-0 from group (1 1 8'00100100).
+
+44.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+Removed 20 unused cells and 20 unused wires.
+<suppressed ~22 debug messages>
+
+44.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\c1.state$3489' from module `\viterbi_decoder'.
+  Removing unused output signal $flatten\c1.$0\state[2:0] [0].
+  Removing unused output signal $flatten\c1.$0\state[2:0] [1].
+  Removing unused output signal $flatten\c1.$0\state[2:0] [2].
+  Removing unused output signal $flatten\c1.$procmux$3151_CMP.
+Optimizing FSM `$fsm$\tbck1.select_node$3496' from module `\viterbi_decoder'.
+  Removing unused output signal $flatten\tbck1.$0\select_node[1:0] [0].
+  Removing unused output signal $flatten\tbck1.$0\select_node[1:0] [1].
+
+44.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+Recoding FSM `$fsm$\c1.state$3489' from module `\viterbi_decoder' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  000 -> ----1
+  100 -> ---1-
+  010 -> --1--
+  001 -> -1---
+  011 -> 1----
+Recoding FSM `$fsm$\tbck1.select_node$3496' from module `\viterbi_decoder' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  00 -> ---1
+  10 -> --1-
+  01 -> -1--
+  11 -> 1---
+
+44.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+FSM `$fsm$\c1.state$3489' from module `viterbi_decoder':
+-------------------------------------
+
+  Information on FSM $fsm$\c1.state$3489 (\c1.state):
+
+  Number of input signals:    2
+  Number of output signals:   4
+  Number of state bits:       5
+
+  Input signals:
+    0: \en
+    1: $flatten\c1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:57$168_Y
+
+  Output signals:
+    0: $flatten\c1.$procmux$3141_CMP
+    1: $flatten\c1.$procmux$3154_CMP
+    2: $flatten\c1.$procmux$3156_CMP
+    3: $flatten\c1.$procmux$3157_CMP
+
+  State encoding:
+    0:    5'----1  <RESET STATE>
+    1:    5'---1-
+    2:    5'--1--
+    3:    5'-1---
+    4:    5'1----
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 2'-0   ->     0 4'0000
+      1:     0 2'-1   ->     3 4'0000
+      2:     1 2'--   ->     1 4'0010
+      3:     2 2'-0   ->     2 4'0100
+      4:     2 2'-1   ->     4 4'0100
+      5:     3 2'-1   ->     2 4'1000
+      6:     3 2'-0   ->     3 4'1000
+      7:     4 2'01   ->     1 4'0001
+      8:     4 2'-0   ->     4 4'0001
+      9:     4 2'11   ->     4 4'0001
+
+-------------------------------------
+
+FSM `$fsm$\tbck1.select_node$3496' from module `viterbi_decoder':
+-------------------------------------
+
+  Information on FSM $fsm$\tbck1.select_node$3496 (\tbck1.select_node):
+
+  Number of input signals:    5
+  Number of output signals:   4
+  Number of state bits:       4
+
+  Input signals:
+    0: \c1.en_tbck
+    1: $flatten\tbck1.$eq$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:55$15_Y
+    2: $flatten\tbck1.$eq$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:48$14_Y
+    3: $flatten\tbck1.$eq$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:41$13_Y
+    4: $flatten\tbck1.$eq$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:34$12_Y
+
+  Output signals:
+    0: $flatten\tbck1.$procmux$3106_CMP
+    1: $flatten\tbck1.$procmux$3102_CMP
+    2: $flatten\tbck1.$procmux$3098_CMP
+    3: $flatten\tbck1.$procmux$3094_CMP
+
+  State encoding:
+    0:     4'---1  <RESET STATE>
+    1:     4'--1-
+    2:     4'-1--
+    3:     4'1---
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 5'----0   ->     0 4'0001
+      1:     0 5'1---1   ->     0 4'0001
+      2:     0 5'0---1   ->     2 4'0001
+      3:     1 5'--1-1   ->     0 4'0100
+      4:     1 5'----0   ->     1 4'0100
+      5:     1 5'--0-1   ->     2 4'0100
+      6:     2 5'-1--1   ->     1 4'0010
+      7:     2 5'----0   ->     2 4'0010
+      8:     2 5'-0--1   ->     3 4'0010
+      9:     3 5'---11   ->     1 4'1000
+     10:     3 5'----0   ->     3 4'1000
+     11:     3 5'---01   ->     3 4'1000
+
+-------------------------------------
+
+44.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+Mapping FSM `$fsm$\c1.state$3489' from module `\viterbi_decoder'.
+Mapping FSM `$fsm$\tbck1.select_node$3496' from module `\viterbi_decoder'.
+
+45. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+<suppressed ~11 debug messages>
+
+46. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\viterbi_decoder'.
+<suppressed ~18 debug messages>
+Removed a total of 6 cells.
+
+47. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \viterbi_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~62 debug messages>
+
+48. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \viterbi_decoder.
+Performed a total of 0 changes.
+
+49. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\viterbi_decoder'.
+Removed a total of 0 cells.
+
+50. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $flatten\tbck1.$procdff$3442 ($adff) from module viterbi_decoder (D = $flatten\tbck1.$procmux$3110_Y, Q = \tbck1.in_bit).
+Adding EN signal on $flatten\tbck1.$procdff$3439 ($adff) from module viterbi_decoder (D = $flatten\tbck1.$procmux$3119_Y, Q = \tbck1.count).
+Adding EN signal on $flatten\tbck1.$procdff$3436 ($adff) from module viterbi_decoder (D = $flatten\tbck1.$or$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:0$22_Y, Q = \tbck1.sel_bit_out).
+Adding EN signal on $flatten\tbck1.$procdff$3433 ($adff) from module viterbi_decoder (D = 1'1, Q = \tbck1.done_flag).
+Adding EN signal on $flatten\tbck1.$procdff$3430 ($adff) from module viterbi_decoder (D = \tbck1.sel_bit_out, Q = \tbck1.data_out).
+Adding EN signal on $flatten\mem1.$procdff$3379 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$621_Y, Q = \mem1.trellis_diagr[31]).
+Adding EN signal on $flatten\mem1.$procdff$3376 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$639_Y, Q = \mem1.trellis_diagr[30]).
+Adding EN signal on $flatten\mem1.$procdff$3373 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$661_Y, Q = \mem1.trellis_diagr[29]).
+Adding EN signal on $flatten\mem1.$procdff$3370 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$687_Y, Q = \mem1.trellis_diagr[28]).
+Adding EN signal on $flatten\mem1.$procdff$3367 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$717_Y, Q = \mem1.trellis_diagr[27]).
+Adding EN signal on $flatten\mem1.$procdff$3364 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$751_Y, Q = \mem1.trellis_diagr[26]).
+Adding EN signal on $flatten\mem1.$procdff$3361 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$789_Y, Q = \mem1.trellis_diagr[25]).
+Adding EN signal on $flatten\mem1.$procdff$3358 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$831_Y, Q = \mem1.trellis_diagr[24]).
+Adding EN signal on $flatten\mem1.$procdff$3355 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$877_Y, Q = \mem1.trellis_diagr[23]).
+Adding EN signal on $flatten\mem1.$procdff$3352 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$927_Y, Q = \mem1.trellis_diagr[22]).
+Adding EN signal on $flatten\mem1.$procdff$3349 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$981_Y, Q = \mem1.trellis_diagr[21]).
+Adding EN signal on $flatten\mem1.$procdff$3346 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$1039_Y, Q = \mem1.trellis_diagr[20]).
+Adding EN signal on $flatten\mem1.$procdff$3343 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$1101_Y, Q = \mem1.trellis_diagr[19]).
+Adding EN signal on $flatten\mem1.$procdff$3340 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$1167_Y, Q = \mem1.trellis_diagr[18]).
+Adding EN signal on $flatten\mem1.$procdff$3337 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$1237_Y, Q = \mem1.trellis_diagr[17]).
+Adding EN signal on $flatten\mem1.$procdff$3334 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$1311_Y, Q = \mem1.trellis_diagr[16]).
+Adding EN signal on $flatten\mem1.$procdff$3331 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$1389_Y, Q = \mem1.trellis_diagr[15]).
+Adding EN signal on $flatten\mem1.$procdff$3328 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$1471_Y, Q = \mem1.trellis_diagr[14]).
+Adding EN signal on $flatten\mem1.$procdff$3325 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$1557_Y, Q = \mem1.trellis_diagr[13]).
+Adding EN signal on $flatten\mem1.$procdff$3322 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$1647_Y, Q = \mem1.trellis_diagr[12]).
+Adding EN signal on $flatten\mem1.$procdff$3319 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$1741_Y, Q = \mem1.trellis_diagr[11]).
+Adding EN signal on $flatten\mem1.$procdff$3316 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$1839_Y, Q = \mem1.trellis_diagr[10]).
+Adding EN signal on $flatten\mem1.$procdff$3313 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$1941_Y, Q = \mem1.trellis_diagr[9]).
+Adding EN signal on $flatten\mem1.$procdff$3310 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$2047_Y, Q = \mem1.trellis_diagr[8]).
+Adding EN signal on $flatten\mem1.$procdff$3307 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$2157_Y, Q = \mem1.trellis_diagr[7]).
+Adding EN signal on $flatten\mem1.$procdff$3304 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$2271_Y, Q = \mem1.trellis_diagr[6]).
+Adding EN signal on $flatten\mem1.$procdff$3301 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$2389_Y, Q = \mem1.trellis_diagr[5]).
+Adding EN signal on $flatten\mem1.$procdff$3298 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$2511_Y, Q = \mem1.trellis_diagr[4]).
+Adding EN signal on $flatten\mem1.$procdff$3295 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$2637_Y, Q = \mem1.trellis_diagr[3]).
+Adding EN signal on $flatten\mem1.$procdff$3292 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$2767_Y, Q = \mem1.trellis_diagr[2]).
+Adding EN signal on $flatten\mem1.$procdff$3289 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$2901_Y, Q = \mem1.trellis_diagr[1]).
+Adding EN signal on $flatten\mem1.$procdff$3286 ($adff) from module viterbi_decoder (D = $flatten\mem1.$procmux$3039_Y, Q = \mem1.trellis_diagr[0]).
+Adding EN signal on $flatten\mem1.$procdff$3277 ($adff) from module viterbi_decoder (D = $flatten\mem1.$sub$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:41$114_Y [2:0], Q = \mem1.trace).
+Adding EN signal on $flatten\mem1.$procdff$3274 ($adff) from module viterbi_decoder (D = $flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:32$95_Y [3:0], Q = \mem1.count).
+Adding EN signal on $flatten\mem1.$procdff$3271 ($dff) from module viterbi_decoder (D = $flatten\mem1.$4$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:39$32_DATA[1:0]$112, Q = \mem1.bck_prv_st_11).
+Adding EN signal on $flatten\mem1.$procdff$3266 ($dff) from module viterbi_decoder (D = $flatten\mem1.$4$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:37$30_DATA[1:0]$108, Q = \mem1.bck_prv_st_10).
+Adding EN signal on $flatten\mem1.$procdff$3261 ($dff) from module viterbi_decoder (D = $flatten\mem1.$4$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:38$31_DATA[1:0]$110, Q = \mem1.bck_prv_st_01).
+Adding EN signal on $flatten\mem1.$procdff$3256 ($dff) from module viterbi_decoder (D = $flatten\mem1.$4$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:36$29_DATA[1:0]$106, Q = \mem1.bck_prv_st_00).
+Adding EN signal on $flatten\c1.$procdff$3454 ($adff) from module viterbi_decoder (D = $flatten\c1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:19$166_Y [3:0], Q = \c1.count).
+Adding EN signal on $flatten\br1.$procdff$3209 ($adff) from module viterbi_decoder (D = $flatten\br1.$sub$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:31$163_Y [3:0], Q = \br1.count).
+Adding EN signal on $flatten\add1.$procdff$3251 ($adff) from module viterbi_decoder (D = $flatten\add1.$procmux$267_Y, Q = \add1.sum_11).
+Adding EN signal on $flatten\add1.$procdff$3248 ($adff) from module viterbi_decoder (D = $flatten\add1.$procmux$279_Y, Q = \add1.sum_01).
+Adding EN signal on $flatten\add1.$procdff$3245 ($adff) from module viterbi_decoder (D = $flatten\add1.$procmux$291_Y, Q = \add1.sum_10).
+Adding EN signal on $flatten\add1.$procdff$3242 ($adff) from module viterbi_decoder (D = $flatten\add1.$procmux$303_Y, Q = \add1.sum_00).
+
+51. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+Removed 94 unused cells and 118 unused wires.
+<suppressed ~95 debug messages>
+
+52. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+<suppressed ~32 debug messages>
+
+53. Rerunning OPT passes. (Maybe there is more to do…)
+
+54. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \viterbi_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~55 debug messages>
+
+55. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \viterbi_decoder.
+Performed a total of 0 changes.
+
+56. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\viterbi_decoder'.
+<suppressed ~24 debug messages>
+Removed a total of 8 cells.
+
+57. Executing OPT_DFF pass (perform DFF optimizations).
+
+58. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+Removed 0 unused cells and 8 unused wires.
+<suppressed ~1 debug messages>
+
+59. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+
+60. Rerunning OPT passes. (Maybe there is more to do…)
+
+61. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \viterbi_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~55 debug messages>
+
+62. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \viterbi_decoder.
+Performed a total of 0 changes.
+
+63. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\viterbi_decoder'.
+Removed a total of 0 cells.
+
+64. Executing OPT_DFF pass (perform DFF optimizations).
+
+65. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+
+66. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+
+67. Executing WREDUCE pass (reducing word size of cells).
+Removed top 28 bits (of 32) from port B of cell viterbi_decoder.$flatten\c1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:57$168 ($lt).
+Removed top 31 bits (of 32) from port B of cell viterbi_decoder.$flatten\c1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:19$166 ($add).
+Removed top 28 bits (of 32) from port Y of cell viterbi_decoder.$flatten\c1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:19$166 ($add).
+Removed top 1 bits (of 2) from port B of cell viterbi_decoder.$auto$fsm_map.cc:77:implement_pattern_cache$3511 ($eq).
+Removed top 1 bits (of 2) from port B of cell viterbi_decoder.$auto$fsm_map.cc:77:implement_pattern_cache$3594 ($eq).
+Removed top 1 bits (of 2) from port B of cell viterbi_decoder.$auto$fsm_map.cc:77:implement_pattern_cache$3598 ($eq).
+Removed top 1 bits (of 2) from port B of cell viterbi_decoder.$auto$fsm_map.cc:77:implement_pattern_cache$3585 ($eq).
+Removed top 1 bits (of 2) from port B of cell viterbi_decoder.$auto$fsm_map.cc:77:implement_pattern_cache$3581 ($eq).
+Removed top 1 bits (of 2) from port B of cell viterbi_decoder.$flatten\br1.$procmux$173_CMP0 ($eq).
+Removed top 30 bits (of 32) from port B of cell viterbi_decoder.$flatten\br1.$sub$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:31$163 ($sub).
+Removed top 28 bits (of 32) from port Y of cell viterbi_decoder.$flatten\br1.$sub$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:31$163 ($sub).
+Removed top 31 bits (of 32) from port B of cell viterbi_decoder.$flatten\br1.$sub$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:30$160 ($sub).
+Removed top 27 bits (of 32) from port Y of cell viterbi_decoder.$flatten\br1.$sub$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:30$160 ($sub).
+Removed top 1 bits (of 2) from mux cell viterbi_decoder.$flatten\add1.$procmux$297 ($mux).
+Removed top 1 bits (of 2) from mux cell viterbi_decoder.$flatten\add1.$procmux$285 ($mux).
+Removed top 1 bits (of 2) from mux cell viterbi_decoder.$flatten\add1.$procmux$273 ($mux).
+Removed top 1 bits (of 2) from mux cell viterbi_decoder.$flatten\add1.$procmux$261 ($mux).
+Removed top 4 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2902_CMP0 ($eq).
+Removed top 4 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2870_CMP0 ($eq).
+Removed top 4 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2838_CMP0 ($eq).
+Removed top 3 bits (of 4) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2806_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2768_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2737_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2706_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2675_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2638_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2608_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2578_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2548_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2512_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2483_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2454_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2425_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2390_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2362_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2334_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2306_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2272_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2245_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2218_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2191_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2158_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2132_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2106_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2080_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2048_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$2023_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$1998_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$1942_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$1918_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$1894_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$1840_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$1817_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$1794_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$1742_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$1720_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$1698_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$1648_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$1627_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$1606_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$1558_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$1538_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$1518_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$1472_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$1453_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$1434_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$1390_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$1372_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$1354_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$463_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$462_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$461_CMP0 ($eq).
+Removed top 4 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$424_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$423_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$422_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$421_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$420_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$419_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$418_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$417_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$416_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$415_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$414_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$413_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$412_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$411_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$410_CMP0 ($eq).
+Removed top 4 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$385_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$384_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$383_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$382_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$381_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$380_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$379_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$378_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$377_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$376_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$375_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$374_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$373_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$372_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$371_CMP0 ($eq).
+Removed top 4 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$346_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$345_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$344_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$343_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$342_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$341_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$340_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$339_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$338_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$337_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$336_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$335_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$334_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$333_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell viterbi_decoder.$flatten\mem1.$procmux$332_CMP0 ($eq).
+Removed top 31 bits (of 32) from port B of cell viterbi_decoder.$flatten\mem1.$sub$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:41$114 ($sub).
+Removed top 29 bits (of 32) from port Y of cell viterbi_decoder.$flatten\mem1.$sub$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:41$114 ($sub).
+Removed top 27 bits (of 32) from port A of cell viterbi_decoder.$flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$111 ($add).
+Removed top 27 bits (of 32) from port Y of cell viterbi_decoder.$flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$111 ($add).
+Removed top 28 bits (of 32) from port A of cell viterbi_decoder.$flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$109 ($add).
+Removed top 27 bits (of 32) from port Y of cell viterbi_decoder.$flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$109 ($add).
+Removed top 27 bits (of 32) from port A of cell viterbi_decoder.$flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$107 ($add).
+Removed top 27 bits (of 32) from port Y of cell viterbi_decoder.$flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$107 ($add).
+Removed top 31 bits (of 32) from port B of cell viterbi_decoder.$flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:32$95 ($add).
+Removed top 28 bits (of 32) from port Y of cell viterbi_decoder.$flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:32$95 ($add).
+Removed top 27 bits (of 32) from port A of cell viterbi_decoder.$flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$94 ($add).
+Removed top 27 bits (of 32) from port Y of cell viterbi_decoder.$flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$94 ($add).
+Removed top 28 bits (of 32) from port A of cell viterbi_decoder.$flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$93 ($add).
+Removed top 27 bits (of 32) from port Y of cell viterbi_decoder.$flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$93 ($add).
+Removed top 27 bits (of 32) from port A of cell viterbi_decoder.$flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$92 ($add).
+Removed top 27 bits (of 32) from port Y of cell viterbi_decoder.$flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$92 ($add).
+Removed top 28 bits (of 32) from port B of cell viterbi_decoder.$flatten\mem1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:27$82 ($lt).
+Removed top 31 bits (of 32) from port B of cell viterbi_decoder.$flatten\tbck1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:67$24 ($add).
+Removed top 28 bits (of 32) from port Y of cell viterbi_decoder.$flatten\tbck1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:67$24 ($add).
+Removed top 28 bits (of 32) from port B of cell viterbi_decoder.$flatten\tbck1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:66$23 ($lt).
+Converting cell viterbi_decoder.$flatten\tbck1.$neg$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:0$16 ($neg) from signed to unsigned.
+Removed top 1 bits (of 5) from port A of cell viterbi_decoder.$flatten\tbck1.$neg$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:0$16 ($neg).
+Removed top 1 bits (of 2) from wire viterbi_decoder.$flatten\add1.$procmux$261_Y.
+Removed top 1 bits (of 2) from wire viterbi_decoder.$flatten\add1.$procmux$273_Y.
+Removed top 1 bits (of 2) from wire viterbi_decoder.$flatten\add1.$procmux$285_Y.
+Removed top 1 bits (of 2) from wire viterbi_decoder.$flatten\add1.$procmux$297_Y.
+Removed top 28 bits (of 32) from wire viterbi_decoder.$flatten\br1.$sub$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:31$163_Y.
+Removed top 28 bits (of 32) from wire viterbi_decoder.$flatten\c1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:19$166_Y.
+Removed top 27 bits (of 32) from wire viterbi_decoder.$flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$107_Y.
+Removed top 27 bits (of 32) from wire viterbi_decoder.$flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$109_Y.
+Removed top 27 bits (of 32) from wire viterbi_decoder.$flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$111_Y.
+Removed top 29 bits (of 32) from wire viterbi_decoder.$flatten\mem1.$sub$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:41$114_Y.
+Removed top 28 bits (of 32) from wire viterbi_decoder.$flatten\tbck1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:67$24_Y.
+
+68. Executing PEEPOPT pass (run peephole optimizers).
+
+69. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+Removed 0 unused cells and 11 unused wires.
+<suppressed ~1 debug messages>
+
+70. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module viterbi_decoder:
+  creating $macc model for $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:34$123 ($add).
+  creating $macc model for $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:37$124 ($add).
+  creating $macc model for $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:43$132 ($add).
+  creating $macc model for $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:46$133 ($add).
+  creating $macc model for $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:60$146 ($add).
+  creating $macc model for $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:60$147 ($add).
+  creating $macc model for $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:61$150 ($add).
+  creating $macc model for $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:64$151 ($add).
+  creating $macc model for $flatten\br1.$sub$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:30$160 ($sub).
+  creating $macc model for $flatten\br1.$sub$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:31$163 ($sub).
+  creating $macc model for $flatten\c1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:19$166 ($add).
+  creating $macc model for $flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$107 ($add).
+  creating $macc model for $flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$109 ($add).
+  creating $macc model for $flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$111 ($add).
+  creating $macc model for $flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$92 ($add).
+  creating $macc model for $flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$93 ($add).
+  creating $macc model for $flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$94 ($add).
+  creating $macc model for $flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:32$95 ($add).
+  creating $macc model for $flatten\mem1.$sub$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:41$114 ($sub).
+  creating $macc model for $flatten\tbck1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:67$24 ($add).
+  creating $macc model for $flatten\tbck1.$neg$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:0$16 ($neg).
+  creating $alu model for $macc $flatten\tbck1.$neg$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:0$16.
+  creating $alu model for $macc $flatten\tbck1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:67$24.
+  creating $alu model for $macc $flatten\mem1.$sub$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:41$114.
+  creating $alu model for $macc $flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:32$95.
+  creating $alu model for $macc $flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$94.
+  creating $alu model for $macc $flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$93.
+  creating $alu model for $macc $flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$92.
+  creating $alu model for $macc $flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$111.
+  creating $alu model for $macc $flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$109.
+  creating $alu model for $macc $flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$107.
+  creating $alu model for $macc $flatten\c1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:19$166.
+  creating $alu model for $macc $flatten\br1.$sub$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:31$163.
+  creating $alu model for $macc $flatten\br1.$sub$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:30$160.
+  creating $alu model for $macc $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:64$151.
+  creating $alu model for $macc $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:61$150.
+  creating $alu model for $macc $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:60$147.
+  creating $alu model for $macc $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:60$146.
+  creating $alu model for $macc $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:46$133.
+  creating $alu model for $macc $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:43$132.
+  creating $alu model for $macc $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:37$124.
+  creating $alu model for $macc $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:34$123.
+  creating $alu model for $flatten\add1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:33$121 ($lt): new $alu
+  creating $alu model for $flatten\add1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:42$130 ($lt): new $alu
+  creating $alu model for $flatten\add1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:51$139 ($lt): new $alu
+  creating $alu model for $flatten\add1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:60$148 ($lt): new $alu
+  creating $alu model for $flatten\c1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:57$168 ($lt): new $alu
+  creating $alu model for $flatten\mem1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:27$82 ($lt): new $alu
+  creating $alu model for $flatten\tbck1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:66$23 ($lt): new $alu
+  creating $alu model for $flatten\add1.$eq$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:33$118 ($eq): merged with $flatten\add1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:33$121.
+  creating $alu model for $flatten\add1.$eq$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:42$127 ($eq): merged with $flatten\add1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:42$130.
+  creating $alu model for $flatten\add1.$eq$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:51$136 ($eq): merged with $flatten\add1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:51$139.
+  creating $alu model for $flatten\add1.$eq$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:60$145 ($eq): merged with $flatten\add1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:60$148.
+  creating $alu model for $flatten\mem1.$eq$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:35$96 ($eq): merged with $flatten\mem1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:27$82.
+  creating $alu cell for $flatten\tbck1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:66$23: $auto$alumacc.cc:485:replace_alu$3825
+  creating $alu cell for $flatten\c1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:57$168: $auto$alumacc.cc:485:replace_alu$3830
+  creating $alu cell for $flatten\add1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:60$148, $flatten\add1.$eq$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:60$145: $auto$alumacc.cc:485:replace_alu$3835
+  creating $alu cell for $flatten\add1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:51$139, $flatten\add1.$eq$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:51$136: $auto$alumacc.cc:485:replace_alu$3846
+  creating $alu cell for $flatten\add1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:42$130, $flatten\add1.$eq$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:42$127: $auto$alumacc.cc:485:replace_alu$3853
+  creating $alu cell for $flatten\add1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:33$121, $flatten\add1.$eq$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:33$118: $auto$alumacc.cc:485:replace_alu$3860
+  creating $alu cell for $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:34$123: $auto$alumacc.cc:485:replace_alu$3867
+  creating $alu cell for $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:37$124: $auto$alumacc.cc:485:replace_alu$3870
+  creating $alu cell for $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:43$132: $auto$alumacc.cc:485:replace_alu$3873
+  creating $alu cell for $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:46$133: $auto$alumacc.cc:485:replace_alu$3876
+  creating $alu cell for $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:60$146: $auto$alumacc.cc:485:replace_alu$3879
+  creating $alu cell for $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:60$147: $auto$alumacc.cc:485:replace_alu$3882
+  creating $alu cell for $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:61$150: $auto$alumacc.cc:485:replace_alu$3885
+  creating $alu cell for $flatten\add1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:64$151: $auto$alumacc.cc:485:replace_alu$3888
+  creating $alu cell for $flatten\br1.$sub$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:30$160: $auto$alumacc.cc:485:replace_alu$3891
+  creating $alu cell for $flatten\br1.$sub$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:31$163: $auto$alumacc.cc:485:replace_alu$3894
+  creating $alu cell for $flatten\c1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:19$166: $auto$alumacc.cc:485:replace_alu$3897
+  creating $alu cell for $flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$107: $auto$alumacc.cc:485:replace_alu$3900
+  creating $alu cell for $flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$109: $auto$alumacc.cc:485:replace_alu$3903
+  creating $alu cell for $flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$111: $auto$alumacc.cc:485:replace_alu$3906
+  creating $alu cell for $flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$92: $auto$alumacc.cc:485:replace_alu$3909
+  creating $alu cell for $flatten\mem1.$lt$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:27$82, $flatten\mem1.$eq$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:35$96: $auto$alumacc.cc:485:replace_alu$3912
+  creating $alu cell for $flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$93: $auto$alumacc.cc:485:replace_alu$3919
+  creating $alu cell for $flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:0$94: $auto$alumacc.cc:485:replace_alu$3922
+  creating $alu cell for $flatten\mem1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:32$95: $auto$alumacc.cc:485:replace_alu$3925
+  creating $alu cell for $flatten\mem1.$sub$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:41$114: $auto$alumacc.cc:485:replace_alu$3928
+  creating $alu cell for $flatten\tbck1.$add$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:67$24: $auto$alumacc.cc:485:replace_alu$3931
+  creating $alu cell for $flatten\tbck1.$neg$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:0$16: $auto$alumacc.cc:485:replace_alu$3934
+  created 28 $alu and 0 $macc cells.
+
+71. Executing SHARE pass (SAT-based resource sharing).
+
+72. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+<suppressed ~2 debug messages>
+
+73. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\viterbi_decoder'.
+Removed a total of 0 cells.
+
+74. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \viterbi_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~55 debug messages>
+
+75. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \viterbi_decoder.
+    New input vector for $reduce_and cell $auto$opt_dff.cc:220:make_patterns_logic$3785: { $auto$rtlil.cc:2493:Not$3783 $auto$alumacc.cc:501:replace_alu$3913 \c1.en_mem }
+    New input vector for $reduce_and cell $auto$opt_dff.cc:220:make_patterns_logic$3777: { $auto$alumacc.cc:501:replace_alu$3913 $flatten\mem1.$ne$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:40$113_Y \c1.en_mem }
+  Optimizing cells in module \viterbi_decoder.
+Performed a total of 2 changes.
+
+76. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\viterbi_decoder'.
+Removed a total of 0 cells.
+
+77. Executing OPT_DFF pass (perform DFF optimizations).
+
+78. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+Removed 1 unused cells and 14 unused wires.
+<suppressed ~2 debug messages>
+
+79. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+
+80. Rerunning OPT passes. (Maybe there is more to do…)
+
+81. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \viterbi_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~55 debug messages>
+
+82. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \viterbi_decoder.
+Performed a total of 0 changes.
+
+83. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\viterbi_decoder'.
+Removed a total of 0 cells.
+
+84. Executing OPT_DFF pass (perform DFF optimizations).
+
+85. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+
+86. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+
+87. Executing MEMORY pass.
+
+87.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+87.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+87.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+87.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+87.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+87.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+
+87.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+87.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+87.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+
+87.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+88. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+
+89. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+<suppressed ~210 debug messages>
+
+90. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\viterbi_decoder'.
+Removed a total of 0 cells.
+
+91. Executing OPT_DFF pass (perform DFF optimizations).
+
+92. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+Removed 6 unused cells and 163 unused wires.
+<suppressed ~7 debug messages>
+
+93. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+94. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+<suppressed ~4 debug messages>
+
+95. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\viterbi_decoder'.
+<suppressed ~84 debug messages>
+Removed a total of 28 cells.
+
+96. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \viterbi_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 9/32 on $pmux $flatten\mem1.$procmux$315.
+    dead port 10/32 on $pmux $flatten\mem1.$procmux$315.
+    dead port 11/32 on $pmux $flatten\mem1.$procmux$315.
+    dead port 12/32 on $pmux $flatten\mem1.$procmux$315.
+    dead port 13/32 on $pmux $flatten\mem1.$procmux$315.
+    dead port 14/32 on $pmux $flatten\mem1.$procmux$315.
+    dead port 15/32 on $pmux $flatten\mem1.$procmux$315.
+    dead port 16/32 on $pmux $flatten\mem1.$procmux$315.
+    dead port 17/32 on $pmux $flatten\mem1.$procmux$315.
+    dead port 18/32 on $pmux $flatten\mem1.$procmux$315.
+    dead port 19/32 on $pmux $flatten\mem1.$procmux$315.
+    dead port 20/32 on $pmux $flatten\mem1.$procmux$315.
+    dead port 21/32 on $pmux $flatten\mem1.$procmux$315.
+    dead port 22/32 on $pmux $flatten\mem1.$procmux$315.
+    dead port 23/32 on $pmux $flatten\mem1.$procmux$315.
+    dead port 24/32 on $pmux $flatten\mem1.$procmux$315.
+    dead port 25/32 on $pmux $flatten\mem1.$procmux$315.
+    dead port 26/32 on $pmux $flatten\mem1.$procmux$315.
+    dead port 27/32 on $pmux $flatten\mem1.$procmux$315.
+    dead port 28/32 on $pmux $flatten\mem1.$procmux$315.
+    dead port 29/32 on $pmux $flatten\mem1.$procmux$315.
+    dead port 30/32 on $pmux $flatten\mem1.$procmux$315.
+    dead port 31/32 on $pmux $flatten\mem1.$procmux$315.
+    dead port 1/32 on $pmux $flatten\mem1.$procmux$354.
+    dead port 2/32 on $pmux $flatten\mem1.$procmux$354.
+    dead port 3/32 on $pmux $flatten\mem1.$procmux$354.
+    dead port 4/32 on $pmux $flatten\mem1.$procmux$354.
+    dead port 5/32 on $pmux $flatten\mem1.$procmux$354.
+    dead port 6/32 on $pmux $flatten\mem1.$procmux$354.
+    dead port 7/32 on $pmux $flatten\mem1.$procmux$354.
+    dead port 8/32 on $pmux $flatten\mem1.$procmux$354.
+    dead port 9/32 on $pmux $flatten\mem1.$procmux$354.
+    dead port 10/32 on $pmux $flatten\mem1.$procmux$354.
+    dead port 11/32 on $pmux $flatten\mem1.$procmux$354.
+    dead port 12/32 on $pmux $flatten\mem1.$procmux$354.
+    dead port 13/32 on $pmux $flatten\mem1.$procmux$354.
+    dead port 14/32 on $pmux $flatten\mem1.$procmux$354.
+    dead port 15/32 on $pmux $flatten\mem1.$procmux$354.
+    dead port 16/32 on $pmux $flatten\mem1.$procmux$354.
+    dead port 25/32 on $pmux $flatten\mem1.$procmux$354.
+    dead port 26/32 on $pmux $flatten\mem1.$procmux$354.
+    dead port 27/32 on $pmux $flatten\mem1.$procmux$354.
+    dead port 28/32 on $pmux $flatten\mem1.$procmux$354.
+    dead port 29/32 on $pmux $flatten\mem1.$procmux$354.
+    dead port 30/32 on $pmux $flatten\mem1.$procmux$354.
+    dead port 31/32 on $pmux $flatten\mem1.$procmux$354.
+    dead port 1/32 on $pmux $flatten\mem1.$procmux$393.
+    dead port 2/32 on $pmux $flatten\mem1.$procmux$393.
+    dead port 3/32 on $pmux $flatten\mem1.$procmux$393.
+    dead port 4/32 on $pmux $flatten\mem1.$procmux$393.
+    dead port 5/32 on $pmux $flatten\mem1.$procmux$393.
+    dead port 6/32 on $pmux $flatten\mem1.$procmux$393.
+    dead port 7/32 on $pmux $flatten\mem1.$procmux$393.
+    dead port 8/32 on $pmux $flatten\mem1.$procmux$393.
+    dead port 17/32 on $pmux $flatten\mem1.$procmux$393.
+    dead port 18/32 on $pmux $flatten\mem1.$procmux$393.
+    dead port 19/32 on $pmux $flatten\mem1.$procmux$393.
+    dead port 20/32 on $pmux $flatten\mem1.$procmux$393.
+    dead port 21/32 on $pmux $flatten\mem1.$procmux$393.
+    dead port 22/32 on $pmux $flatten\mem1.$procmux$393.
+    dead port 23/32 on $pmux $flatten\mem1.$procmux$393.
+    dead port 24/32 on $pmux $flatten\mem1.$procmux$393.
+    dead port 25/32 on $pmux $flatten\mem1.$procmux$393.
+    dead port 26/32 on $pmux $flatten\mem1.$procmux$393.
+    dead port 27/32 on $pmux $flatten\mem1.$procmux$393.
+    dead port 28/32 on $pmux $flatten\mem1.$procmux$393.
+    dead port 29/32 on $pmux $flatten\mem1.$procmux$393.
+    dead port 30/32 on $pmux $flatten\mem1.$procmux$393.
+    dead port 31/32 on $pmux $flatten\mem1.$procmux$393.
+Removed 69 multiplexer ports.
+<suppressed ~50 debug messages>
+
+97. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \viterbi_decoder.
+    Consolidated identical input bits for $mux cell $flatten\add1.$procmux$287:
+      Old ports: A=2'00, B={ 1'0 $auto$wreduce.cc:461:run$3809 [0] }, Y=$flatten\add1.$0\prv_st_10[1:0]
+      New ports: A=1'0, B=$auto$wreduce.cc:461:run$3809 [0], Y=$flatten\add1.$0\prv_st_10[1:0] [0]
+      New connections: $flatten\add1.$0\prv_st_10[1:0] [1] = 1'0
+    Consolidated identical input bits for $mux cell $flatten\add1.$procmux$299:
+      Old ports: A=2'00, B={ 1'0 $auto$wreduce.cc:461:run$3810 [0] }, Y=$flatten\add1.$0\prv_st_00[1:0]
+      New ports: A=1'0, B=$auto$wreduce.cc:461:run$3810 [0], Y=$flatten\add1.$0\prv_st_00[1:0] [0]
+      New connections: $flatten\add1.$0\prv_st_00[1:0] [1] = 1'0
+  Optimizing cells in module \viterbi_decoder.
+Performed a total of 2 changes.
+
+98. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\viterbi_decoder'.
+Removed a total of 0 cells.
+
+99. Executing OPT_SHARE pass.
+
+100. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $auto$ff.cc:266:slice$3802 ($adffe) from module viterbi_decoder (D = \br1.count [0], Q = \br1.count [0]).
+Handling D = Q on $auto$ff.cc:266:slice$3956 ($adffe) from module viterbi_decoder (removing D path).
+Setting constant 1-bit at position 0 on $auto$ff.cc:266:slice$3956 ($dlatch) from module viterbi_decoder.
+
+101. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+Removed 2 unused cells and 30 unused wires.
+<suppressed ~3 debug messages>
+
+102. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+<suppressed ~17 debug messages>
+
+103. Rerunning OPT passes. (Maybe there is more to do…)
+
+104. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \viterbi_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~48 debug messages>
+
+105. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \viterbi_decoder.
+Performed a total of 0 changes.
+
+106. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\viterbi_decoder'.
+Removed a total of 0 cells.
+
+107. Executing OPT_SHARE pass.
+
+108. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 1 on $flatten\add1.$procdff$3224 ($adff) from module viterbi_decoder.
+Setting constant 0-bit at position 1 on $flatten\add1.$procdff$3230 ($adff) from module viterbi_decoder.
+
+109. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+Removed 1 unused cells and 9 unused wires.
+<suppressed ~3 debug messages>
+
+110. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+
+111. Rerunning OPT passes. (Maybe there is more to do…)
+
+112. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \viterbi_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~48 debug messages>
+
+113. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \viterbi_decoder.
+Performed a total of 0 changes.
+
+114. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\viterbi_decoder'.
+Removed a total of 0 cells.
+
+115. Executing OPT_SHARE pass.
+
+116. Executing OPT_DFF pass (perform DFF optimizations).
+
+117. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+
+118. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+
+119. Executing TECHMAP pass (map to technology primitives).
+
+119.1. Executing Verilog-2005 frontend: /nix/store/9r0bh7sp051dpm8km8bqlb028anpd3v3-yosys/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/nix/store/9r0bh7sp051dpm8km8bqlb028anpd3v3-yosys/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+119.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $and.
+Using template $paramod$3ac6e4268d0279df14823f25676acf685165517e\_90_alu for cells of type $alu.
+Using template $paramod$b18e16801adf491a64caa0542270798e5d4ac6b6\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $mux.
+Using template $paramod$521ce43182eecb9f60c72393a788160d2c356bf5\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $logic_not.
+Using template $paramod$32a7b7b86c07519b7537abc18e96f0331f97914d\_90_alu for cells of type $alu.
+Using template $paramod$constmap:3e9c88d652927482d5bdffc87b731c33155c6a9a$paramod$39466c153d1381e5e5c33cb861f8a339d953949d\_90_shift_shiftx for cells of type $shiftx.
+Using template $paramod$constmap:e5bf8a63dbff3a3e173c3b65db35da03305678fd$paramod$d306f3989a1e71cb7d0dc3c9e7db74ae0ca96f07\_90_shift_shiftx for cells of type $shiftx.
+Using template $paramod$b8c0a997bce700f23568a5ada79cc6781d1f5ca0\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $logic_or.
+Using template $paramod$fc972a7a46956c1788f3cb5257b53c8f1df2d0cc\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $dffe.
+Using template $paramod$b569b4d9c64aef2243c1fd5dbfc1a71b4a41c1b6\_90_pmux for cells of type $pmux.
+Using template $paramod$b0dd5928987634d4f6d414fc2fefa5cebc2c5506\_90_pmux for cells of type $pmux.
+Using template $paramod$1d1e68f77481583066c6d429218f48ea9d5739b3\_90_alu for cells of type $alu.
+Using template $paramod$175e67c02b86e96b1288b9dc100122520d7240d8\_90_alu for cells of type $alu.
+Using template $paramod$3ace65afedd5f6a6849996376b6c02262a5f23eb\_90_alu for cells of type $alu.
+Using template $paramod$740b056ede97228d3eae64ea2fdc81f0a33e0fe7\_90_alu for cells of type $alu.
+Using template $paramod$constmap:38f9c548357cd87dd95160b53e56b1f7cdc9cd84$paramod$9a202bcc22027871469abc40366723b96a88ed36\_90_shift_shiftx for cells of type $shift.
+Analyzing pattern of constant bits for this cell:
+  Constant input on bit 0 of port A: 1'1
+Creating constmapped module `$paramod$constmap:bcfef79cd3f19f8d65a942f5814d3a73b910a053$paramod$9a202bcc22027871469abc40366723b96a88ed36\_90_shift_shiftx'.
+
+119.42. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$constmap:bcfef79cd3f19f8d65a942f5814d3a73b910a053$paramod$9a202bcc22027871469abc40366723b96a88ed36\_90_shift_shiftx..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$6799.
+    dead port 2/2 on $mux $procmux$6793.
+    dead port 2/2 on $mux $procmux$6787.
+    dead port 2/2 on $mux $procmux$6781.
+Removed 4 multiplexer ports.
+<suppressed ~1272 debug messages>
+
+119.43. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$constmap:bcfef79cd3f19f8d65a942f5814d3a73b910a053$paramod$9a202bcc22027871469abc40366723b96a88ed36\_90_shift_shiftx.
+<suppressed ~2 debug messages>
+Removed 0 unused cells and 10 unused wires.
+Using template $paramod$constmap:bcfef79cd3f19f8d65a942f5814d3a73b910a053$paramod$9a202bcc22027871469abc40366723b96a88ed36\_90_shift_shiftx for cells of type $shift.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000100 for cells of type $lcu.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000001 for cells of type $lcu.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000010 for cells of type $lcu.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000011 for cells of type $lcu.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000101 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~1053 debug messages>
+
+120. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+<suppressed ~1320 debug messages>
+
+121. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\viterbi_decoder'.
+<suppressed ~2106 debug messages>
+Removed a total of 702 cells.
+
+122. Executing OPT_DFF pass (perform DFF optimizations).
+
+123. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+Removed 124 unused cells and 1728 unused wires.
+<suppressed ~125 debug messages>
+
+124. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+
+125. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\viterbi_decoder'.
+Removed a total of 0 cells.
+
+126. Executing OPT_DFF pass (perform DFF optimizations).
+
+127. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+
+128. Executing ABC pass (technology mapping using ABC).
+
+128.1. Extracting gate netlist of module `\viterbi_decoder' to `<abc-temp-dir>/input.blif'..
+Extracted 949 gates and 1109 wires to a netlist network with 159 inputs and 166 outputs.
+
+128.1.1. Executing ABC.
+Running ABC command: "/nix/store/6l3aj1gi4lja8z5s4lan2k2cfz9mqkrz-yosys-abc/bin/abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+128.1.2. Re-integrating ABC results.
+ABC RESULTS:               MUX cells:      140
+ABC RESULTS:               NOT cells:       31
+ABC RESULTS:             ORNOT cells:       26
+ABC RESULTS:                OR cells:      161
+ABC RESULTS:            ANDNOT cells:      231
+ABC RESULTS:              NAND cells:       29
+ABC RESULTS:              XNOR cells:       22
+ABC RESULTS:               NOR cells:       32
+ABC RESULTS:               AND cells:       95
+ABC RESULTS:               XOR cells:       54
+ABC RESULTS:        internal signals:      784
+ABC RESULTS:           input signals:      159
+ABC RESULTS:          output signals:      166
+Removing temp directory.
+
+129. Executing OPT pass (performing simple optimizations).
+
+129.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+<suppressed ~6 debug messages>
+
+129.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\viterbi_decoder'.
+Removed a total of 0 cells.
+
+129.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+129.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+Removed 2 unused cells and 715 unused wires.
+<suppressed ~6 debug messages>
+
+129.5. Finished fast OPT passes.
+
+130. Executing HIERARCHY pass (managing design hierarchy).
+
+130.1. Analyzing design hierarchy..
+Top module:  \viterbi_decoder
+
+130.2. Analyzing design hierarchy..
+Top module:  \viterbi_decoder
+Removed 0 unused modules.
+
+131. Executing CHECK pass (checking for obvious problems).
+Checking module viterbi_decoder...
+Found and reported 0 problems.
+
+132. Printing statistics.
+
+=== viterbi_decoder ===
+
+   Number of wires:                929
+   Number of wire bits:           1133
+   Number of public wires:         124
+   Number of public wire bits:     308
+   Number of ports:                  6
+   Number of port bits:             28
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                990
+     $_ANDNOT_                     231
+     $_AND_                         95
+     $_DFFE_PP0P_                  114
+     $_DFFE_PP1P_                    6
+     $_DFFE_PP_                      8
+     $_DFF_PP0_                     36
+     $_DFF_PP1_                      2
+     $_MUX_                        140
+     $_NAND_                        29
+     $_NOR_                         32
+     $_NOT_                         29
+     $_ORNOT_                       26
+     $_OR_                         161
+     $_XNOR_                        22
+     $_XOR_                         54
+     $scopeinfo                      5
+
+133. Generating Graphviz representation of design.
+Writing dot description to `/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/runs/RUN_2025-12-04_07-52-11/06-yosys-synthesis/primitive_techmap.dot'.
+Dumping module viterbi_decoder to page 1.
+
+134. Executing OPT pass (performing simple optimizations).
+
+134.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+
+134.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\viterbi_decoder'.
+Removed a total of 0 cells.
+
+134.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \viterbi_decoder..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+134.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \viterbi_decoder.
+Performed a total of 0 changes.
+
+134.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\viterbi_decoder'.
+Removed a total of 0 cells.
+
+134.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $auto$ff.cc:266:slice$4607 ($_DFF_PP0_) from module viterbi_decoder (D = \c1.state [0], Q = \c1.state [3]).
+Adding EN signal on $auto$ff.cc:266:slice$4606 ($_DFF_PP0_) from module viterbi_decoder (D = \c1.state [3], Q = \c1.state [2]).
+
+134.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+Removed 2 unused cells and 2 unused wires.
+<suppressed ~3 debug messages>
+
+134.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+
+134.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+134.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \viterbi_decoder..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+134.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \viterbi_decoder.
+Performed a total of 0 changes.
+
+134.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\viterbi_decoder'.
+Removed a total of 0 cells.
+
+134.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+134.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+
+134.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+
+134.16. Finished OPT passes. (There is nothing left to do.)
+
+135. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+Removed 5 unused cells and 56 unused wires.
+<suppressed ~61 debug messages>
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/runs/RUN_2025-12-04_07-52-11/tmp/0e2a141401b64efcacd39aefca8dd9f2.lib ",
+   "modules": {
+      "\\viterbi_decoder": {
+         "num_wires":         871,
+         "num_wire_bits":     1017,
+         "num_pub_wires":     68,
+         "num_pub_wire_bits": 194,
+         "num_ports":         6,
+         "num_port_bits":     28,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         983,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 231,
+            "$_AND_": 95,
+            "$_DFFE_PP0P_": 116,
+            "$_DFFE_PP1P_": 6,
+            "$_DFFE_PP_": 8,
+            "$_DFF_PP0_": 34,
+            "$_DFF_PP1_": 2,
+            "$_MUX_": 138,
+            "$_NAND_": 29,
+            "$_NOR_": 32,
+            "$_NOT_": 29,
+            "$_ORNOT_": 26,
+            "$_OR_": 161,
+            "$_XNOR_": 22,
+            "$_XOR_": 54
+         }
+      }
+   },
+      "design": {
+         "num_wires":         871,
+         "num_wire_bits":     1017,
+         "num_pub_wires":     68,
+         "num_pub_wire_bits": 194,
+         "num_ports":         6,
+         "num_port_bits":     28,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         983,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 231,
+            "$_AND_": 95,
+            "$_DFFE_PP0P_": 116,
+            "$_DFFE_PP1P_": 6,
+            "$_DFFE_PP_": 8,
+            "$_DFF_PP0_": 34,
+            "$_DFF_PP1_": 2,
+            "$_MUX_": 138,
+            "$_NAND_": 29,
+            "$_NOR_": 32,
+            "$_NOT_": 29,
+            "$_ORNOT_": 26,
+            "$_OR_": 161,
+            "$_XNOR_": 22,
+            "$_XOR_": 54
+         }
+      }
+}
+
+136. Printing statistics.
+
+=== viterbi_decoder ===
+
+   Number of wires:                871
+   Number of wire bits:           1017
+   Number of public wires:          68
+   Number of public wire bits:     194
+   Number of ports:                  6
+   Number of port bits:             28
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                983
+     $_ANDNOT_                     231
+     $_AND_                         95
+     $_DFFE_PP0P_                  116
+     $_DFFE_PP1P_                    6
+     $_DFFE_PP_                      8
+     $_DFF_PP0_                     34
+     $_DFF_PP1_                      2
+     $_MUX_                        138
+     $_NAND_                        29
+     $_NOR_                         32
+     $_NOT_                         29
+     $_ORNOT_                       26
+     $_OR_                         161
+     $_XNOR_                        22
+     $_XOR_                         54
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_DFFE_PP_ is unknown!
+   Area for cell type $_DFF_PP0_ is unknown!
+   Area for cell type $_DFF_PP1_ is unknown!
+   Area for cell type $_DFFE_PP0P_ is unknown!
+   Area for cell type $_DFFE_PP1P_ is unknown!
+
+[INFO] Applying tri-state buffer mapping from '/home/lroot/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v'…
+
+137. Executing TECHMAP pass (map to technology primitives).
+
+137.1. Executing Verilog-2005 frontend: /home/lroot/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v
+Parsing Verilog input from `/home/lroot/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_TBUF_'.
+Successfully finished Verilog frontend.
+
+137.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+138. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+[INFO] Applying latch mapping from '/home/lroot/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v'…
+
+139. Executing TECHMAP pass (map to technology primitives).
+
+139.1. Executing Verilog-2005 frontend: /home/lroot/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v
+Parsing Verilog input from `/home/lroot/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+139.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+140. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+141. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_2 (noninv, pins=3, area=21.27) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_2 (noninv, pins=6, area=35.03) is a direct match for cell type $_DFFSR_NNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_2 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_2 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    \sky130_fd_sc_hd__dfbbn_2 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+141.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\viterbi_decoder':
+  mapped 150 $_DFF_PN0_ cells to \sky130_fd_sc_hd__dfrtp_2 cells.
+  mapped 8 $_DFF_PN1_ cells to \sky130_fd_sc_hd__dfstp_2 cells.
+  mapped 8 $_DFF_P_ cells to \sky130_fd_sc_hd__dfxtp_2 cells.
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/runs/RUN_2025-12-04_07-52-11/tmp/0e2a141401b64efcacd39aefca8dd9f2.lib ",
+   "modules": {
+      "\\viterbi_decoder": {
+         "num_wires":         1159,
+         "num_wire_bits":     1305,
+         "num_pub_wires":     68,
+         "num_pub_wire_bits": 194,
+         "num_ports":         6,
+         "num_port_bits":     28,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1271,
+         "area":              4321.644800,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 231,
+            "$_AND_": 95,
+            "$_MUX_": 268,
+            "$_NAND_": 29,
+            "$_NOR_": 32,
+            "$_NOT_": 187,
+            "$_ORNOT_": 26,
+            "$_OR_": 161,
+            "$_XNOR_": 22,
+            "$_XOR_": 54,
+            "sky130_fd_sc_hd__dfrtp_2": 150,
+            "sky130_fd_sc_hd__dfstp_2": 8,
+            "sky130_fd_sc_hd__dfxtp_2": 8
+         }
+      }
+   },
+      "design": {
+         "num_wires":         1159,
+         "num_wire_bits":     1305,
+         "num_pub_wires":     68,
+         "num_pub_wire_bits": 194,
+         "num_ports":         6,
+         "num_port_bits":     28,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1271,
+         "area":              4321.644800,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 231,
+            "$_AND_": 95,
+            "$_MUX_": 268,
+            "$_NAND_": 29,
+            "$_NOR_": 32,
+            "$_NOT_": 187,
+            "$_ORNOT_": 26,
+            "$_OR_": 161,
+            "$_XNOR_": 22,
+            "$_XOR_": 54,
+            "sky130_fd_sc_hd__dfrtp_2": 150,
+            "sky130_fd_sc_hd__dfstp_2": 8,
+            "sky130_fd_sc_hd__dfxtp_2": 8
+         }
+      }
+}
+
+142. Printing statistics.
+
+=== viterbi_decoder ===
+
+   Number of wires:               1159
+   Number of wire bits:           1305
+   Number of public wires:          68
+   Number of public wire bits:     194
+   Number of ports:                  6
+   Number of port bits:             28
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1271
+     $_ANDNOT_                     231
+     $_AND_                         95
+     $_MUX_                        268
+     $_NAND_                        29
+     $_NOR_                         32
+     $_NOT_                        187
+     $_ORNOT_                       26
+     $_OR_                         161
+     $_XNOR_                        22
+     $_XOR_                         54
+     sky130_fd_sc_hd__dfrtp_2      150
+     sky130_fd_sc_hd__dfstp_2        8
+     sky130_fd_sc_hd__dfxtp_2        8
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+
+   Chip area for module '\viterbi_decoder': 4321.644800
+     of which used for sequential elements: 4321.644800 (100.00%)
+
+[INFO] Using generated ABC script '/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/runs/RUN_2025-12-04_07-52-11/06-yosys-synthesis/AREA_0.abc'…
+
+143. Executing ABC pass (technology mapping using ABC).
+
+143.1. Extracting gate netlist of module `\viterbi_decoder' to `/tmp/yosys-abc-YUl8K9/input.blif'..
+Extracted 1105 gates and 1274 wires to a netlist network with 168 inputs and 308 outputs.
+
+143.1.1. Executing ABC.
+Running ABC command: "/nix/store/6l3aj1gi4lja8z5s4lan2k2cfz9mqkrz-yosys-abc/bin/abc" -s -f /tmp/yosys-abc-YUl8K9/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-YUl8K9/abc.script".
+ABC: 
+ABC: + read_blif /tmp/yosys-abc-YUl8K9/input.blif 
+ABC: + read_lib -w /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/runs/RUN_2025-12-04_07-52-11/tmp/0e2a141401b64efcacd39aefca8dd9f2.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.13 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/runs/RUN_2025-12-04_07-52-11/tmp/0e2a141401b64efcacd39aefca8dd9f2.lib" has 175 cells (17 skipped: 14 seq; 3 tri-state; 0 no func; 0 dont_use).  Time =     0.15 sec
+ABC: Memory =    9.54 MB. Time =     0.15 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + read_constr -v /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/runs/RUN_2025-12-04_07-52-11/06-yosys-synthesis/synthesis.abc.sdc 
+ABC: Setting driving cell to be "sky130_fd_sc_hd__inv_2/Y".
+ABC: Setting output load to be 33.442001.
+ABC: + source /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/runs/RUN_2025-12-04_07-52-11/06-yosys-synthesis/AREA_0.abc 
+ABC: Error: The network is combinational.
+ABC: Cannot find the default PI driving cell (sky130_fd_sc_hd__inv_2/Y) in the library.
+ABC: WireLoad = "none"  Gates =    595 ( 27.7 %)   Cap = 19.2 ff (  7.2 %)   Area =     4805.86 ( 58.5 %)   Delay =  2423.47 ps  (  5.7 %)               
+ABC: Path  0 --     114 : 0    6 pi                        A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =  23.4 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --     667 : 2    2 sky130_fd_sc_hd__xor2_2   A =  16.27  Df = 183.0  -14.4 ps  S = 181.8 ps  Cin =  8.6 ff  Cout =  10.9 ff  Cmax = 130.0 ff  G =  124  
+ABC: Path  2 --     794 : 4    3 sky130_fd_sc_hd__a31o_2   A =   8.76  Df = 451.8  -40.3 ps  S = 102.9 ps  Cin =  2.4 ff  Cout =  15.1 ff  Cmax = 271.9 ff  G =  616  
+ABC: Path  3 --     795 : 3    2 sky130_fd_sc_hd__and3_2   A =   7.51  Df = 685.8  -59.0 ps  S =  76.9 ps  Cin =  1.5 ff  Cout =  10.1 ff  Cmax = 309.5 ff  G =  650  
+ABC: Path  4 --     804 : 2    2 sky130_fd_sc_hd__or2_2    A =   6.26  Df = 983.0 -241.5 ps  S =  59.5 ps  Cin =  1.5 ff  Cout =   4.5 ff  Cmax = 299.4 ff  G =  292  
+ABC: Path  5 --     806 : 5    1 sky130_fd_sc_hd__a221o_2  A =  11.26  Df =1327.6 -388.9 ps  S =  48.3 ps  Cin =  2.3 ff  Cout =   1.8 ff  Cmax = 299.4 ff  G =   74  
+ABC: Path  6 --     808 : 4   10 sky130_fd_sc_hd__a2bb2o_2 A =  11.26  Df =1666.3 -365.4 ps  S = 189.1 ps  Cin =  1.7 ff  Cout =  35.1 ff  Cmax = 300.3 ff  G = 1926  
+ABC: Path  7 --     809 : 3    1 sky130_fd_sc_hd__mux2_1   A =  11.26  Df =1985.1 -437.7 ps  S =  51.0 ps  Cin =  2.3 ff  Cout =   2.0 ff  Cmax = 173.0 ff  G =   82  
+ABC: Path  8 --     810 : 3    1 sky130_fd_sc_hd__mux2_1   A =  11.26  Df =2423.5 -570.5 ps  S = 300.6 ps  Cin =  2.3 ff  Cout =  33.4 ff  Cmax = 173.0 ff  G = 1465  
+ABC: Start-point = pi113 (\add1.sum_10 [1]).  End-point = po118 ($auto$rtlil.cc:2739:MuxGate$9665).
+ABC: netlist                       : i/o =  168/  308  lat =    0  nd =   595  edge =   1424  area =4805.94  delay = 8.00  lev = 8
+ABC: + write_blif /tmp/yosys-abc-YUl8K9/output.blif 
+
+143.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__nand4_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__or4b_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__nor3_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a21bo_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__nor4_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and4_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__and4bb_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand3_2 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__o22ai_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o32a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a31oi_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a31o_2 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_2 cells:       16
+ABC RESULTS:   sky130_fd_sc_hd__xor2_2 cells:       19
+ABC RESULTS:   sky130_fd_sc_hd__o2bb2a_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__a2bb2o_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__o31a_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__a21o_2 cells:       11
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_2 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__o211a_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__or3b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand2b_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__and4b_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o211ai_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a32o_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_2 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__mux4_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__nand2_2 cells:       28
+ABC RESULTS:   sky130_fd_sc_hd__and2_2 cells:       27
+ABC RESULTS:   sky130_fd_sc_hd__and2b_2 cells:       12
+ABC RESULTS:   sky130_fd_sc_hd__nor2_2 cells:       36
+ABC RESULTS:   sky130_fd_sc_hd__or2_2 cells:       25
+ABC RESULTS:   sky130_fd_sc_hd__and3_2 cells:       14
+ABC RESULTS:   sky130_fd_sc_hd__nor3b_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__and3b_2 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__or3_2 cells:       12
+ABC RESULTS:   sky130_fd_sc_hd__o21a_2 cells:        9
+ABC RESULTS:   sky130_fd_sc_hd__a221o_2 cells:       19
+ABC RESULTS:   sky130_fd_sc_hd__a22o_2 cells:       27
+ABC RESULTS:   sky130_fd_sc_hd__a211o_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__o22a_2 cells:        8
+ABC RESULTS:   sky130_fd_sc_hd__mux2_1 cells:       76
+ABC RESULTS:   sky130_fd_sc_hd__inv_2 cells:      165
+ABC RESULTS:        internal signals:      798
+ABC RESULTS:           input signals:      168
+ABC RESULTS:          output signals:      308
+Removing temp directory.
+
+144. Executing SETUNDEF pass (replace undef values with defined constants).
+
+145. Executing HILOMAP pass (mapping to constant drivers).
+
+146. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+147. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+Removed 3 unused cells and 1291 unused wires.
+<suppressed ~12 debug messages>
+
+148. Executing INSBUF pass (insert buffer cells for connected wires).
+
+149. Executing CHECK pass (checking for obvious problems).
+Checking module viterbi_decoder...
+Found and reported 0 problems.
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/runs/RUN_2025-12-04_07-52-11/tmp/0e2a141401b64efcacd39aefca8dd9f2.lib ",
+   "modules": {
+      "\\viterbi_decoder": {
+         "num_wires":         758,
+         "num_wire_bits":     780,
+         "num_pub_wires":     164,
+         "num_pub_wire_bits": 186,
+         "num_ports":         6,
+         "num_port_bits":     28,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         761,
+         "area":              9127.504000,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a211o_2": 5,
+            "sky130_fd_sc_hd__a21bo_2": 2,
+            "sky130_fd_sc_hd__a21o_2": 11,
+            "sky130_fd_sc_hd__a21oi_2": 10,
+            "sky130_fd_sc_hd__a221o_2": 19,
+            "sky130_fd_sc_hd__a22o_2": 27,
+            "sky130_fd_sc_hd__a2bb2o_2": 3,
+            "sky130_fd_sc_hd__a31o_2": 10,
+            "sky130_fd_sc_hd__a31oi_2": 1,
+            "sky130_fd_sc_hd__a32o_2": 2,
+            "sky130_fd_sc_hd__and2_2": 27,
+            "sky130_fd_sc_hd__and2b_2": 12,
+            "sky130_fd_sc_hd__and3_2": 14,
+            "sky130_fd_sc_hd__and3b_2": 7,
+            "sky130_fd_sc_hd__and4_2": 2,
+            "sky130_fd_sc_hd__and4b_2": 2,
+            "sky130_fd_sc_hd__and4bb_2": 1,
+            "sky130_fd_sc_hd__dfrtp_2": 150,
+            "sky130_fd_sc_hd__dfstp_2": 8,
+            "sky130_fd_sc_hd__dfxtp_2": 8,
+            "sky130_fd_sc_hd__inv_2": 165,
+            "sky130_fd_sc_hd__mux2_1": 76,
+            "sky130_fd_sc_hd__mux4_2": 4,
+            "sky130_fd_sc_hd__nand2_2": 28,
+            "sky130_fd_sc_hd__nand2b_2": 2,
+            "sky130_fd_sc_hd__nand3_2": 7,
+            "sky130_fd_sc_hd__nand4_2": 1,
+            "sky130_fd_sc_hd__nor2_2": 36,
+            "sky130_fd_sc_hd__nor3_2": 2,
+            "sky130_fd_sc_hd__nor3b_2": 3,
+            "sky130_fd_sc_hd__nor4_2": 1,
+            "sky130_fd_sc_hd__o211a_2": 3,
+            "sky130_fd_sc_hd__o211ai_2": 1,
+            "sky130_fd_sc_hd__o21a_2": 9,
+            "sky130_fd_sc_hd__o21ai_2": 7,
+            "sky130_fd_sc_hd__o22a_2": 8,
+            "sky130_fd_sc_hd__o22ai_2": 2,
+            "sky130_fd_sc_hd__o2bb2a_2": 3,
+            "sky130_fd_sc_hd__o31a_2": 5,
+            "sky130_fd_sc_hd__o32a_2": 1,
+            "sky130_fd_sc_hd__or2_2": 25,
+            "sky130_fd_sc_hd__or3_2": 12,
+            "sky130_fd_sc_hd__or3b_2": 1,
+            "sky130_fd_sc_hd__or4b_2": 3,
+            "sky130_fd_sc_hd__xnor2_2": 16,
+            "sky130_fd_sc_hd__xor2_2": 19
+         }
+      }
+   },
+      "design": {
+         "num_wires":         758,
+         "num_wire_bits":     780,
+         "num_pub_wires":     164,
+         "num_pub_wire_bits": 186,
+         "num_ports":         6,
+         "num_port_bits":     28,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         761,
+         "area":              9127.504000,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a211o_2": 5,
+            "sky130_fd_sc_hd__a21bo_2": 2,
+            "sky130_fd_sc_hd__a21o_2": 11,
+            "sky130_fd_sc_hd__a21oi_2": 10,
+            "sky130_fd_sc_hd__a221o_2": 19,
+            "sky130_fd_sc_hd__a22o_2": 27,
+            "sky130_fd_sc_hd__a2bb2o_2": 3,
+            "sky130_fd_sc_hd__a31o_2": 10,
+            "sky130_fd_sc_hd__a31oi_2": 1,
+            "sky130_fd_sc_hd__a32o_2": 2,
+            "sky130_fd_sc_hd__and2_2": 27,
+            "sky130_fd_sc_hd__and2b_2": 12,
+            "sky130_fd_sc_hd__and3_2": 14,
+            "sky130_fd_sc_hd__and3b_2": 7,
+            "sky130_fd_sc_hd__and4_2": 2,
+            "sky130_fd_sc_hd__and4b_2": 2,
+            "sky130_fd_sc_hd__and4bb_2": 1,
+            "sky130_fd_sc_hd__dfrtp_2": 150,
+            "sky130_fd_sc_hd__dfstp_2": 8,
+            "sky130_fd_sc_hd__dfxtp_2": 8,
+            "sky130_fd_sc_hd__inv_2": 165,
+            "sky130_fd_sc_hd__mux2_1": 76,
+            "sky130_fd_sc_hd__mux4_2": 4,
+            "sky130_fd_sc_hd__nand2_2": 28,
+            "sky130_fd_sc_hd__nand2b_2": 2,
+            "sky130_fd_sc_hd__nand3_2": 7,
+            "sky130_fd_sc_hd__nand4_2": 1,
+            "sky130_fd_sc_hd__nor2_2": 36,
+            "sky130_fd_sc_hd__nor3_2": 2,
+            "sky130_fd_sc_hd__nor3b_2": 3,
+            "sky130_fd_sc_hd__nor4_2": 1,
+            "sky130_fd_sc_hd__o211a_2": 3,
+            "sky130_fd_sc_hd__o211ai_2": 1,
+            "sky130_fd_sc_hd__o21a_2": 9,
+            "sky130_fd_sc_hd__o21ai_2": 7,
+            "sky130_fd_sc_hd__o22a_2": 8,
+            "sky130_fd_sc_hd__o22ai_2": 2,
+            "sky130_fd_sc_hd__o2bb2a_2": 3,
+            "sky130_fd_sc_hd__o31a_2": 5,
+            "sky130_fd_sc_hd__o32a_2": 1,
+            "sky130_fd_sc_hd__or2_2": 25,
+            "sky130_fd_sc_hd__or3_2": 12,
+            "sky130_fd_sc_hd__or3b_2": 1,
+            "sky130_fd_sc_hd__or4b_2": 3,
+            "sky130_fd_sc_hd__xnor2_2": 16,
+            "sky130_fd_sc_hd__xor2_2": 19
+         }
+      }
+}
+
+150. Printing statistics.
+
+=== viterbi_decoder ===
+
+   Number of wires:                758
+   Number of wire bits:            780
+   Number of public wires:         164
+   Number of public wire bits:     186
+   Number of ports:                  6
+   Number of port bits:             28
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                761
+     sky130_fd_sc_hd__a211o_2        5
+     sky130_fd_sc_hd__a21bo_2        2
+     sky130_fd_sc_hd__a21o_2        11
+     sky130_fd_sc_hd__a21oi_2       10
+     sky130_fd_sc_hd__a221o_2       19
+     sky130_fd_sc_hd__a22o_2        27
+     sky130_fd_sc_hd__a2bb2o_2       3
+     sky130_fd_sc_hd__a31o_2        10
+     sky130_fd_sc_hd__a31oi_2        1
+     sky130_fd_sc_hd__a32o_2         2
+     sky130_fd_sc_hd__and2_2        27
+     sky130_fd_sc_hd__and2b_2       12
+     sky130_fd_sc_hd__and3_2        14
+     sky130_fd_sc_hd__and3b_2        7
+     sky130_fd_sc_hd__and4_2         2
+     sky130_fd_sc_hd__and4b_2        2
+     sky130_fd_sc_hd__and4bb_2       1
+     sky130_fd_sc_hd__dfrtp_2      150
+     sky130_fd_sc_hd__dfstp_2        8
+     sky130_fd_sc_hd__dfxtp_2        8
+     sky130_fd_sc_hd__inv_2        165
+     sky130_fd_sc_hd__mux2_1        76
+     sky130_fd_sc_hd__mux4_2         4
+     sky130_fd_sc_hd__nand2_2       28
+     sky130_fd_sc_hd__nand2b_2       2
+     sky130_fd_sc_hd__nand3_2        7
+     sky130_fd_sc_hd__nand4_2        1
+     sky130_fd_sc_hd__nor2_2        36
+     sky130_fd_sc_hd__nor3_2         2
+     sky130_fd_sc_hd__nor3b_2        3
+     sky130_fd_sc_hd__nor4_2         1
+     sky130_fd_sc_hd__o211a_2        3
+     sky130_fd_sc_hd__o211ai_2       1
+     sky130_fd_sc_hd__o21a_2         9
+     sky130_fd_sc_hd__o21ai_2        7
+     sky130_fd_sc_hd__o22a_2         8
+     sky130_fd_sc_hd__o22ai_2        2
+     sky130_fd_sc_hd__o2bb2a_2       3
+     sky130_fd_sc_hd__o31a_2         5
+     sky130_fd_sc_hd__o32a_2         1
+     sky130_fd_sc_hd__or2_2         25
+     sky130_fd_sc_hd__or3_2         12
+     sky130_fd_sc_hd__or3b_2         1
+     sky130_fd_sc_hd__or4b_2         3
+     sky130_fd_sc_hd__xnor2_2       16
+     sky130_fd_sc_hd__xor2_2        19
+
+   Chip area for module '\viterbi_decoder': 9127.504000
+     of which used for sequential elements: 4321.644800 (47.35%)
+
+151. Executing Verilog backend.
+Dumping module `\viterbi_decoder'.
+
+152. Executing JSON backend.

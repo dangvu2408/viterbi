@@ -397,7 +397,7 @@
 	
 	- Dữ liệu đầu ra: chuỗi 8 bit (thông tin ban đầu trước khi mã hóa).
 	
-	\subsection{Sơ đồ khối các module}
+	\subsection{Yêu cầu kỹ thuật chi tiết các module}
 	
 	\subsubsection{Module \texttt{viterbi\_decoder}}
 	
@@ -743,7 +743,7 @@
 	
 	\begin{figure}[!ht]
 		\centering
-		\includegraphics[clip, width=12cm]{mem_wave.pdf}
+		\includegraphics[clip, width=13cm]{mem_wave.pdf}
 		\caption[Dạng sóng của các tín hiệu trong module \texttt{mem}]{\bfseries \fontsize{12pt}{0pt}\selectfont Dạng sóng của các tín hiệu trong module \texttt{mem}}
 		\label{memwave}
 	\end{figure}
@@ -756,7 +756,7 @@
 	
 	\begin{figure}[!ht]
 		\centering
-		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=10cm]{fig211.pdf}
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=12cm]{fig211.pdf}
 		\caption[Sơ đồ khối của module \texttt{tbck\_dec}]{\bfseries \fontsize{12pt}{0pt}\selectfont Sơ đồ khối của module \texttt{tbck\_dec}}
 		\label{hinh211}
 	\end{figure}
@@ -812,7 +812,7 @@
 	
 	\begin{figure}[!ht]
 		\centering
-		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=11cm]{fig212.pdf}
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=13cm]{fig212.pdf}
 		\caption[Sơ đồ trạng thái FSM của module \texttt{tbck\_dec}]{\bfseries \fontsize{12pt}{0pt}\selectfont Sơ đồ trạng thái FSM của module \texttt{tbck\_dec}}
 		\label{hinh212}
 	\end{figure}
@@ -823,7 +823,7 @@
 	
 	\begin{figure}[!ht]
 		\centering
-		\includegraphics[clip, width=12cm]{tbck_wave.pdf}
+		\includegraphics[clip, width=13cm]{tbck_wave.pdf}
 		\caption[Dạng sóng của các tín hiệu trong module \texttt{tbck\_dec}]{\bfseries \fontsize{12pt}{0pt}\selectfont Dạng sóng của các tín hiệu trong module \texttt{tbck\_dec}}
 		\label{tbckwave}
 	\end{figure}
@@ -840,7 +840,7 @@
 	
 	Trong chương này, nhóm em thực hiện mô phỏng thiết kế. Môi trường và công cụ mô phỏng nhóm em sử dụng trình biên dịch QuestaSim. Nhóm em mô phỏng lần lượt từ các module con đến top module.
 	
-	\subsection{Module \texttt{ctrl}}
+	\subsection{Kết quả mô phỏng module \texttt{ctrl}}
 	
 	Dạng sóng mô phỏng của các tín hiệu trong module \texttt{ctrl} được biểu diễn trên Hình \ref{fig31}. 
 	
@@ -853,7 +853,7 @@
 	
 	Ta thấy dạng sóng mô phỏng hoạt động đúng như dạng sóng đã đề cập ở Hình \ref{ctrlwave}. Mỗi trạng thái tương ứng của \texttt{en\_brch} ($S_1$), \texttt{en\_add} ($S_2$), \texttt{en\_mem} ($S_3$) và \texttt{en\_tbck} ($S_4$) đều được biểu diễn theo đúng như trên Hình \ref{hinh24}.
 	
-	\subsection{Module \texttt{ham\_d}}
+	\subsection{Kết quả mô phỏng module \texttt{ham\_d}}
 	
 	Dạng sóng mô phỏng của các tín hiệu trong module \texttt{ham\_d} được biểu diễn trên Hình \ref{fig32}.
 	
@@ -864,12 +864,11 @@
 		\label{fig32}
 	\end{figure}
 	
-	
 	Dạng sóng mô phỏng cho thấy sau khi luồng dữ liệu đầu tiên đi vào (\texttt{16'h8000}), các thanh ghi \texttt{hamd\_1} đến \texttt{hamd\_8} được nhận giá trị khoảng cách Hamming tương ứng, cho thấy dữ liệu đã được tách thành các cặp 2 bit và so sánh với khoảng cách Hamming. Thanh ghi \texttt{data\_reg} hoạt động đúng chức năng lưu bộ dữ liệu trước. Tóm lại, dạng sóng mô phỏng đã hoạt động đúng như dạng sóng thể hiện trên Hình \ref{hamdwave}.
 	
-	\subsection{Module \texttt{add\_comp}}
+	\subsection{Kết quả mô phỏng module \texttt{add\_comp}}
 	
-	xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz 
+	Dạng sóng mô phỏng của các tín hiệu trong module \texttt{add\_comp} được biểu diễn trên Hình \ref{fig33}.
 	
 	\begin{figure}[!ht]
 		\centering
@@ -878,9 +877,9 @@
 		\label{fig33}
 	\end{figure}
 	
-	\subsection{Module \texttt{mem}}
+	\subsection{Kết quả mô phỏng module \texttt{mem}}
 	
-	xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz 
+	Dạng sóng mô phỏng của các tín hiệu trong module \texttt{mem} được biểu diễn trên Hình \ref{fig34}.
 	
 	\begin{figure}[!ht]
 		\centering
@@ -889,9 +888,9 @@
 		\label{fig34}
 	\end{figure}
 	
-	\subsection{Module \texttt{tbck\_dec}}
+	\subsection{Kết quả mô phỏng module \texttt{tbck\_dec}}
 	
-	xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz 
+	Dạng sóng mô phỏng của các tín hiệu trong module \texttt{tbck\_dec} được biểu diễn trên Hình \ref{fig35}.
 	
 	\begin{figure}[!ht]
 		\centering
@@ -900,9 +899,9 @@
 		\label{fig35}
 	\end{figure}
 	
-	\subsection{Module \texttt{viterbi\_decoder}}
+	\subsection{Kết quả mô phỏng module \texttt{viterbi\_decoder}}
 	
-	xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz 
+	Dạng sóng mô phỏng của các tín hiệu trong top module \texttt{viterbi\_decoder} được biểu diễn trên Hình \ref{fig36}.
 	
 	\begin{figure}[!ht]
 		\centering
@@ -910,6 +909,8 @@
 		\caption[Dạng sóng mô phỏng của các tín hiệu trong module \texttt{viterbi\_decoder}]{\bfseries \fontsize{12pt}{0pt}\selectfont Dạng sóng mô phỏng của các tín hiệu trong module \texttt{viterbi\_decoder}}
 		\label{fig36}
 	\end{figure}
+	
+	Bộ 16 bit dữ liệu đầu vào \texttt{data} được đọc từ file \texttt{input.txt}
 	
 	\newpage
 	

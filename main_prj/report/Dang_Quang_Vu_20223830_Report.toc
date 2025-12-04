@@ -7,7 +7,7 @@
 \contentsline {subsection}{\numberline {1.2}Thuật toán giải mã Viterbi}{2}{subsection.1.2}%
 \contentsline {section}{\hbox to\@tempdima {\hfil }CHƯƠNG 2. YÊU CẦU KỸ THUẬT}{8}{figure.caption.21}%
 \contentsline {subsection}{\numberline {2.1}Yêu cầu thông số kỹ thuật}{8}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Sơ đồ khối các module}{8}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}Yêu cầu kỹ thuật chi tiết các module}{8}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}Module \texttt {viterbi\_decoder}}{8}{subsubsection.2.2.1}%
 \contentsline {paragraph}{\numberline {2.2.1.1}Sơ đồ khối}{8}{paragraph.2.2.1.1}%
 \contentsline {paragraph}{\numberline {2.2.1.2}Chức năng}{8}{paragraph.2.2.1.2}%
@@ -42,12 +42,12 @@
 \contentsline {paragraph}{\numberline {2.2.6.2}Chức năng}{18}{paragraph.2.2.6.2}%
 \contentsline {paragraph}{\numberline {2.2.6.3}Đầu vào, đầu ra}{19}{paragraph.2.2.6.3}%
 \contentsline {paragraph}{\numberline {2.2.6.4}Sơ đồ trạng thái FSM}{19}{paragraph.2.2.6.4}%
-\contentsline {paragraph}{\numberline {2.2.6.5}Dạng sóng tín hiệu}{20}{paragraph.2.2.6.5}%
-\contentsline {section}{\hbox to\@tempdima {\hfil }CHƯƠNG 3. KẾT QUẢ MÔ PHỎNG}{21}{figure.caption.44}%
-\contentsline {subsection}{\numberline {3.1}Module \texttt {ctrl}}{22}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Module \texttt {ham\_d}}{22}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Module \texttt {add\_comp}}{23}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Module \texttt {mem}}{23}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Module \texttt {tbck\_dec}}{23}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Module \texttt {viterbi\_decoder}}{24}{subsection.3.6}%
-\contentsline {section}{\hbox to\@tempdima {\hfil }TÀI LIỆU THAM KHẢO}{25}{section*.51}%
+\contentsline {paragraph}{\numberline {2.2.6.5}Dạng sóng tín hiệu}{22}{paragraph.2.2.6.5}%
+\contentsline {section}{\hbox to\@tempdima {\hfil }CHƯƠNG 3. KẾT QUẢ MÔ PHỎNG}{23}{figure.caption.44}%
+\contentsline {subsection}{\numberline {3.1}Kết quả mô phỏng module \texttt {ctrl}}{23}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Kết quả mô phỏng module \texttt {ham\_d}}{23}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Kết quả mô phỏng module \texttt {add\_comp}}{24}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Kết quả mô phỏng module \texttt {mem}}{24}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Kết quả mô phỏng module \texttt {tbck\_dec}}{24}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Kết quả mô phỏng module \texttt {viterbi\_decoder}}{25}{subsection.3.6}%
+\contentsline {section}{\hbox to\@tempdima {\hfil }TÀI LIỆU THAM KHẢO}{26}{section*.51}%

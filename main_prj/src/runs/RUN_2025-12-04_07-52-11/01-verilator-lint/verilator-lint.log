@@ -1,0 +1,133 @@
+%Warning-WIDTHTRUNC: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:63:24: Bit extraction of var[7:0] requires 3 bit index, not 4 bits.
+                                                                                          : ... note: In instance 'viterbi_decoder.tbck1'
+   63 |             sel_bit_out[count] <= in_bit;
+      |                        ^
+                     ... For warning description see https://verilator.org/warn/WIDTHTRUNC?v=5.018
+                     ... Use "/* verilator lint_off WIDTHTRUNC */" and lint_on around source to disable this message.
+%Warning-WIDTHTRUNC: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:28:37: Bit extraction of array[7:0] requires 3 bit index, not 4 bits.
+                                                                                     : ... note: In instance 'viterbi_decoder.mem1'
+   28 |                     trellis_diagr[0][count] <= prv_st_00; 
+      |                                     ^
+%Warning-WIDTHTRUNC: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:29:37: Bit extraction of array[7:0] requires 3 bit index, not 4 bits.
+                                                                                     : ... note: In instance 'viterbi_decoder.mem1'
+   29 |                     trellis_diagr[2][count] <= prv_st_10; 
+      |                                     ^
+%Warning-WIDTHTRUNC: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:30:37: Bit extraction of array[7:0] requires 3 bit index, not 4 bits.
+                                                                                     : ... note: In instance 'viterbi_decoder.mem1'
+   30 |                     trellis_diagr[1][count] <= prv_st_01;
+      |                                     ^
+%Warning-WIDTHTRUNC: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:31:37: Bit extraction of array[7:0] requires 3 bit index, not 4 bits.
+                                                                                     : ... note: In instance 'viterbi_decoder.mem1'
+   31 |                     trellis_diagr[3][count] <= prv_st_11;
+      |                                     ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:20:23: Operator ASSIGNDLY expects 4 bits on the Assign RHS, but Assign RHS's CONST '3'h0' generates 3 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   20 |             count     <= 3'b000;
+      |                       ^~
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:34:38: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_1' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   34 |                     sum_00 <= hamd_1 + sum_00;
+      |                                      ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:37:38: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_5' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   37 |                     sum_00 <= hamd_5 + sum_01;
+      |                                      ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:33:29: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_1' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   33 |                 if ((hamd_1 + sum_00) == (hamd_5 + sum_01) || (hamd_1 + sum_00) < (hamd_5 + sum_01)) begin 
+      |                             ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:33:50: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_5' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   33 |                 if ((hamd_1 + sum_00) == (hamd_5 + sum_01) || (hamd_1 + sum_00) < (hamd_5 + sum_01)) begin 
+      |                                                  ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:33:71: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_1' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   33 |                 if ((hamd_1 + sum_00) == (hamd_5 + sum_01) || (hamd_1 + sum_00) < (hamd_5 + sum_01)) begin 
+      |                                                                       ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:33:91: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_5' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   33 |                 if ((hamd_1 + sum_00) == (hamd_5 + sum_01) || (hamd_1 + sum_00) < (hamd_5 + sum_01)) begin 
+      |                                                                                           ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:43:38: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_2' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   43 |                     sum_10 <= hamd_2 + sum_00;
+      |                                      ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:46:38: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_6' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   46 |                     sum_10 <= hamd_6 + sum_01;
+      |                                      ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:42:29: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_2' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   42 |                 if ((hamd_2 + sum_00) == (hamd_6 + sum_01) || (hamd_2 + sum_00) < (hamd_6 + sum_01)) begin 
+      |                             ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:42:50: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_6' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   42 |                 if ((hamd_2 + sum_00) == (hamd_6 + sum_01) || (hamd_2 + sum_00) < (hamd_6 + sum_01)) begin 
+      |                                                  ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:42:71: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_2' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   42 |                 if ((hamd_2 + sum_00) == (hamd_6 + sum_01) || (hamd_2 + sum_00) < (hamd_6 + sum_01)) begin 
+      |                                                                       ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:42:91: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_6' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   42 |                 if ((hamd_2 + sum_00) == (hamd_6 + sum_01) || (hamd_2 + sum_00) < (hamd_6 + sum_01)) begin 
+      |                                                                                           ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:52:38: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_3' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   52 |                     sum_01 <= hamd_3 + sum_10;
+      |                                      ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:55:38: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_7' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   55 |                     sum_01 <= hamd_7 + sum_11;
+      |                                      ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:51:29: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_3' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   51 |                 if ((hamd_3 + sum_10) == (hamd_7 + sum_11) || (hamd_3 + sum_10) < (hamd_7 + sum_11)) begin 
+      |                             ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:51:50: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_7' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   51 |                 if ((hamd_3 + sum_10) == (hamd_7 + sum_11) || (hamd_3 + sum_10) < (hamd_7 + sum_11)) begin 
+      |                                                  ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:51:71: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_3' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   51 |                 if ((hamd_3 + sum_10) == (hamd_7 + sum_11) || (hamd_3 + sum_10) < (hamd_7 + sum_11)) begin 
+      |                                                                       ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:51:91: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_7' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   51 |                 if ((hamd_3 + sum_10) == (hamd_7 + sum_11) || (hamd_3 + sum_10) < (hamd_7 + sum_11)) begin 
+      |                                                                                           ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:61:38: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_3' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   61 |                     sum_11 <= hamd_3 + sum_10;
+      |                                      ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:64:38: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_7' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   64 |                     sum_11 <= hamd_7 + sum_11;
+      |                                      ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:60:29: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_4' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   60 |                 if ((hamd_4 + sum_10) == (hamd_8 + sum_11) || (hamd_4 + sum_10) < (hamd_8 + sum_11)) begin 
+      |                             ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:60:50: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_8' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   60 |                 if ((hamd_4 + sum_10) == (hamd_8 + sum_11) || (hamd_4 + sum_10) < (hamd_8 + sum_11)) begin 
+      |                                                  ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:60:71: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_4' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   60 |                 if ((hamd_4 + sum_10) == (hamd_8 + sum_11) || (hamd_4 + sum_10) < (hamd_8 + sum_11)) begin 
+      |                                                                       ^
+%Warning-WIDTHEXPAND: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:60:91: Operator ADD expects 5 bits on the LHS, but LHS's VARREF 'hamd_8' generates 2 bits.
+                                                                                           : ... note: In instance 'viterbi_decoder.add1'
+   60 |                 if ((hamd_4 + sum_10) == (hamd_8 + sum_11) || (hamd_4 + sum_10) < (hamd_8 + sum_11)) begin 
+      |                                                                                           ^
+%Warning-UNUSEDSIGNAL: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:6:22: Signal is not used: 'sel_node'
+                                                                                           : ... note: In instance 'viterbi_decoder.tbck1'
+    6 |     input      [1:0] sel_node;
+      |                      ^~~~~~~~
+%Warning-UNUSEDSIGNAL: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:19:28: Signal is not driven, nor used: 'next_select_node'
+                                                                                            : ... note: In instance 'viterbi_decoder.tbck1'
+   19 |     reg [1:0] select_node, next_select_node; 
+      |                            ^~~~~~~~~~~~~~~~
+%Warning-CASEINCOMPLETE: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:36:9: Case values incompletely covered (example pattern 0x5)
+   36 |         case (state)
+      |         ^~~~

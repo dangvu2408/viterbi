@@ -1,0 +1,7 @@
+
+20. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\ctrl.\en_brch' from process `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29$167'.
+No latch inferred for signal `\ctrl.\en_add' from process `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29$167'.
+No latch inferred for signal `\ctrl.\en_mem' from process `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29$167'.
+No latch inferred for signal `\ctrl.\en_tbck' from process `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29$167'.
+No latch inferred for signal `\ctrl.\next_state' from process `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29$167'.

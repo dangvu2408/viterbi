@@ -1,0 +1,5 @@
+`verilator_config
+lint_off -rule DECLFILENAME
+lint_off -rule EOFNEWLINE
+lint_off -rule UNDRIVEN -file "/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/runs/MACRO/tmp/d98162a9a02b4effb999332030194505.bb.v"
+lint_off -rule UNUSEDSIGNAL -file "/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/runs/MACRO/tmp/d98162a9a02b4effb999332030194505.bb.v"

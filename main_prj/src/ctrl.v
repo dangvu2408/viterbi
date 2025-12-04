@@ -25,38 +25,47 @@ module ctrl (clk, rst, en, en_brch, en_add, en_mem, en_tbck);
         end
     end
 
-    always @ (posedge rst or state or count or en or posedge clk) begin
-        case(state)
+
+    always @(state or count or en) begin
+        en_brch = 0;
+        en_add  = 0;
+        en_mem  = 0;
+        en_tbck = 0;
+        next_state = state;
+
+        case (state)
             s0: begin
-                en_brch = 0; en_add = 0; en_mem = 0; en_tbck = 0;
-                if (en == 1)
+                if (en)
                     next_state = s1;
-                else
-                    next_state = state;
             end
-        
+
             s1: begin
-                en_brch = 1; en_add = 0; en_mem = 0; en_tbck = 0;
+                en_brch = 1;
                 next_state = s2;
             end
-        
+
             s2: begin
-                en_brch = 1; en_add = 1; en_mem = 0; en_tbck = 0;
+                en_brch = 1;
+                en_add  = 1;
                 next_state = s3;
             end
-        
+
             s3: begin
-                en_brch = 1; en_add = 1; en_mem = 1; en_tbck = 0;
-                if(count < 11)
+                en_brch = 1;
+                en_add  = 1;
+                en_mem  = 1;
+                if (count < 11)
                     next_state = s3;
-                else 
+                else
                     next_state = s4;
             end
-        
+
             s4: begin
-                en_brch = 0; en_add = 0; en_mem = 1; en_tbck = 1;
+                en_mem  = 1;
+                en_tbck = 1;
                 next_state = s4;
             end
         endcase
     end
+
 endmodule

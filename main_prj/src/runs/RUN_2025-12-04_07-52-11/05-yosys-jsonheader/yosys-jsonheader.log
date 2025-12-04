@@ -1,0 +1,943 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)
+Loaded SDC plugin
+
+1. Executing Verilog-2005 frontend: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/runs/RUN_2025-12-04_07-52-11/tmp/d5828fb308ca46ecbf264fd0d01b462c.bb.v
+Parsing SystemVerilog input from `/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/runs/RUN_2025-12-04_07-52-11/tmp/d5828fb308ca46ecbf264fd0d01b462c.bb.v' to AST representation.
+Generating RTLIL representation for module `\sky130_ef_sc_hd__decap_12'.
+Generating RTLIL representation for module `\sky130_ef_sc_hd__fill_12'.
+Generating RTLIL representation for module `\sky130_ef_sc_hd__fill_4'.
+Generating RTLIL representation for module `\sky130_ef_sc_hd__fill_8'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a2111o_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a2111o_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a2111o_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a2111oi_0'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a2111oi_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a2111oi_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a2111oi_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a211o_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a211o_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a211o_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a211oi_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a211oi_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a211oi_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a21bo_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a21bo_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a21bo_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a21boi_0'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a21boi_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a21boi_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a21boi_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a21o_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a21o_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a21o_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a21oi_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a21oi_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a21oi_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a221o_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a221o_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a221o_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a221oi_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a221oi_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a221oi_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a222oi_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a22o_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a22o_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a22o_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a22oi_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a22oi_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a22oi_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a2bb2o_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a2bb2o_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a2bb2o_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a2bb2oi_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a2bb2oi_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a2bb2oi_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a311o_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a311o_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a311o_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a311oi_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a311oi_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a311oi_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a31o_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a31o_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a31o_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a31oi_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a31oi_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a31oi_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a32o_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a32o_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a32o_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a32oi_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a32oi_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a32oi_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a41o_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a41o_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a41o_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a41oi_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a41oi_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__a41oi_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__and2_0'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__and2_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__and2_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__and2_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__and2b_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__and2b_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__and2b_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__and3_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__and3_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__and3_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__and3b_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__and3b_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__and3b_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__and4_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__and4_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__and4_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__and4b_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__and4b_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__and4b_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__and4bb_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__and4bb_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__and4bb_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__buf_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__buf_12'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__buf_16'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__buf_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__buf_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__buf_6'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__buf_8'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__bufbuf_16'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__bufbuf_8'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__bufinv_16'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__bufinv_8'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__clkbuf_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__clkbuf_16'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__clkbuf_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__clkbuf_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__clkbuf_8'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__clkdlybuf4s15_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__clkdlybuf4s15_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__clkdlybuf4s18_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__clkdlybuf4s18_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__clkdlybuf4s25_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__clkdlybuf4s25_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__clkdlybuf4s50_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__clkdlybuf4s50_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__clkinv_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__clkinv_16'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__clkinv_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__clkinv_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__clkinv_8'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__clkinvlp_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__clkinvlp_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__conb_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__decap_12'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__decap_3'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__decap_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__decap_6'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__decap_8'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dfbbn_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dfbbn_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dfbbp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dfrbp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dfrbp_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dfrtn_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dfrtp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dfrtp_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dfrtp_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dfsbp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dfsbp_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dfstp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dfstp_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dfstp_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dfxbp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dfxbp_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dfxtp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dfxtp_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dfxtp_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__diode_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlclkp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlclkp_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlclkp_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlrbn_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlrbn_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlrbp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlrbp_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlrtn_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlrtn_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlrtn_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlrtp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlrtp_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlrtp_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlxbn_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlxbn_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlxbp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlxtn_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlxtn_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlxtn_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlxtp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlygate4sd1_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlygate4sd2_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlygate4sd3_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlymetal6s2s_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlymetal6s4s_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__dlymetal6s6s_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__ebufn_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__ebufn_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__ebufn_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__ebufn_8'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__edfxbp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__edfxtp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__einvn_0'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__einvn_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__einvn_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__einvn_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__einvn_8'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__einvp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__einvp_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__einvp_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__einvp_8'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__fa_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__fa_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__fa_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__fah_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__fahcin_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__fahcon_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__fill_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__fill_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__fill_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__fill_8'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__ha_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__ha_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__ha_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__inv_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__inv_12'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__inv_16'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__inv_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__inv_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__inv_6'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__inv_8'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_bleeder_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_clkbufkapwr_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_clkbufkapwr_16'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_clkbufkapwr_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_clkbufkapwr_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_clkbufkapwr_8'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_clkinvkapwr_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_clkinvkapwr_16'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_clkinvkapwr_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_clkinvkapwr_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_clkinvkapwr_8'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_decapkapwr_12'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_decapkapwr_3'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_decapkapwr_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_decapkapwr_6'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_decapkapwr_8'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_inputiso0n_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_inputiso0p_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_inputiso1n_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_inputiso1p_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_inputisolatch_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_isobufsrc_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_isobufsrc_16'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_isobufsrc_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_isobufsrc_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_isobufsrc_8'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_isobufsrckapwr_16'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__macro_sparecell'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__maj3_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__maj3_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__maj3_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__mux2_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__mux2_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__mux2_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__mux2_8'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__mux2i_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__mux2i_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__mux2i_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__mux4_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__mux4_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__mux4_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nand2_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nand2_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nand2_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nand2_8'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nand2b_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nand2b_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nand2b_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nand3_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nand3_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nand3_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nand3b_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nand3b_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nand3b_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nand4_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nand4_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nand4_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nand4b_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nand4b_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nand4b_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nand4bb_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nand4bb_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nand4bb_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nor2_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nor2_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nor2_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nor2_8'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nor2b_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nor2b_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nor2b_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nor3_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nor3_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nor3_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nor3b_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nor3b_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nor3b_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nor4_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nor4_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nor4_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nor4b_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nor4b_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nor4b_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nor4bb_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nor4bb_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__nor4bb_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o2111a_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o2111a_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o2111a_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o2111ai_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o2111ai_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o2111ai_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o211a_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o211a_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o211a_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o211ai_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o211ai_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o211ai_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o21a_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o21a_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o21a_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o21ai_0'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o21ai_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o21ai_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o21ai_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o21ba_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o21ba_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o21ba_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o21bai_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o21bai_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o21bai_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o221a_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o221a_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o221a_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o221ai_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o221ai_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o221ai_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o22a_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o22a_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o22a_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o22ai_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o22ai_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o22ai_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o2bb2a_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o2bb2a_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o2bb2a_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o2bb2ai_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o2bb2ai_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o2bb2ai_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o311a_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o311a_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o311a_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o311ai_0'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o311ai_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o311ai_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o311ai_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o31a_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o31a_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o31a_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o31ai_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o31ai_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o31ai_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o32a_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o32a_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o32a_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o32ai_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o32ai_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o32ai_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o41a_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o41a_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o41a_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o41ai_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o41ai_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__o41ai_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__or2_0'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__or2_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__or2_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__or2_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__or2b_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__or2b_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__or2b_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__or3_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__or3_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__or3_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__or3b_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__or3b_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__or3b_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__or4_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__or4_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__or4_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__or4b_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__or4b_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__or4b_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__or4bb_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__or4bb_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__or4bb_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__probe_p_8'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__probec_p_8'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sdfbbn_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sdfbbn_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sdfbbp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sdfrbp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sdfrbp_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sdfrtn_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sdfrtp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sdfrtp_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sdfrtp_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sdfsbp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sdfsbp_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sdfstp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sdfstp_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sdfstp_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sdfxbp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sdfxbp_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sdfxtp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sdfxtp_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sdfxtp_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sdlclkp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sdlclkp_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sdlclkp_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sedfxbp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sedfxbp_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sedfxtp_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sedfxtp_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__sedfxtp_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__tap_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__tap_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__tapvgnd2_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__tapvgnd_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__tapvpwrvgnd_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__xnor2_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__xnor2_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__xnor2_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__xnor3_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__xnor3_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__xnor3_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__xor2_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__xor2_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__xor2_4'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__xor3_1'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__xor3_2'.
+Generating RTLIL representation for module `\sky130_fd_sc_hd__xor3_4'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v
+Parsing SystemVerilog input from `/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v' to AST representation.
+Storing AST representation for module `$abstract\add_comp'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v
+Parsing SystemVerilog input from `/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v' to AST representation.
+Storing AST representation for module `$abstract\ctrl'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v
+Parsing SystemVerilog input from `/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v' to AST representation.
+Storing AST representation for module `$abstract\ham_d'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v
+Parsing SystemVerilog input from `/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v' to AST representation.
+Storing AST representation for module `$abstract\mem'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v
+Parsing SystemVerilog input from `/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v' to AST representation.
+Storing AST representation for module `$abstract\tbck_dec'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder.v
+Parsing SystemVerilog input from `/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/viterbi_decoder.v' to AST representation.
+Storing AST representation for module `$abstract\viterbi_decoder'.
+Successfully finished Verilog frontend.
+
+8. Executing HIERARCHY pass (managing design hierarchy).
+
+9. Executing AST frontend in derive mode using pre-parsed AST for module `\viterbi_decoder'.
+Generating RTLIL representation for module `\viterbi_decoder'.
+
+9.1. Analyzing design hierarchy..
+Top module:  \viterbi_decoder
+
+9.2. Executing AST frontend in derive mode using pre-parsed AST for module `\tbck_dec'.
+Generating RTLIL representation for module `\tbck_dec'.
+
+9.3. Executing AST frontend in derive mode using pre-parsed AST for module `\mem'.
+Generating RTLIL representation for module `\mem'.
+Warning: Replacing memory \trellis_diagr with list of registers. See /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:22
+
+9.4. Executing AST frontend in derive mode using pre-parsed AST for module `\add_comp'.
+Generating RTLIL representation for module `\add_comp'.
+
+9.5. Executing AST frontend in derive mode using pre-parsed AST for module `\ham_d'.
+Generating RTLIL representation for module `\ham_d'.
+
+9.6. Executing AST frontend in derive mode using pre-parsed AST for module `\ctrl'.
+Generating RTLIL representation for module `\ctrl'.
+Note: Assuming pure combinatorial block at /mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29.5-69.8 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+
+9.7. Analyzing design hierarchy..
+Top module:  \viterbi_decoder
+Used module:     \tbck_dec
+Used module:     \mem
+Used module:     \add_comp
+Used module:     \ham_d
+Used module:     \ctrl
+
+9.8. Analyzing design hierarchy..
+Top module:  \viterbi_decoder
+Used module:     \tbck_dec
+Used module:     \mem
+Used module:     \add_comp
+Used module:     \ham_d
+Used module:     \ctrl
+Removing unused module `$abstract\viterbi_decoder'.
+Removing unused module `$abstract\tbck_dec'.
+Removing unused module `$abstract\mem'.
+Removing unused module `$abstract\ham_d'.
+Removing unused module `$abstract\ctrl'.
+Removing unused module `$abstract\add_comp'.
+Removed 6 unused modules.
+Renaming module viterbi_decoder to viterbi_decoder.
+
+10. Executing PROC pass (convert processes to netlists).
+
+10.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+10.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 1 dead cases from process $proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159 in module ham_d.
+Marked 3 switch rules as full_case in process $proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159 in module ham_d.
+Marked 1 switch rules as full_case in process $proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:85$153 in module add_comp.
+Marked 6 switch rules as full_case in process $proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115 in module add_comp.
+Removed 4 dead cases from process $proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33 in module mem.
+Marked 12 switch rules as full_case in process $proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33 in module mem.
+Marked 8 switch rules as full_case in process $proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5 in module tbck_dec.
+Marked 3 switch rules as full_case in process $proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29$167 in module ctrl.
+Marked 2 switch rules as full_case in process $proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:13$164 in module ctrl.
+Removed a total of 5 dead cases.
+
+10.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 23 redundant assignments.
+Promoted 26 assignments to connections.
+
+10.4. Executing PROC_INIT pass (extract init attributes).
+
+10.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst in `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+Found async reset \rst in `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:85$153'.
+Found async reset \rst in `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+Found async reset \rst in `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+Found async reset \rst in `\tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+Found async reset \rst in `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:13$164'.
+
+10.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~35 debug messages>
+
+10.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+     1/11: $0\hamd_8[1:0]
+     2/11: $0\hamd_7[1:0]
+     3/11: $0\hamd_6[1:0]
+     4/11: $0\hamd_5[1:0]
+     5/11: $0\hamd_4[1:0]
+     6/11: $0\hamd_3[1:0]
+     7/11: $0\hamd_2[1:0]
+     8/11: $0\hamd_1[1:0]
+     9/11: $0\count[3:0]
+    10/11: $0\data_rx[1:0]
+    11/11: $0\data_reg[15:0]
+Creating decoders for process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:85$153'.
+     1/2: $0\min_node[1:0]
+     2/2: $0\min_sum[4:0]
+Creating decoders for process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+     1/10: $0\prv_st_11[1:0]
+     2/10: $0\sum_11[4:0]
+     3/10: $0\prv_st_01[1:0]
+     4/10: $0\sum_01[4:0]
+     5/10: $0\prv_st_10[1:0]
+     6/10: $0\sum_10[4:0]
+     7/10: $0\prv_st_00[1:0]
+     8/10: $0\sum_00[4:0]
+     9/10: $0\count[3:0]
+    10/10: $0\sel_node[1:0]
+Creating decoders for process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+     1/92: $4$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:39$32_DATA[1:0]$112
+     2/92: $4$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:38$31_DATA[1:0]$110
+     3/92: $4$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:37$30_DATA[1:0]$108
+     4/92: $4$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:36$29_DATA[1:0]$106
+     5/92: $3$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:39$32_DATA[1:0]$104
+     6/92: $3$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:39$32_ADDR[4:0]$103
+     7/92: $3$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:38$31_DATA[1:0]$102
+     8/92: $3$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:38$31_ADDR[4:0]$101
+     9/92: $3$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:37$30_DATA[1:0]$100
+    10/92: $3$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:37$30_ADDR[4:0]$99
+    11/92: $3$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:36$29_DATA[1:0]$98
+    12/92: $3$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:36$29_ADDR[4:0]$97
+    13/92: $3$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:31$28_ADDR[4:0]$89
+    14/92: $3$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:31$28_DATA[1:0]$90
+    15/92: $3$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:30$27_ADDR[4:0]$87
+    16/92: $3$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:30$27_DATA[1:0]$88
+    17/92: $3$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:29$26_ADDR[4:0]$85
+    18/92: $3$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:29$26_DATA[1:0]$86
+    19/92: $3$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:28$25_ADDR[4:0]$83
+    20/92: $3$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:28$25_DATA[1:0]$84
+    21/92: $2$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:39$32_DATA[1:0]$81
+    22/92: $2$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:39$32_ADDR[4:0]$80
+    23/92: $2$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:38$31_DATA[1:0]$79
+    24/92: $2$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:38$31_ADDR[4:0]$78
+    25/92: $2$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:37$30_DATA[1:0]$77
+    26/92: $2$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:37$30_ADDR[4:0]$76
+    27/92: $2$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:36$29_DATA[1:0]$75
+    28/92: $2$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:36$29_ADDR[4:0]$74
+    29/92: $2$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:31$28_DATA[1:0]$73
+    30/92: $2$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:31$28_ADDR[4:0]$72
+    31/92: $2$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:30$27_DATA[1:0]$71
+    32/92: $2$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:30$27_ADDR[4:0]$70
+    33/92: $2$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:29$26_DATA[1:0]$69
+    34/92: $2$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:29$26_ADDR[4:0]$68
+    35/92: $2$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:28$25_DATA[1:0]$67
+    36/92: $2$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:28$25_ADDR[4:0]$66
+    37/92: $1$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:39$32_DATA[1:0]$65
+    38/92: $1$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:39$32_ADDR[4:0]$64
+    39/92: $1$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:38$31_DATA[1:0]$63
+    40/92: $1$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:38$31_ADDR[4:0]$62
+    41/92: $1$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:37$30_DATA[1:0]$61
+    42/92: $1$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:37$30_ADDR[4:0]$60
+    43/92: $1$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:36$29_DATA[1:0]$59
+    44/92: $1$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:36$29_ADDR[4:0]$58
+    45/92: $1$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:31$28_DATA[1:0]$57
+    46/92: $1$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:31$28_ADDR[4:0]$56
+    47/92: $1$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:30$27_DATA[1:0]$55
+    48/92: $1$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:30$27_ADDR[4:0]$54
+    49/92: $1$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:29$26_DATA[1:0]$53
+    50/92: $1$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:29$26_ADDR[4:0]$52
+    51/92: $1$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:28$25_DATA[1:0]$51
+    52/92: $1$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:28$25_ADDR[4:0]$50
+    53/92: $1\k[31:0]
+    54/92: $1\i[31:0]
+    55/92: $0\trellis_diagr[31][1:0]
+    56/92: $0\trellis_diagr[30][1:0]
+    57/92: $0\trellis_diagr[29][1:0]
+    58/92: $0\trellis_diagr[28][1:0]
+    59/92: $0\trellis_diagr[27][1:0]
+    60/92: $0\trellis_diagr[26][1:0]
+    61/92: $0\trellis_diagr[25][1:0]
+    62/92: $0\trellis_diagr[24][1:0]
+    63/92: $0\trellis_diagr[23][1:0]
+    64/92: $0\trellis_diagr[22][1:0]
+    65/92: $0\trellis_diagr[21][1:0]
+    66/92: $0\trellis_diagr[20][1:0]
+    67/92: $0\trellis_diagr[19][1:0]
+    68/92: $0\trellis_diagr[18][1:0]
+    69/92: $0\trellis_diagr[17][1:0]
+    70/92: $0\trellis_diagr[16][1:0]
+    71/92: $0\trellis_diagr[15][1:0]
+    72/92: $0\trellis_diagr[14][1:0]
+    73/92: $0\trellis_diagr[13][1:0]
+    74/92: $0\trellis_diagr[12][1:0]
+    75/92: $0\trellis_diagr[11][1:0]
+    76/92: $0\trellis_diagr[10][1:0]
+    77/92: $0\trellis_diagr[9][1:0]
+    78/92: $0\trellis_diagr[8][1:0]
+    79/92: $0\trellis_diagr[7][1:0]
+    80/92: $0\trellis_diagr[6][1:0]
+    81/92: $0\trellis_diagr[5][1:0]
+    82/92: $0\trellis_diagr[4][1:0]
+    83/92: $0\trellis_diagr[3][1:0]
+    84/92: $0\trellis_diagr[2][1:0]
+    85/92: $0\trellis_diagr[1][1:0]
+    86/92: $0\trellis_diagr[0][1:0]
+    87/92: $0\trace[2:0]
+    88/92: $0\count[3:0]
+    89/92: $0\bck_prv_st_11[1:0]
+    90/92: $0\bck_prv_st_10[1:0]
+    91/92: $0\bck_prv_st_01[1:0]
+    92/92: $0\bck_prv_st_00[1:0]
+Creating decoders for process `\tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+     1/9: $2$lookahead\sel_bit_out$4[7:0]$11
+     2/9: $2$bitselwrite$pos$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:63$3[3:0]$10
+     3/9: $1$lookahead\sel_bit_out$4[7:0]$9
+     4/9: $1$bitselwrite$pos$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:63$3[3:0]$8
+     5/9: $0\select_node[1:0]
+     6/9: $0\in_bit[0:0]
+     7/9: $0\count[3:0]
+     8/9: $0\done_flag[0:0]
+     9/9: $0\data_out[7:0]
+Creating decoders for process `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29$167'.
+     1/7: $3\next_state[2:0]
+     2/7: $2\next_state[2:0]
+     3/7: $1\next_state[2:0]
+     4/7: $1\en_tbck[0:0]
+     5/7: $1\en_mem[0:0]
+     6/7: $1\en_add[0:0]
+     7/7: $1\en_brch[0:0]
+Creating decoders for process `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:13$164'.
+     1/2: $0\state[2:0]
+     2/2: $0\count[3:0]
+
+10.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\ctrl.\en_brch' from process `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29$167'.
+No latch inferred for signal `\ctrl.\en_add' from process `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29$167'.
+No latch inferred for signal `\ctrl.\en_mem' from process `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29$167'.
+No latch inferred for signal `\ctrl.\en_tbck' from process `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29$167'.
+No latch inferred for signal `\ctrl.\next_state' from process `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29$167'.
+
+10.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ham_d.\hamd_1' using process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+  created $adff cell `$procdff$3185' with positive edge clock and positive level reset.
+Creating register for signal `\ham_d.\hamd_2' using process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+  created $adff cell `$procdff$3188' with positive edge clock and positive level reset.
+Creating register for signal `\ham_d.\hamd_3' using process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+  created $adff cell `$procdff$3191' with positive edge clock and positive level reset.
+Creating register for signal `\ham_d.\hamd_4' using process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+  created $adff cell `$procdff$3194' with positive edge clock and positive level reset.
+Creating register for signal `\ham_d.\hamd_5' using process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+  created $adff cell `$procdff$3197' with positive edge clock and positive level reset.
+Creating register for signal `\ham_d.\hamd_6' using process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+  created $adff cell `$procdff$3200' with positive edge clock and positive level reset.
+Creating register for signal `\ham_d.\hamd_7' using process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+  created $adff cell `$procdff$3203' with positive edge clock and positive level reset.
+Creating register for signal `\ham_d.\hamd_8' using process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+  created $adff cell `$procdff$3206' with positive edge clock and positive level reset.
+Creating register for signal `\ham_d.\count' using process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+  created $adff cell `$procdff$3209' with positive edge clock and positive level reset.
+Creating register for signal `\ham_d.\data_rx' using process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+  created $adff cell `$procdff$3212' with positive edge clock and positive level reset.
+Creating register for signal `\ham_d.\data_reg' using process `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+  created $adff cell `$procdff$3215' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\min_sum' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:85$153'.
+  created $adff cell `$procdff$3218' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\min_node' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:85$153'.
+  created $adff cell `$procdff$3221' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\prv_st_00' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+  created $adff cell `$procdff$3224' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\prv_st_01' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+  created $adff cell `$procdff$3227' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\prv_st_10' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+  created $adff cell `$procdff$3230' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\prv_st_11' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+  created $adff cell `$procdff$3233' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\sel_node' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+  created $adff cell `$procdff$3236' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\count' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+  created $adff cell `$procdff$3239' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\sum_00' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+  created $adff cell `$procdff$3242' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\sum_10' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+  created $adff cell `$procdff$3245' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\sum_01' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+  created $adff cell `$procdff$3248' with positive edge clock and positive level reset.
+Creating register for signal `\add_comp.\sum_11' using process `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+  created $adff cell `$procdff$3251' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\bck_prv_st_00' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $dff cell `$procdff$3256' with positive edge clock.
+Creating register for signal `\mem.\bck_prv_st_01' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $dff cell `$procdff$3261' with positive edge clock.
+Creating register for signal `\mem.\bck_prv_st_10' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $dff cell `$procdff$3266' with positive edge clock.
+Creating register for signal `\mem.\bck_prv_st_11' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $dff cell `$procdff$3271' with positive edge clock.
+Creating register for signal `\mem.\count' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3274' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trace' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3277' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\i' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3280' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\k' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3283' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[0]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3286' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[1]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3289' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[2]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3292' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[3]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3295' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[4]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3298' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[5]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3301' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[6]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3304' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[7]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3307' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[8]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3310' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[9]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3313' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[10]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3316' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[11]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3319' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[12]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3322' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[13]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3325' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[14]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3328' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[15]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3331' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[16]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3334' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[17]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3337' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[18]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3340' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[19]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3343' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[20]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3346' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[21]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3349' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[22]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3352' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[23]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3355' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[24]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3358' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[25]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3361' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[26]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3364' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[27]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3367' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[28]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3370' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[29]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3373' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[30]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3376' with positive edge clock and positive level reset.
+Creating register for signal `\mem.\trellis_diagr[31]' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3379' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:28$25_ADDR' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3382' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:28$25_DATA' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3385' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:29$26_ADDR' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3388' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:29$26_DATA' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3391' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:30$27_ADDR' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3394' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:30$27_DATA' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3397' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:31$28_ADDR' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3400' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_wr$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:31$28_DATA' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3403' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:36$29_ADDR' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3406' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:36$29_DATA' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3409' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:37$30_ADDR' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3412' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:37$30_DATA' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3415' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:38$31_ADDR' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3418' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:38$31_DATA' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3421' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:39$32_ADDR' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3424' with positive edge clock and positive level reset.
+Creating register for signal `\mem.$mem2reg_rd$\trellis_diagr$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:39$32_DATA' using process `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+  created $adff cell `$procdff$3427' with positive edge clock and positive level reset.
+Creating register for signal `\tbck_dec.\data_out' using process `\tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+  created $adff cell `$procdff$3430' with positive edge clock and positive level reset.
+Creating register for signal `\tbck_dec.\done_flag' using process `\tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+  created $adff cell `$procdff$3433' with positive edge clock and positive level reset.
+Creating register for signal `\tbck_dec.\sel_bit_out' using process `\tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+  created $adff cell `$procdff$3436' with positive edge clock and positive level reset.
+Creating register for signal `\tbck_dec.\count' using process `\tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+  created $adff cell `$procdff$3439' with positive edge clock and positive level reset.
+Creating register for signal `\tbck_dec.\in_bit' using process `\tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+  created $adff cell `$procdff$3442' with positive edge clock and positive level reset.
+Creating register for signal `\tbck_dec.\select_node' using process `\tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+  created $adff cell `$procdff$3445' with positive edge clock and positive level reset.
+Creating register for signal `\tbck_dec.$bitselwrite$pos$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:63$3' using process `\tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+  created $adff cell `$procdff$3448' with positive edge clock and positive level reset.
+Creating register for signal `\tbck_dec.$lookahead\sel_bit_out$4' using process `\tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+  created $adff cell `$procdff$3451' with positive edge clock and positive level reset.
+Creating register for signal `\ctrl.\count' using process `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:13$164'.
+  created $adff cell `$procdff$3454' with positive edge clock and positive level reset.
+Creating register for signal `\ctrl.\state' using process `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:13$164'.
+  created $adff cell `$procdff$3457' with positive edge clock and positive level reset.
+
+10.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+10.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 2 empty switches in `\ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+Removing empty process `ham_d.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ham_d.v:13$159'.
+Found and cleaned up 5 empty switches in `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:85$153'.
+Removing empty process `add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:85$153'.
+Found and cleaned up 5 empty switches in `\add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+Removing empty process `add_comp.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/add_comp.v:18$115'.
+Found and cleaned up 12 empty switches in `\mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+Removing empty process `mem.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/mem.v:16$33'.
+Found and cleaned up 7 empty switches in `\tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+Removing empty process `tbck_dec.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/tbck_dec.v:21$5'.
+Found and cleaned up 3 empty switches in `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29$167'.
+Removing empty process `ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:29$167'.
+Found and cleaned up 1 empty switch in `\ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:13$164'.
+Removing empty process `ctrl.$proc$/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/ctrl.v:13$164'.
+Cleaned up 35 empty switches.
+
+10.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module viterbi_decoder.
+Optimizing module ham_d.
+<suppressed ~19 debug messages>
+Optimizing module add_comp.
+<suppressed ~12 debug messages>
+Optimizing module mem.
+<suppressed ~65 debug messages>
+Optimizing module tbck_dec.
+<suppressed ~12 debug messages>
+Optimizing module ctrl.
+<suppressed ~5 debug messages>
+
+11. Executing FLATTEN pass (flatten design).
+Deleting now unused module ham_d.
+Deleting now unused module add_comp.
+Deleting now unused module mem.
+Deleting now unused module tbck_dec.
+Deleting now unused module ctrl.
+<suppressed ~5 debug messages>
+
+12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \viterbi_decoder..
+Removed 96 unused cells and 591 unused wires.
+<suppressed ~160 debug messages>

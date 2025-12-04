@@ -28,9 +28,9 @@
 \contentsline {figure}{\numberline {2.15}{\ignorespaces Sơ đồ khối của module \texttt {tbck\_dec}}}{21}{figure.caption.41}%
 \contentsline {figure}{\numberline {2.16}{\ignorespaces Sơ đồ trạng thái FSM của module \texttt {tbck\_dec}}}{21}{figure.caption.43}%
 \contentsline {figure}{\numberline {2.17}{\ignorespaces Dạng sóng của các tín hiệu trong module \texttt {tbck\_dec}}}{22}{figure.caption.44}%
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Dạng sóng mô phỏng của các tín hiệu trong module \texttt {ctrl}}}{22}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Dạng sóng mô phỏng của các tín hiệu trong module \texttt {ctrl}}}{23}{figure.caption.45}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Dạng sóng mô phỏng của các tín hiệu trong module \texttt {ham\_d}}}{23}{figure.caption.46}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Dạng sóng mô phỏng của các tín hiệu trong module \texttt {add\_comp}}}{23}{figure.caption.47}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Dạng sóng mô phỏng của các tín hiệu trong module \texttt {add\_comp}}}{24}{figure.caption.47}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Dạng sóng mô phỏng của các tín hiệu trong module \texttt {mem}}}{24}{figure.caption.48}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Dạng sóng mô phỏng của các tín hiệu trong module \texttt {tbck\_dec}}}{24}{figure.caption.49}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Dạng sóng mô phỏng của các tín hiệu trong module \texttt {viterbi\_decoder}}}{25}{figure.caption.50}%

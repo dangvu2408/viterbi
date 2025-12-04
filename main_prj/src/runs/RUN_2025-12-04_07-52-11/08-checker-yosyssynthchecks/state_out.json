@@ -1,0 +1,31 @@
+{
+    "nl": "/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/runs/RUN_2025-12-04_07-52-11/06-yosys-synthesis/viterbi_decoder.nl.v",
+    "pnl": null,
+    "pnl-sdf-friendly": null,
+    "pnl-npc": null,
+    "def": null,
+    "lef": null,
+    "openroad-lef": null,
+    "odb": null,
+    "sdc": null,
+    "sdf": null,
+    "spef": null,
+    "lib": null,
+    "spice": null,
+    "mag": null,
+    "gds": null,
+    "mag_gds": null,
+    "klayout_gds": null,
+    "json_h": "/mnt/d/backup_later/ET4340/prj/main_prj/main_prj/src/runs/RUN_2025-12-04_07-52-11/05-yosys-jsonheader/viterbi_decoder.h.json",
+    "vh": null,
+    "metrics": {
+        "design__lint_error__count": 0,
+        "design__lint_timing_construct__count": 0,
+        "design__lint_warning__count": 33,
+        "design__inferred_latch__count": 0,
+        "design__instance__count": 761,
+        "design__instance__area": 9127.504,
+        "design__instance_unmapped__count": 0,
+        "synthesis__check_error__count": 0
+    }
+}
